@@ -1,1213 +1,705 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>053967763D40EE721AE073DA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_DanTang.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1AC7FCCCC457EC50FC9CBF46</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-DanTang.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041871D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041921D3DD15D00994B58</string>
-				<string>250041A71D3DD15D00994B58</string>
-				<string>250041B21D3DD15D00994B58</string>
-				<string>250041911D3DD15D00994B58</string>
-				<string>897123692A8351DD9B82F159</string>
-				<string>71334DDCB8E57963AC7AE1DC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041881D3DD15D00994B58</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>hrscy</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>2500418F1D3DD15D00994B58</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-					</dict>
-					<key>250041A31D3DD15D00994B58</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>2500418F1D3DD15D00994B58</string>
-					</dict>
-					<key>250041AE1D3DD15D00994B58</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>2500418F1D3DD15D00994B58</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2500418B1D3DD15D00994B58</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>250041871D3DD15D00994B58</string>
-			<key>productRefGroup</key>
-			<string>250041911D3DD15D00994B58</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>2500418F1D3DD15D00994B58</string>
-				<string>250041A31D3DD15D00994B58</string>
-				<string>250041AE1D3DD15D00994B58</string>
-			</array>
-		</dict>
-		<key>2500418B1D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>250041B61D3DD15D00994B58</string>
-				<string>250041B71D3DD15D00994B58</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2500418C1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>250041961D3DD15D00994B58</string>
-				<string>250041941D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2500418D1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F49ED7EC25B9CAC63FEB5100</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2500418E1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2500419E1D3DD15D00994B58</string>
-				<string>2500419B1D3DD15D00994B58</string>
-				<string>250041C61D3DDABE00994B58</string>
-				<string>250041991D3DD15D00994B58</string>
-				<string>250041C21D3DDAAA00994B58</string>
-				<string>250041C41D3DDAB700994B58</string>
-				<string>250041C81D3DDAC500994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2500418F1D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>250041B81D3DD15D00994B58</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8C2AA6E135B9E57F7CA4C15B</string>
-				<string>2500418C1D3DD15D00994B58</string>
-				<string>2500418D1D3DD15D00994B58</string>
-				<string>2500418E1D3DD15D00994B58</string>
-				<string>CD4BB2CB2EF7B62E6AFCD401</string>
-				<string>5B460329EE786A3126AB2760</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>DanTang</string>
-			<key>productName</key>
-			<string>DanTang</string>
-			<key>productReference</key>
-			<string>250041901D3DD15D00994B58</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>250041901D3DD15D00994B58</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>DanTang.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>250041911D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041901D3DD15D00994B58</string>
-				<string>250041A41D3DD15D00994B58</string>
-				<string>250041AF1D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041921D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041931D3DD15D00994B58</string>
-				<string>250041951D3DD15D00994B58</string>
-				<string>250041971D3DD15D00994B58</string>
-				<string>2500419A1D3DD15D00994B58</string>
-				<string>2500419C1D3DD15D00994B58</string>
-				<string>250041C31D3DDAB700994B58</string>
-				<string>250041C51D3DDABE00994B58</string>
-				<string>250041C71D3DDAC500994B58</string>
-				<string>250041C11D3DDAAA00994B58</string>
-				<string>2500419F1D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>DanTang</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041931D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041941D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041931D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041951D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041961D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041951D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041971D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041981D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041981D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041991D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041971D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2500419A1D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2500419B1D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2500419A1D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2500419C1D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2500419D1D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2500419D1D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2500419E1D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2500419C1D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2500419F1D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041A01D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>250041A91D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041A11D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041A21D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041A31D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>250041BB1D3DD15D00994B58</string>
-			<key>buildPhases</key>
-			<array>
-				<string>250041A01D3DD15D00994B58</string>
-				<string>250041A11D3DD15D00994B58</string>
-				<string>250041A21D3DD15D00994B58</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>250041A61D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>DanTangTests</string>
-			<key>productName</key>
-			<string>DanTangTests</string>
-			<key>productReference</key>
-			<string>250041A41D3DD15D00994B58</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>250041A41D3DD15D00994B58</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>DanTangTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>250041A51D3DD15D00994B58</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>250041881D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>2500418F1D3DD15D00994B58</string>
-			<key>remoteInfo</key>
-			<string>DanTang</string>
-		</dict>
-		<key>250041A61D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>2500418F1D3DD15D00994B58</string>
-			<key>targetProxy</key>
-			<string>250041A51D3DD15D00994B58</string>
-		</dict>
-		<key>250041A71D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041A81D3DD15D00994B58</string>
-				<string>250041AA1D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>DanTangTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041A81D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DanTangTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041A91D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041A81D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041AA1D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041AB1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>250041B41D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041AC1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041AD1D3DD15D00994B58</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>250041AE1D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>250041BE1D3DD15D00994B58</string>
-			<key>buildPhases</key>
-			<array>
-				<string>250041AB1D3DD15D00994B58</string>
-				<string>250041AC1D3DD15D00994B58</string>
-				<string>250041AD1D3DD15D00994B58</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>250041B11D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>DanTangUITests</string>
-			<key>productName</key>
-			<string>DanTangUITests</string>
-			<key>productReference</key>
-			<string>250041AF1D3DD15D00994B58</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>250041AF1D3DD15D00994B58</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>DanTangUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>250041B01D3DD15D00994B58</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>250041881D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>2500418F1D3DD15D00994B58</string>
-			<key>remoteInfo</key>
-			<string>DanTang</string>
-		</dict>
-		<key>250041B11D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>2500418F1D3DD15D00994B58</string>
-			<key>targetProxy</key>
-			<string>250041B01D3DD15D00994B58</string>
-		</dict>
-		<key>250041B21D3DD15D00994B58</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250041B31D3DD15D00994B58</string>
-				<string>250041B51D3DD15D00994B58</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>DanTangUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041B31D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DanTangUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041B41D3DD15D00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041B31D3DD15D00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041B51D3DD15D00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041B61D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>250041B71D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>250041B81D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>250041B91D3DD15D00994B58</string>
-				<string>250041BA1D3DD15D00994B58</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>250041B91D3DD15D00994B58</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1AC7FCCCC457EC50FC9CBF46</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTang/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTang</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>250041BA1D3DD15D00994B58</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>91EF270E66D496431DC127E0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTang/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTang</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>250041BB1D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>250041BC1D3DD15D00994B58</string>
-				<string>250041BD1D3DD15D00994B58</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>250041BC1D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTangTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTangTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>250041BD1D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTangTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTangTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>250041BE1D3DD15D00994B58</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>250041BF1D3DD15D00994B58</string>
-				<string>250041C01D3DD15D00994B58</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>250041BF1D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTangUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTangUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>DanTang</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>250041C01D3DD15D00994B58</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>DanTangUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.hrscy.DanTangUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>DanTang</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>250041C11D3DDAAA00994B58</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>base.string</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041C21D3DDAAA00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041C11D3DDAAA00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041C31D3DDAB700994B58</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.javascript</string>
-			<key>path</key>
-			<string>calendar.js</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041C41D3DDAB700994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041C31D3DDAB700994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041C51D3DDABE00994B58</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>FZLTXHK.TTF</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041C61D3DDABE00994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041C51D3DDABE00994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>250041C71D3DDAC500994B58</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>sub.string</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250041C81D3DDAC500994B58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>250041C71D3DDAC500994B58</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5B460329EE786A3126AB2760</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>71334DDCB8E57963AC7AE1DC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>053967763D40EE721AE073DA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>897123692A8351DD9B82F159</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1AC7FCCCC457EC50FC9CBF46</string>
-				<string>91EF270E66D496431DC127E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2AA6E135B9E57F7CA4C15B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>91EF270E66D496431DC127E0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-DanTang.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD4BB2CB2EF7B62E6AFCD401</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F49ED7EC25B9CAC63FEB5100</key>
-		<dict>
-			<key>fileRef</key>
-			<string>053967763D40EE721AE073DA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>250041881D3DD15D00994B58</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2500419A1D3DD15D00994B58 /* Assets.xcassets */; };
+		250041A91D3DD15D00994B58 /* DanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250041A81D3DD15D00994B58 /* DanTangTests.swift */; };
+		250041B41D3DD15D00994B58 /* DanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250041B31D3DD15D00994B58 /* DanTangUITests.swift */; };
+		94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */; };
+		94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */; };
+		94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */; };
+		94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044BB1D3E7B1300BCB4B1 /* AppDelegate.swift */; };
+		94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E044BC1D3E7B1300BCB4B1 /* Info.plist */; };
+		94E044CA1D3E7B1300BCB4B1 /* YMProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */; };
+		94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C11D3E7B1300BCB4B1 /* base.string */; };
+		94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C21D3E7B1300BCB4B1 /* calendar.js */; };
+		94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */; };
+		94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C41D3E7B1300BCB4B1 /* sub.string */; };
+		94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044D01D3E7D9600BCB4B1 /* YMTabBarController.swift */; };
+		94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044D21D3E7DA900BCB4B1 /* YMNavigationController.swift */; };
+		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		250041A51D3DD15D00994B58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250041881D3DD15D00994B58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2500418F1D3DD15D00994B58;
+			remoteInfo = DanTang;
+		};
+		250041B01D3DD15D00994B58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250041881D3DD15D00994B58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2500418F1D3DD15D00994B58;
+			remoteInfo = DanTang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053967763D40EE721AE073DA /* Pods_DanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig"; sourceTree = "<group>"; };
+		250041901D3DD15D00994B58 /* DanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2500419A1D3DD15D00994B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		250041A41D3DD15D00994B58 /* DanTangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		250041A81D3DD15D00994B58 /* DanTangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangTests.swift; sourceTree = "<group>"; };
+		250041AA1D3DD15D00994B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		250041B31D3DD15D00994B58 /* DanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangUITests.swift; sourceTree = "<group>"; };
+		250041B51D3DD15D00994B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
+		94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
+		94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
+		94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeViewController.swift; sourceTree = "<group>"; };
+		94E044BB1D3E7B1300BCB4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94E044BC1D3E7B1300BCB4B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductViewController.swift; sourceTree = "<group>"; };
+		94E044C11D3E7B1300BCB4B1 /* base.string */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = base.string; sourceTree = "<group>"; };
+		94E044C21D3E7B1300BCB4B1 /* calendar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = calendar.js; sourceTree = "<group>"; };
+		94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTXHK.TTF; sourceTree = "<group>"; };
+		94E044C41D3E7B1300BCB4B1 /* sub.string */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub.string; sourceTree = "<group>"; };
+		94E044D01D3E7D9600BCB4B1 /* YMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTabBarController.swift; sourceTree = "<group>"; };
+		94E044D21D3E7DA900BCB4B1 /* YMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNavigationController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2500418D1D3DD15D00994B58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041A11D3DD15D00994B58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041AC1D3DD15D00994B58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		250041871D3DD15D00994B58 = {
+			isa = PBXGroup;
+			children = (
+				250041921D3DD15D00994B58 /* DanTang */,
+				250041A71D3DD15D00994B58 /* DanTangTests */,
+				250041B21D3DD15D00994B58 /* DanTangUITests */,
+				250041911D3DD15D00994B58 /* Products */,
+				897123692A8351DD9B82F159 /* Pods */,
+				71334DDCB8E57963AC7AE1DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		250041911D3DD15D00994B58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				250041901D3DD15D00994B58 /* DanTang.app */,
+				250041A41D3DD15D00994B58 /* DanTangTests.xctest */,
+				250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		250041921D3DD15D00994B58 /* DanTang */ = {
+			isa = PBXGroup;
+			children = (
+				94E044AF1D3E7B1300BCB4B1 /* Classes */,
+				2500419A1D3DD15D00994B58 /* Assets.xcassets */,
+			);
+			path = DanTang;
+			sourceTree = "<group>";
+		};
+		250041A71D3DD15D00994B58 /* DanTangTests */ = {
+			isa = PBXGroup;
+			children = (
+				250041A81D3DD15D00994B58 /* DanTangTests.swift */,
+				250041AA1D3DD15D00994B58 /* Info.plist */,
+			);
+			path = DanTangTests;
+			sourceTree = "<group>";
+		};
+		250041B21D3DD15D00994B58 /* DanTangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				250041B31D3DD15D00994B58 /* DanTangUITests.swift */,
+				250041B51D3DD15D00994B58 /* Info.plist */,
+			);
+			path = DanTangUITests;
+			sourceTree = "<group>";
+		};
+		71334DDCB8E57963AC7AE1DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				053967763D40EE721AE073DA /* Pods_DanTang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		897123692A8351DD9B82F159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */,
+				91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94E044AF1D3E7B1300BCB4B1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B01D3E7B1300BCB4B1 /* Classify */,
+				94E044B31D3E7B1300BCB4B1 /* DanTang */,
+				94E044B61D3E7B1300BCB4B1 /* Main */,
+				94E044B71D3E7B1300BCB4B1 /* Me */,
+				94E044BA1D3E7B1300BCB4B1 /* Others */,
+				94E044BD1D3E7B1300BCB4B1 /* Product */,
+				94E044C01D3E7B1300BCB4B1 /* Resource */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		94E044B01D3E7B1300BCB4B1 /* Classify */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B11D3E7B1300BCB4B1 /* Controller */,
+			);
+			path = Classify;
+			sourceTree = "<group>";
+		};
+		94E044B11D3E7B1300BCB4B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94E044B31D3E7B1300BCB4B1 /* DanTang */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B41D3E7B1300BCB4B1 /* Controller */,
+			);
+			path = DanTang;
+			sourceTree = "<group>";
+		};
+		94E044B41D3E7B1300BCB4B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94E044B61D3E7B1300BCB4B1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94E044CF1D3E7D7B00BCB4B1 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		94E044B71D3E7B1300BCB4B1 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B81D3E7B1300BCB4B1 /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		94E044B81D3E7B1300BCB4B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94E044BA1D3E7B1300BCB4B1 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				94E044BB1D3E7B1300BCB4B1 /* AppDelegate.swift */,
+				94E044BC1D3E7B1300BCB4B1 /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		94E044BD1D3E7B1300BCB4B1 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				94E044BE1D3E7B1300BCB4B1 /* Controller */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		94E044BE1D3E7B1300BCB4B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94E044C01D3E7B1300BCB4B1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				94E044C11D3E7B1300BCB4B1 /* base.string */,
+				94E044C21D3E7B1300BCB4B1 /* calendar.js */,
+				94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */,
+				94E044C41D3E7B1300BCB4B1 /* sub.string */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		94E044CF1D3E7D7B00BCB4B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94E044D01D3E7D9600BCB4B1 /* YMTabBarController.swift */,
+				94E044D21D3E7DA900BCB4B1 /* YMNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2500418F1D3DD15D00994B58 /* DanTang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 250041B81D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTang" */;
+			buildPhases = (
+				8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */,
+				2500418C1D3DD15D00994B58 /* Sources */,
+				2500418D1D3DD15D00994B58 /* Frameworks */,
+				2500418E1D3DD15D00994B58 /* Resources */,
+				CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */,
+				5B460329EE786A3126AB2760 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DanTang;
+			productName = DanTang;
+			productReference = 250041901D3DD15D00994B58 /* DanTang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		250041A31D3DD15D00994B58 /* DanTangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 250041BB1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangTests" */;
+			buildPhases = (
+				250041A01D3DD15D00994B58 /* Sources */,
+				250041A11D3DD15D00994B58 /* Frameworks */,
+				250041A21D3DD15D00994B58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				250041A61D3DD15D00994B58 /* PBXTargetDependency */,
+			);
+			name = DanTangTests;
+			productName = DanTangTests;
+			productReference = 250041A41D3DD15D00994B58 /* DanTangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		250041AE1D3DD15D00994B58 /* DanTangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 250041BE1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangUITests" */;
+			buildPhases = (
+				250041AB1D3DD15D00994B58 /* Sources */,
+				250041AC1D3DD15D00994B58 /* Frameworks */,
+				250041AD1D3DD15D00994B58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				250041B11D3DD15D00994B58 /* PBXTargetDependency */,
+			);
+			name = DanTangUITests;
+			productName = DanTangUITests;
+			productReference = 250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		250041881D3DD15D00994B58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YM;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = hrscy;
+				TargetAttributes = {
+					2500418F1D3DD15D00994B58 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					250041A31D3DD15D00994B58 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2500418F1D3DD15D00994B58;
+					};
+					250041AE1D3DD15D00994B58 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2500418F1D3DD15D00994B58;
+					};
+				};
+			};
+			buildConfigurationList = 2500418B1D3DD15D00994B58 /* Build configuration list for PBXProject "DanTang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 250041871D3DD15D00994B58;
+			productRefGroup = 250041911D3DD15D00994B58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2500418F1D3DD15D00994B58 /* DanTang */,
+				250041A31D3DD15D00994B58 /* DanTangTests */,
+				250041AE1D3DD15D00994B58 /* DanTangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2500418E1D3DD15D00994B58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */,
+				94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */,
+				94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */,
+				2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */,
+				94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */,
+				94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041A21D3DD15D00994B58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041AD1D3DD15D00994B58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B460329EE786A3126AB2760 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2500418C1D3DD15D00994B58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */,
+				94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */,
+				94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */,
+				94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */,
+				94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */,
+				94E044CA1D3E7B1300BCB4B1 /* YMProductViewController.swift in Sources */,
+				94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041A01D3DD15D00994B58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250041A91D3DD15D00994B58 /* DanTangTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250041AB1D3DD15D00994B58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250041B41D3DD15D00994B58 /* DanTangUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		250041A61D3DD15D00994B58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2500418F1D3DD15D00994B58 /* DanTang */;
+			targetProxy = 250041A51D3DD15D00994B58 /* PBXContainerItemProxy */;
+		};
+		250041B11D3DD15D00994B58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2500418F1D3DD15D00994B58 /* DanTang */;
+			targetProxy = 250041B01D3DD15D00994B58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		250041B61D3DD15D00994B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		250041B71D3DD15D00994B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		250041B91D3DD15D00994B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DanTang/Classes/Others/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		250041BA1D3DD15D00994B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DanTang/Classes/Others/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		250041BC1D3DD15D00994B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DanTangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang";
+			};
+			name = Debug;
+		};
+		250041BD1D3DD15D00994B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DanTangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang";
+			};
+			name = Release;
+		};
+		250041BF1D3DD15D00994B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DanTangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DanTang;
+			};
+			name = Debug;
+		};
+		250041C01D3DD15D00994B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DanTangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DanTang;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2500418B1D3DD15D00994B58 /* Build configuration list for PBXProject "DanTang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250041B61D3DD15D00994B58 /* Debug */,
+				250041B71D3DD15D00994B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		250041B81D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250041B91D3DD15D00994B58 /* Debug */,
+				250041BA1D3DD15D00994B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		250041BB1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250041BC1D3DD15D00994B58 /* Debug */,
+				250041BD1D3DD15D00994B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		250041BE1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250041BF1D3DD15D00994B58 /* Debug */,
+				250041C01D3DD15D00994B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 250041881D3DD15D00994B58 /* Project object */;
+}
