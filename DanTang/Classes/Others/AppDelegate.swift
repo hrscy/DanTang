@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // 创建 window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // 创建根控制器

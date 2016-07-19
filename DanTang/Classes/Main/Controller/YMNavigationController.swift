@@ -14,8 +14,10 @@ class YMNavigationController: UINavigationController {
     internal override class func initialize() {
         super.initialize()
         /// 设置导航栏标题
-//        let navBar = UINavigationBar.appearance()
-        
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = UIColor(red: 245 / 255, green: 80 / 255, blue: 83 / 255, alpha: 1.0)
+        navBar.tintColor = UIColor.whiteColor()
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(20)]
     }
     /**
      # 统一所有控制器导航栏左上角的返回按钮
