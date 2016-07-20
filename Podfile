@@ -11,6 +11,6 @@ pod "Alamofire"
 # pod "AlamofireObjectMapper"
 pod "RxSwift"
 pod "RxCocoa"
-# pod "SwiftyJSON"
+pod "SwiftyJSON"
 end
 

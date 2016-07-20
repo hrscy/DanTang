@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMProductViewController: UIViewController {
+class YMProductViewController: YMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

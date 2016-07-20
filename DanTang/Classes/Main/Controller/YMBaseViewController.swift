@@ -1,25 +1,25 @@
 //
-//  YMCategoryViewController.swift
-//  DanTang
+//  YMBaseViewController.swift
+//  LongLian369
 //
-//  Created by 杨蒙 on 16/7/19.
+//  Created by 杨蒙 on 16/7/2.
 //  Copyright © 2016年 hrscy. All rights reserved.
-//
-//  分类
 //
 
 import UIKit
+import SVProgressHUD
+import FDFullscreenPopGesture
 
-class YMCategoryViewController: YMBaseViewController {
+class YMBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .Plain, target: self, action: #selector(categoryRightBBClick))
-    }
-    
-    func categoryRightBBClick() {
-        print(#function)
+        navigationController?.fd_prefersNavigationBarHidden = true
+        view.backgroundColor = UIColor(red: 245 / 255, green: 245 / 255, blue: 245 / 255, alpha: 1.0)
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.Custom)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.0)
+        SVProgressHUD.setBackgroundColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.5))
+        SVProgressHUD.setForegroundColor(UIColor.whiteColor())        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +27,6 @@ class YMCategoryViewController: YMBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

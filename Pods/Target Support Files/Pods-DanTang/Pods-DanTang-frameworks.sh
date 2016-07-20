@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-DanTang/RxSwift.framework"
   install_framework "Pods-DanTang/SVProgressHUD.framework"
   install_framework "Pods-DanTang/SnapKit.framework"
+  install_framework "Pods-DanTang/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-DanTang/Alamofire.framework"
@@ -100,4 +101,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-DanTang/RxSwift.framework"
   install_framework "Pods-DanTang/SVProgressHUD.framework"
   install_framework "Pods-DanTang/SnapKit.framework"
+  install_framework "Pods-DanTang/SwiftyJSON.framework"
 fi

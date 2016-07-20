@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMMeViewController: UIViewController {
+class YMMeViewController: YMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

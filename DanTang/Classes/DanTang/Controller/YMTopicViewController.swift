@@ -1,25 +1,19 @@
 //
-//  YMCategoryViewController.swift
+//  YMTopicViewController.swift
 //  DanTang
 //
-//  Created by 杨蒙 on 16/7/19.
+//  Created by 杨蒙 on 16/7/20.
 //  Copyright © 2016年 hrscy. All rights reserved.
-//
-//  分类
 //
 
 import UIKit
 
-class YMCategoryViewController: YMBaseViewController {
+class YMTopicViewController: YMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .Plain, target: self, action: #selector(categoryRightBBClick))
-    }
-    
-    func categoryRightBBClick() {
-        print(#function)
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
