@@ -27,7 +27,6 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         // 设置导航栏
         setupNav()
         weak var weakSelf = self
-        
         // 获取首页顶部选择数据
         YMNetworkTool.shareNetworkTool.loadHomeTopData { (ym_channels) in
             for channel in ym_channels {
@@ -184,7 +183,6 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         // 点击 Button
         let button = titlesView.subviews[index] as! UIButton
         titlesClick(button)
-        print(index)
     }
 
 }

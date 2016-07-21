@@ -14,7 +14,7 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
     
     var type = Int()
     
-    var tableView = UITableView()
+    var tableView: UITableView?
     
     
     /// 首页列表数据
@@ -30,12 +30,13 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
         weak var weakSelf = self
         YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { (homeItems) in
             weakSelf!.items = homeItems
-            weakSelf?.tableView.reloadData()
+            weakSelf!.tableView!.reloadData()
         }
     }
     
+    // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -44,7 +45,7 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
         homeCell.delegate = self
         return homeCell
     }
-    
+    // MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailVC = YMDetailViewController()
         detailVC.homeItem = items[indexPath.row]
@@ -59,7 +60,6 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
         let nav = YMNavigationController(rootViewController: loginVC)
         presentViewController(nav, animated: true, completion: nil)
     }
-    
     
     func setupTableView() {
         let tableView = UITableView()
