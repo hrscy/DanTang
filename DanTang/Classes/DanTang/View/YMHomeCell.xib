@@ -3,18 +3,70 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="C4I-gb-W3S" customClass="YMHomeCell" customModule="DanTang" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeCellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCellID" id="C4I-gb-W3S" customClass="YMHomeCell" customModule="DanTang" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C4I-gb-W3S" id="k8M-9I-YhS">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95R-8A-rW5">
+                        <rect key="frame" x="145" y="67" width="31" height="26"/>
+                        <state key="normal" image="PlaceHolderImage_small_31x26_"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-ZJ-jLm">
+                        <rect key="frame" x="8" y="8" width="304" height="143.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-wX-l5B">
+                        <rect key="frame" x="250" y="18" width="52" height="25"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="NtT-6j-QDs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="3000" image="Feed_FavoriteIcon_17x17_"/>
+                        <connections>
+                            <action selector="favoriteButtonClick:" destination="C4I-gb-W3S" eventType="touchUpInside" id="Elc-zN-G2z"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGY-RG-kB2">
+                        <rect key="frame" x="13" y="125" width="44" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fGY-RG-kB2" firstAttribute="leading" secondItem="cNT-ZJ-jLm" secondAttribute="leading" constant="5" id="5pc-aN-Tle"/>
+                    <constraint firstItem="fGY-RG-kB2" firstAttribute="bottom" secondItem="cNT-ZJ-jLm" secondAttribute="bottom" constant="-5" id="EYX-ou-ZYQ"/>
+                    <constraint firstItem="cNT-ZJ-jLm" firstAttribute="leading" secondItem="k8M-9I-YhS" secondAttribute="leadingMargin" id="Pxw-hq-vV4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cNT-ZJ-jLm" secondAttribute="bottom" id="bwz-9O-oup"/>
+                    <constraint firstItem="cNT-ZJ-jLm" firstAttribute="top" secondItem="k8M-9I-YhS" secondAttribute="topMargin" id="eZT-GK-3L4"/>
+                    <constraint firstItem="95R-8A-rW5" firstAttribute="centerX" secondItem="k8M-9I-YhS" secondAttribute="centerX" id="lY1-Ur-Df8"/>
+                    <constraint firstItem="Nsf-wX-l5B" firstAttribute="trailing" secondItem="cNT-ZJ-jLm" secondAttribute="trailing" constant="-10" id="lc3-wU-1VD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cNT-ZJ-jLm" secondAttribute="trailing" id="n1T-NA-2SL"/>
+                    <constraint firstItem="Nsf-wX-l5B" firstAttribute="top" secondItem="cNT-ZJ-jLm" secondAttribute="top" constant="10" id="pIA-Dj-3or"/>
+                    <constraint firstItem="95R-8A-rW5" firstAttribute="centerY" secondItem="k8M-9I-YhS" secondAttribute="centerY" id="zOy-vk-Wsy"/>
+                </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="bgImageView" destination="cNT-ZJ-jLm" id="mja-Si-9Yi"/>
+                <outlet property="favoriteBtn" destination="Nsf-wX-l5B" id="DgL-sy-8yW"/>
+                <outlet property="placeholderBtn" destination="95R-8A-rW5" id="C0n-4D-biX"/>
+                <outlet property="titleLabel" destination="fGY-RG-kB2" id="HaA-95-wew"/>
+            </connections>
             <point key="canvasLocation" x="566" y="205"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Feed_FavoriteIcon_17x17_" width="17" height="17"/>
+        <image name="PlaceHolderImage_small_31x26_" width="31" height="26"/>
+    </resources>
 </document>

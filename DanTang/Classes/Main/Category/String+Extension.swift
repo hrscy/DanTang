@@ -26,17 +26,4 @@ public extension String {
         return predicate.evaluateWithObject(string)
     }
     
-    /// 格式化金额
-    static func stringWithFormatMoney(money: Double) -> String {
-        var moneyStr: String
-        
-        if money < 10000 {
-            moneyStr = String(format: "%.2f", money)
-        } else {
-            let newMoney = money / 10000.0
-            moneyStr = String(format: "%.2f万", newMoney)
-        }
-        return moneyStr
-    }
-    
 }

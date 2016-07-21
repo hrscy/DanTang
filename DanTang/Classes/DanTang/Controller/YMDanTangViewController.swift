@@ -33,6 +33,7 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
             for channel in ym_channels {
                 let vc = YMTopicViewController()
                 vc.title = channel.name!
+                vc.type = channel.id!
                 weakSelf!.addChildViewController(vc)
             }
             //设置顶部标签栏
@@ -184,7 +185,6 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         let button = titlesView.subviews[index] as! UIButton
         titlesClick(button)
         print(index)
-        
     }
 
 }
