@@ -6,7 +6,7 @@
 //  Copyright © 2016年 hrscy. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class YMProduct: NSObject {
     var brand_order: Int?

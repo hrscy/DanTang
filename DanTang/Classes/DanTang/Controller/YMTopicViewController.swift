@@ -14,7 +14,7 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
     
     var type = Int()
     
-    var tableView: UITableView?
+    weak var tableView: UITableView?
     
     
     /// 首页列表数据

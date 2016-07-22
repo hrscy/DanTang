@@ -16,7 +16,7 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
     
     var products = [YMProduct]()
     
-    var collectionView: UICollectionView?
+    weak var collectionView: UICollectionView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,10 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
     /// 设置collectionView
     private func setupCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        let nib = UINib(nibName: String(YMCollectionViewCell), bundle: nil)
         collectionView.delegate = self
         collectionView.backgroundColor = view.backgroundColor
         collectionView.dataSource = self
+        let nib = UINib(nibName: String(YMCollectionViewCell), bundle: nil)
         collectionView.registerNib(nib, forCellWithReuseIdentifier: collectionCellID)
         view.addSubview(collectionView)
         self.collectionView = collectionView

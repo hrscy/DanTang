@@ -61,6 +61,10 @@ let kAnimationDuration = 0.25
 let SCREENW = UIScreen.mainScreen().bounds.size.width
 /// 屏幕的高
 let SCREENH = UIScreen.mainScreen().bounds.size.height
+/// 分类界面 顶部 item 的高
+let kitemH: CGFloat = 75
+/// 分类界面 顶部 item 的宽
+let kitemW: CGFloat = 150
 
 /// RGBA的颜色设置
 func YMColor(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {

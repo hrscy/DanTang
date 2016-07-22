@@ -30,6 +30,22 @@
 		25AD3B701D40B4DF001610B7 /* YMCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3B6E1D40B4DF001610B7 /* YMCollectionViewCell.xib */; };
 		25AD3B731D40B993001610B7 /* YMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B721D40B993001610B7 /* YMProduct.swift */; };
 		25AD3B751D40CDD4001610B7 /* YMProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B741D40CDD4001610B7 /* YMProductDetailViewController.swift */; };
+		25AD3B791D41C915001610B7 /* YMCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B781D41C915001610B7 /* YMCollection.swift */; };
+		25AD3B7B1D41CA20001610B7 /* YMGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B7A1D41CA20001610B7 /* YMGroup.swift */; };
+		25AD3B7D1D41DDB4001610B7 /* YMVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B7C1D41DDB4001610B7 /* YMVerticalButton.swift */; };
+		25AD3B811D41E80C001610B7 /* YMCategoryHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B801D41E80C001610B7 /* YMCategoryHeaderViewController.swift */; };
+		25AD3B861D41EF46001610B7 /* YMCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B841D41EF46001610B7 /* YMCategoryCollectionViewCell.swift */; };
+		25AD3B871D41EF46001610B7 /* YMCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3B851D41EF46001610B7 /* YMCategoryCollectionViewCell.xib */; };
+		25AD3B8F1D41F530001610B7 /* YMCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B8E1D41F530001610B7 /* YMCategoryHeaderView.swift */; };
+		25AD3B9B1D420A4F001610B7 /* YMTopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B9A1D420A4F001610B7 /* YMTopHeaderView.swift */; };
+		25AD3B9D1D420A59001610B7 /* YMTopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3B9C1D420A59001610B7 /* YMTopHeaderView.xib */; };
+		25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */; };
+		25AD3BA21D420F0F001610B7 /* YMFirstGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BA01D420F0F001610B7 /* YMFirstGroupCell.swift */; };
+		25AD3BA31D420F0F001610B7 /* YMFirstGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA11D420F0F001610B7 /* YMFirstGroupCell.xib */; };
+		25AD3BA61D420F18001610B7 /* YMSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BA41D420F18001610B7 /* YMSecondTableViewCell.swift */; };
+		25AD3BA71D420F18001610B7 /* YMSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA51D420F18001610B7 /* YMSecondTableViewCell.xib */; };
+		25AD3BAA1D42202E001610B7 /* YMFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */; };
+		25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */; };
 		94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */; };
 		94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */; };
 		94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */; };
@@ -93,6 +109,22 @@
 		25AD3B6E1D40B4DF001610B7 /* YMCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionViewCell.xib; sourceTree = "<group>"; };
 		25AD3B721D40B993001610B7 /* YMProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProduct.swift; sourceTree = "<group>"; };
 		25AD3B741D40CDD4001610B7 /* YMProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailViewController.swift; sourceTree = "<group>"; };
+		25AD3B781D41C915001610B7 /* YMCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollection.swift; sourceTree = "<group>"; };
+		25AD3B7A1D41CA20001610B7 /* YMGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMGroup.swift; sourceTree = "<group>"; };
+		25AD3B7C1D41DDB4001610B7 /* YMVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMVerticalButton.swift; sourceTree = "<group>"; };
+		25AD3B801D41E80C001610B7 /* YMCategoryHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryHeaderViewController.swift; sourceTree = "<group>"; };
+		25AD3B841D41EF46001610B7 /* YMCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		25AD3B851D41EF46001610B7 /* YMCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		25AD3B8E1D41F530001610B7 /* YMCategoryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryHeaderView.swift; sourceTree = "<group>"; };
+		25AD3B9A1D420A4F001610B7 /* YMTopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopHeaderView.swift; sourceTree = "<group>"; };
+		25AD3B9C1D420A59001610B7 /* YMTopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTopHeaderView.xib; sourceTree = "<group>"; };
+		25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeMoreController.swift; sourceTree = "<group>"; };
+		25AD3BA01D420F0F001610B7 /* YMFirstGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMFirstGroupCell.swift; sourceTree = "<group>"; };
+		25AD3BA11D420F0F001610B7 /* YMFirstGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMFirstGroupCell.xib; sourceTree = "<group>"; };
+		25AD3BA41D420F18001610B7 /* YMSecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSecondTableViewCell.swift; sourceTree = "<group>"; };
+		25AD3BA51D420F18001610B7 /* YMSecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSecondTableViewCell.xib; sourceTree = "<group>"; };
+		25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMFirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMFirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
 		94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
 		94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +287,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		25AD3B761D41C8F3001610B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25AD3B781D41C915001610B7 /* YMCollection.swift */,
+				25AD3B7A1D41CA20001610B7 /* YMGroup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25AD3B771D41C8F3001610B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25AD3B8E1D41F530001610B7 /* YMCategoryHeaderView.swift */,
+				25AD3B7C1D41DDB4001610B7 /* YMVerticalButton.swift */,
+				25AD3B841D41EF46001610B7 /* YMCategoryCollectionViewCell.swift */,
+				25AD3B851D41EF46001610B7 /* YMCategoryCollectionViewCell.xib */,
+				25AD3B9A1D420A4F001610B7 /* YMTopHeaderView.swift */,
+				25AD3B9C1D420A59001610B7 /* YMTopHeaderView.xib */,
+				25AD3BA01D420F0F001610B7 /* YMFirstGroupCell.swift */,
+				25AD3BA11D420F0F001610B7 /* YMFirstGroupCell.xib */,
+				25AD3BA41D420F18001610B7 /* YMSecondTableViewCell.swift */,
+				25AD3BA51D420F18001610B7 /* YMSecondTableViewCell.xib */,
+				25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */,
+				25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		71334DDCB8E57963AC7AE1DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,10 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				2586E2091D3F810C007C5178 /* Login&Register */,
-				94E044B31D3E7B1300BCB4B1 /* DanTang */,
-				94E044BD1D3E7B1300BCB4B1 /* Product */,
-				94E044B01D3E7B1300BCB4B1 /* Classify */,
-				94E044B71D3E7B1300BCB4B1 /* Me */,
+				94E044B31D3E7B1300BCB4B1 /* DanTang(单糖) */,
+				94E044BD1D3E7B1300BCB4B1 /* Product(单品) */,
+				94E044B01D3E7B1300BCB4B1 /* Classify(分类) */,
+				94E044B71D3E7B1300BCB4B1 /* Me(我) */,
 				94E044B61D3E7B1300BCB4B1 /* Main */,
 				94E044BA1D3E7B1300BCB4B1 /* Others */,
 				94E044C01D3E7B1300BCB4B1 /* Resource */,
@@ -287,11 +347,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		94E044B01D3E7B1300BCB4B1 /* Classify */ = {
+		94E044B01D3E7B1300BCB4B1 /* Classify(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				25AD3B761D41C8F3001610B7 /* Model */,
+				25AD3B771D41C8F3001610B7 /* View */,
 				94E044B11D3E7B1300BCB4B1 /* Controller */,
 			);
+			name = "Classify(分类)";
 			path = Classify;
 			sourceTree = "<group>";
 		};
@@ -299,17 +362,20 @@
 			isa = PBXGroup;
 			children = (
 				94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */,
+				25AD3B801D41E80C001610B7 /* YMCategoryHeaderViewController.swift */,
+				25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		94E044B31D3E7B1300BCB4B1 /* DanTang */ = {
+		94E044B31D3E7B1300BCB4B1 /* DanTang(单糖) */ = {
 			isa = PBXGroup;
 			children = (
 				2586E1F11D3F303D007C5178 /* View */,
 				2586E1EE1D3F2826007C5178 /* Model */,
 				94E044B41D3E7B1300BCB4B1 /* Controller */,
 			);
+			name = "DanTang(单糖)";
 			path = DanTang;
 			sourceTree = "<group>";
 		};
@@ -334,11 +400,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		94E044B71D3E7B1300BCB4B1 /* Me */ = {
+		94E044B71D3E7B1300BCB4B1 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
 				94E044B81D3E7B1300BCB4B1 /* Controller */,
 			);
+			name = "Me(我)";
 			path = Me;
 			sourceTree = "<group>";
 		};
@@ -359,13 +426,14 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
-		94E044BD1D3E7B1300BCB4B1 /* Product */ = {
+		94E044BD1D3E7B1300BCB4B1 /* Product(单品) */ = {
 			isa = PBXGroup;
 			children = (
 				25AD3B711D40B984001610B7 /* Model */,
 				25AD3B6C1D40B4D9001610B7 /* View */,
 				94E044BE1D3E7B1300BCB4B1 /* Controller */,
 			);
+			name = "Product(单品)";
 			path = Product;
 			sourceTree = "<group>";
 		};
@@ -508,13 +576,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				25AD3B271D406580001610B7 /* YMRegisterViewController.xib in Resources */,
+				25AD3B9D1D420A59001610B7 /* YMTopHeaderView.xib in Resources */,
 				2586E20E1D3F820B007C5178 /* YMLoginViewController.xib in Resources */,
 				25AD3B701D40B4DF001610B7 /* YMCollectionViewCell.xib in Resources */,
 				94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */,
 				94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */,
 				2586E1F71D3F3327007C5178 /* YMHomeCell.xib in Resources */,
 				94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */,
+				25AD3B871D41EF46001610B7 /* YMCategoryCollectionViewCell.xib in Resources */,
 				2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */,
+				25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */,
+				25AD3BA31D420F0F001610B7 /* YMFirstGroupCell.xib in Resources */,
+				25AD3BA71D420F18001610B7 /* YMSecondTableViewCell.xib in Resources */,
 				94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */,
 				94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */,
 			);
@@ -593,25 +666,36 @@
 				94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */,
 				94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */,
 				2586E2061D3F7C05007C5178 /* YMDetailViewController.swift in Sources */,
+				25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */,
 				94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */,
 				2586E2081D3F7E95007C5178 /* YMGoodsDetailViewController.swift in Sources */,
 				94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */,
+				25AD3BA61D420F18001610B7 /* YMSecondTableViewCell.swift in Sources */,
+				25AD3B7D1D41DDB4001610B7 /* YMVerticalButton.swift in Sources */,
 				25AD3B751D40CDD4001610B7 /* YMProductDetailViewController.swift in Sources */,
+				25AD3B9B1D420A4F001610B7 /* YMTopHeaderView.swift in Sources */,
+				25AD3B8F1D41F530001610B7 /* YMCategoryHeaderView.swift in Sources */,
+				25AD3BA21D420F0F001610B7 /* YMFirstGroupCell.swift in Sources */,
 				25AD3B261D406580001610B7 /* YMRegisterViewController.swift in Sources */,
 				2586E1F51D3F3260007C5178 /* YMBaseViewController.swift in Sources */,
 				94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */,
+				25AD3B7B1D41CA20001610B7 /* YMGroup.swift in Sources */,
 				2586E1ED1D3F246D007C5178 /* YMNetworkTool.swift in Sources */,
 				2586E1FC1D3F3E0E007C5178 /* UIView+Extension.swift in Sources */,
 				2586E20C1D3F811E007C5178 /* YMLoginViewController.swift in Sources */,
+				25AD3BAA1D42202E001610B7 /* YMFirstCollectionViewCell.swift in Sources */,
 				2586E1EB1D3F2453007C5178 /* YMConst.swift in Sources */,
+				25AD3B861D41EF46001610B7 /* YMCategoryCollectionViewCell.swift in Sources */,
 				94E044CA1D3E7B1300BCB4B1 /* YMProductViewController.swift in Sources */,
 				94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */,
 				2586E2041D3F511B007C5178 /* YMTopicViewController.swift in Sources */,
 				2586E1F91D3F3734007C5178 /* YMChannel.swift in Sources */,
 				25AD3B6F1D40B4DF001610B7 /* YMCollectionViewCell.swift in Sources */,
+				25AD3B811D41E80C001610B7 /* YMCategoryHeaderViewController.swift in Sources */,
 				2586E1FE1D3F3E1B007C5178 /* String+Extension.swift in Sources */,
 				2586E1F01D3F2854007C5178 /* YMHomeItem.swift in Sources */,
 				25AD3B731D40B993001610B7 /* YMProduct.swift in Sources */,
+				25AD3B791D41C915001610B7 /* YMCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

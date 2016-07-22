@@ -14,13 +14,13 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
     
     var channels = [YMChannel]()
     // 标签
-    var titlesView = UIView()
+    weak var titlesView = UIView()
     //底部红色指示器
-    var indicatorView = UIView()
+    weak var indicatorView = UIView()
     
-    var contentView = UIScrollView()
+    weak var contentView = UIScrollView()
     /// 当前选中的按钮
-    var selectedButton = UIButton()
+    weak var selectedButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,18 +122,18 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
     /// 标签上的按钮点击
     func titlesClick(button: UIButton) {
         // 修改按钮状态
-        selectedButton.enabled = true
+        selectedButton!.enabled = true
         button.enabled = false
         selectedButton = button
         // 让标签执行动画
         UIView.animateWithDuration(kAnimationDuration) { 
-            self.indicatorView.width = self.selectedButton.titleLabel!.width
-            self.indicatorView.centerX = self.selectedButton.centerX
+            self.indicatorView!.width = self.selectedButton!.titleLabel!.width
+            self.indicatorView!.centerX = self.selectedButton!.centerX
         }
         //滚动,切换子控制器
-        var offset = contentView.contentOffset
-        offset.x = CGFloat(button.tag) * contentView.width
-        contentView.setContentOffset(offset, animated: true)
+        var offset = contentView!.contentOffset
+        offset.x = CGFloat(button.tag) * contentView!.width
+        contentView!.setContentOffset(offset, animated: true)
     }
     
     /// 底部的scrollview
@@ -181,7 +181,7 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         // 当前索引
         let index = Int(scrollView.contentOffset.x / scrollView.width)
         // 点击 Button
-        let button = titlesView.subviews[index] as! UIButton
+        let button = titlesView!.subviews[index] as! UIButton
         titlesClick(button)
     }
 
