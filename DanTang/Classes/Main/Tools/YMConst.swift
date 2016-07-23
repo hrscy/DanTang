@@ -65,7 +65,7 @@ let klineWidth: CGFloat = 1.0
 /// 首页顶部标签指示条的高度
 let kIndicatorViewH: CGFloat = 2.0
 /// 新特性界面图片数量
-let kNewFeatureCount = 5
+let kNewFeatureCount = 4
 /// 顶部标题的高度
 let kTitlesViewH: CGFloat = 35
 /// 顶部标题的y

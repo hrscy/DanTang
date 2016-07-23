@@ -11,8 +11,10 @@
 import UIKit
 import SnapKit
 
-class YMProductDetailViewController: YMBaseViewController {
-
+class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBarDelegate {
+    
+    var product: YMProduct?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,7 @@ class YMProductDetailViewController: YMBaseViewController {
     /// 设置导航栏和底部栏
     func setupNav() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .Plain, target: self, action: #selector(shareBBItemClick))
+        toolBarView.delegate = self
         view.addSubview(toolBarView)
         toolBarView.snp_makeConstraints { (make) in
             make.left.bottom.right.equalTo(view)
@@ -43,5 +46,12 @@ class YMProductDetailViewController: YMBaseViewController {
             , options: nil).last as! YMProductDetailToolBar
         return toolBarView
     }()
-
+    
+    func toolBarDidClickedTMALLButton() {
+        let tmallVC = YMTMALLViewController()
+        tmallVC.title = "商品详情"
+        tmallVC.product = product
+        let nav = YMNavigationController(rootViewController: tmallVC)
+        presentViewController(nav, animated: true, completion: nil)
+    }
 }

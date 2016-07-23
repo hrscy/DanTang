@@ -69,6 +69,9 @@
 		94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */; };
 		94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C131D434571009E9609 /* YMActionSheet.swift */; };
 		94E66C161D439D62009E9609 /* YMShareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C151D439D62009E9609 /* YMShareButtonView.swift */; };
+		94E66C191D43AF37009E9609 /* YMTMALLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C171D43AF37009E9609 /* YMTMALLViewController.swift */; };
+		94E66C1A1D43AF37009E9609 /* YMTMALLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E66C181D43AF37009E9609 /* YMTMALLViewController.xib */; };
+		94E66C1C1D43B531009E9609 /* YMNewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C1B1D43B531009E9609 /* YMNewfeatureViewController.swift */; };
 		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +163,9 @@
 		94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMProductDetailToolBar.xib; sourceTree = "<group>"; };
 		94E66C131D434571009E9609 /* YMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMActionSheet.swift; sourceTree = "<group>"; };
 		94E66C151D439D62009E9609 /* YMShareButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMShareButtonView.swift; sourceTree = "<group>"; };
+		94E66C171D43AF37009E9609 /* YMTMALLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTMALLViewController.swift; sourceTree = "<group>"; };
+		94E66C181D43AF37009E9609 /* YMTMALLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTMALLViewController.xib; sourceTree = "<group>"; };
+		94E66C1B1D43B531009E9609 /* YMNewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNewfeatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,7 @@
 				2586E20D1D3F820B007C5178 /* YMLoginViewController.xib */,
 				25AD3B241D406580001610B7 /* YMRegisterViewController.swift */,
 				25AD3B251D406580001610B7 /* YMRegisterViewController.xib */,
+				94E66C1B1D43B531009E9609 /* YMNewfeatureViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -473,6 +480,8 @@
 			children = (
 				94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */,
 				25AD3B741D40CDD4001610B7 /* YMProductDetailViewController.swift */,
+				94E66C171D43AF37009E9609 /* YMTMALLViewController.swift */,
+				94E66C181D43AF37009E9609 /* YMTMALLViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -638,6 +647,7 @@
 				25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */,
 				94E044E31D4315D800BCB4B1 /* YMSettingCell.xib in Resources */,
 				25AD3BA31D420F0F001610B7 /* YMFirstGroupCell.xib in Resources */,
+				94E66C1A1D43AF37009E9609 /* YMTMALLViewController.xib in Resources */,
 				94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */,
 				25AD3BA71D420F18001610B7 /* YMSecondTableViewCell.xib in Resources */,
 				94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */,
@@ -718,6 +728,7 @@
 				2586E1F31D3F305C007C5178 /* YMHomeCell.swift in Sources */,
 				94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */,
 				94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */,
+				94E66C191D43AF37009E9609 /* YMTMALLViewController.swift in Sources */,
 				2586E2061D3F7C05007C5178 /* YMDetailViewController.swift in Sources */,
 				25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */,
 				94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */,
@@ -749,6 +760,7 @@
 				2586E1F91D3F3734007C5178 /* YMChannel.swift in Sources */,
 				25AD3B6F1D40B4DF001610B7 /* YMCollectionViewCell.swift in Sources */,
 				25AD3B811D41E80C001610B7 /* YMCategoryHeaderViewController.swift in Sources */,
+				94E66C1C1D43B531009E9609 /* YMNewfeatureViewController.swift in Sources */,
 				2586E1FE1D3F3E1B007C5178 /* String+Extension.swift in Sources */,
 				2586E1F01D3F2854007C5178 /* YMHomeItem.swift in Sources */,
 				94E044DA1D42F75800BCB4B1 /* YMMineHeaderView.swift in Sources */,

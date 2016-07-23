@@ -43,7 +43,7 @@
 	<array>
 		<dict>
 			<key>iconImage</key>
-			<string></string>
+			<string>checkUserType_icon_identity_21x21_</string>
 			<key>leftTitle</key>
 			<string>我的身份</string>
 			<key>rightTitle</key>

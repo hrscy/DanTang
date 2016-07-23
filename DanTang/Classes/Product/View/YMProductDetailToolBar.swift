@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol YMProductDetailToolBarDelegate: NSObjectProtocol {
+    func toolBarDidClickedTMALLButton()
+}
+
 class YMProductDetailToolBar: UIView {
+    
+    weak var delegate: YMProductDetailToolBarDelegate?
     
     @IBOutlet weak var likeButton: UIButton!
     
@@ -32,7 +38,7 @@ class YMProductDetailToolBar: UIView {
         }
     }
     
-    @IBAction func goTALLButtonClick() {
-        
+    @IBAction func goTMALLButtonClick() {
+        delegate?.toolBarDidClickedTMALLButton()
     }
 }

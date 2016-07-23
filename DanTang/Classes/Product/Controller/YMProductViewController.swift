@@ -58,6 +58,7 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
          let productDetailVC = YMProductDetailViewController()
         productDetailVC.title = "商品详情"
+        productDetailVC.product = products[indexPath.item]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }
     // MARK: - UICollectionViewDelegateFlowLayout

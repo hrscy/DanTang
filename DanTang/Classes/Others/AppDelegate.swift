@@ -18,10 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
         // 创建 window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // 创建根控制器
-        window?.rootViewController = YMTabBarController()
         window?.makeKeyAndVisible()
-        
+        // 检测用户是不是第一次启动
+        if !NSUserDefaults.standardUserDefaults().boolForKey(YMFirstLaunch) {
+            window?.rootViewController = YMNewfeatureViewController()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: YMFirstLaunch)
+        } else {
+            window?.rootViewController = YMTabBarController()
+        }
         return true
     }
     
