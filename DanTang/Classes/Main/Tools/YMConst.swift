@@ -65,6 +65,8 @@ let SCREENH = UIScreen.mainScreen().bounds.size.height
 let kitemH: CGFloat = 75
 /// 分类界面 顶部 item 的宽
 let kitemW: CGFloat = 150
+/// 我的界面头部图像的高度
+let kYMMineHeaderImageHeight: CGFloat = 200
 
 /// RGBA的颜色设置
 func YMColor(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {

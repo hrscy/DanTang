@@ -29,6 +29,10 @@ class YMLoginViewController: YMBaseViewController {
         super.didReceiveMemoryWarning()
         
     }
+    @IBAction func loginButtonClick(sender: UIButton) {
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: isLogin)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     // MARK: - 设置导航栏按钮
     private func setupBarButtonItem() {
