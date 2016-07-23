@@ -65,6 +65,9 @@
 		94E044DF1D430E4700BCB4B1 /* YMSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044DE1D430E4700BCB4B1 /* YMSetting.swift */; };
 		94E044E21D4315D800BCB4B1 /* YMSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044E01D4315D800BCB4B1 /* YMSettingCell.swift */; };
 		94E044E31D4315D800BCB4B1 /* YMSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E044E11D4315D800BCB4B1 /* YMSettingCell.xib */; };
+		94E66C101D433EC7009E9609 /* YMProductDetailToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */; };
+		94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */; };
+		94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C131D434571009E9609 /* YMActionSheet.swift */; };
 		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +155,9 @@
 		94E044DE1D430E4700BCB4B1 /* YMSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSetting.swift; sourceTree = "<group>"; };
 		94E044E01D4315D800BCB4B1 /* YMSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSettingCell.swift; sourceTree = "<group>"; };
 		94E044E11D4315D800BCB4B1 /* YMSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSettingCell.xib; sourceTree = "<group>"; };
+		94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailToolBar.swift; sourceTree = "<group>"; };
+		94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMProductDetailToolBar.xib; sourceTree = "<group>"; };
+		94E66C131D434571009E9609 /* YMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMActionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +295,9 @@
 			children = (
 				25AD3B6D1D40B4DF001610B7 /* YMCollectionViewCell.swift */,
 				25AD3B6E1D40B4DF001610B7 /* YMCollectionViewCell.xib */,
+				94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */,
+				94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */,
+				94E66C131D434571009E9609 /* YMActionSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -626,6 +635,7 @@
 				25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */,
 				94E044E31D4315D800BCB4B1 /* YMSettingCell.xib in Resources */,
 				25AD3BA31D420F0F001610B7 /* YMFirstGroupCell.xib in Resources */,
+				94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */,
 				25AD3BA71D420F18001610B7 /* YMSecondTableViewCell.xib in Resources */,
 				94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */,
 				94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */,
@@ -720,6 +730,7 @@
 				2586E1F51D3F3260007C5178 /* YMBaseViewController.swift in Sources */,
 				94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */,
 				25AD3B7B1D41CA20001610B7 /* YMGroup.swift in Sources */,
+				94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */,
 				2586E1ED1D3F246D007C5178 /* YMNetworkTool.swift in Sources */,
 				2586E1FC1D3F3E0E007C5178 /* UIView+Extension.swift in Sources */,
 				2586E20C1D3F811E007C5178 /* YMLoginViewController.swift in Sources */,
@@ -737,6 +748,7 @@
 				2586E1FE1D3F3E1B007C5178 /* String+Extension.swift in Sources */,
 				2586E1F01D3F2854007C5178 /* YMHomeItem.swift in Sources */,
 				94E044DA1D42F75800BCB4B1 /* YMMineHeaderView.swift in Sources */,
+				94E66C101D433EC7009E9609 /* YMProductDetailToolBar.swift in Sources */,
 				25AD3B731D40B993001610B7 /* YMProduct.swift in Sources */,
 				94E044DF1D430E4700BCB4B1 /* YMSetting.swift in Sources */,
 				25AD3B791D41C915001610B7 /* YMCollection.swift in Sources */,

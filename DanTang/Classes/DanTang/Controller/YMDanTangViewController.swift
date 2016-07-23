@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
+class YMDanTangViewController: YMBaseViewController {
     
     var channels = [YMChannel]()
     // 标签
@@ -161,7 +161,10 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
     func dantangRightBBClick() {
         print(#function)
     }
-    
+}
+
+
+extension YMDanTangViewController: UIScrollViewDelegate {
     // MARK: - UIScrollViewDelegate
     func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
         // 添加子控制器的 view
@@ -184,6 +187,6 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         let button = titlesView!.subviews[index] as! UIButton
         titlesClick(button)
     }
-
 }
+
 

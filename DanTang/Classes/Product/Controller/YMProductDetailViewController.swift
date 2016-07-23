@@ -9,18 +9,39 @@
 //
 
 import UIKit
+import SnapKit
 
 class YMProductDetailViewController: YMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupNav()
+    }
+    
+    /// 设置导航栏和底部栏
+    func setupNav() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .Plain, target: self, action: #selector(shareBBItemClick))
+        view.addSubview(toolBarView)
+        toolBarView.snp_makeConstraints { (make) in
+            make.left.bottom.right.equalTo(view)
+            make.height.equalTo(45)
+        }
+    }
+    
+    func shareBBItemClick() {
+        YMActionSheet.show()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private lazy var toolBarView: YMProductDetailToolBar = {
+        let toolBarView = NSBundle.mainBundle().loadNibNamed(String(YMProductDetailToolBar), owner: nil
+            , options: nil).last as! YMProductDetailToolBar
+        return toolBarView
+    }()
 
 }

@@ -41,6 +41,7 @@ class YMCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     @IBAction func likeButtonClick(sender: UIButton) {
