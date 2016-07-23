@@ -68,6 +68,7 @@
 		94E66C101D433EC7009E9609 /* YMProductDetailToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */; };
 		94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */; };
 		94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C131D434571009E9609 /* YMActionSheet.swift */; };
+		94E66C161D439D62009E9609 /* YMShareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C151D439D62009E9609 /* YMShareButtonView.swift */; };
 		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +159,7 @@
 		94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailToolBar.swift; sourceTree = "<group>"; };
 		94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMProductDetailToolBar.xib; sourceTree = "<group>"; };
 		94E66C131D434571009E9609 /* YMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMActionSheet.swift; sourceTree = "<group>"; };
+		94E66C151D439D62009E9609 /* YMShareButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMShareButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				94E66C0F1D433EC7009E9609 /* YMProductDetailToolBar.swift */,
 				94E66C111D433ECF009E9609 /* YMProductDetailToolBar.xib */,
 				94E66C131D434571009E9609 /* YMActionSheet.swift */,
+				94E66C151D439D62009E9609 /* YMShareButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */,
 				2586E1ED1D3F246D007C5178 /* YMNetworkTool.swift in Sources */,
 				2586E1FC1D3F3E0E007C5178 /* UIView+Extension.swift in Sources */,
+				94E66C161D439D62009E9609 /* YMShareButtonView.swift in Sources */,
 				2586E20C1D3F811E007C5178 /* YMLoginViewController.swift in Sources */,
 				94E044D51D42F27400BCB4B1 /* YMMessageViewController.swift in Sources */,
 				25AD3BAA1D42202E001610B7 /* YMFirstCollectionViewCell.swift in Sources */,

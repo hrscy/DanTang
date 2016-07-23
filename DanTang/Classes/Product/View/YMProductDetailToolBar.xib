@@ -27,7 +27,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="likeButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="5KP-U3-vd4"/>
+                        <action selector="likeButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yb7-2F-610"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-3z-SL1">
@@ -70,7 +70,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="likeButton" destination="QDG-Qa-Izc" id="hQw-3V-WeG"/>
+                <outlet property="likeButton" destination="QDG-Qa-Izc" id="mXb-Dh-ziP"/>
             </connections>
         </view>
     </objects>

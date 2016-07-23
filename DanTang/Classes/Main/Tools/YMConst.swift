@@ -22,6 +22,21 @@ enum YMTopicType: Int {
     case Grocery = 22
 }
 
+enum YMShareButtonType: Int {
+    /// 微信朋友圈
+    case WeChatTimeline = 0
+    /// 微信好友
+    case WeChatSession = 1
+    /// 微博
+    case Weibo = 2
+    /// QQ 空间
+    case QZone = 3
+    /// QQ 好友
+    case QQFriends = 4
+    /// 复制链接
+    case CopyLink = 5
+}
+
 enum YMOtherLoginButtonType: Int {
     /// 微博
     case weiboLogin = 100
@@ -67,6 +82,9 @@ let kitemH: CGFloat = 75
 let kitemW: CGFloat = 150
 /// 我的界面头部图像的高度
 let kYMMineHeaderImageHeight: CGFloat = 200
+// 分享按钮背景高度
+let kTopViewH: CGFloat = 230
+
 
 /// RGBA的颜色设置
 func YMColor(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
