@@ -71,7 +71,9 @@ class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDele
     
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.item)
+        let collectionDetailVC = YMCollectionDetailController()
+        collectionDetailVC.collection = collections[indexPath.row]
+        navigationController?.pushViewController(collectionDetailVC, animated: true)
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout

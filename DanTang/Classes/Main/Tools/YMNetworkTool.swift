@@ -18,7 +18,7 @@ class YMNetworkTool: NSObject {
     /// 获取首页数据
     func loadHomeInfo(id: Int, finished:(homeItems: [YMHomeItem]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/channels/" + String(id) + "/items?gender=1&generation=1&limit=20&offset=0"
+        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
         Alamofire
             .request(.GET, url)
             .responseJSON { (response) in
@@ -147,6 +147,40 @@ class YMNetworkTool: NSObject {
                                 collections.append(collection)
                             }
                             finished(collections: collections)
+                        }
+                    }
+                }
+        }
+    }
+    
+    /// 顶部 专题合集 -> 专题列表
+    func loadCollectionPosts(id: Int, finished:(posts: [YMCollectionPost]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v1/collections/\(id)/posts?gender=1&generation=1&limit=20&offset=0"
+        Alamofire
+            .request(.GET, url)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionary {
+                        if let postsData = data["posts"]?.arrayObject {
+                            var posts = [YMCollectionPost]()
+                            for item in postsData {
+                                let post = YMCollectionPost(dict: item as! [String: AnyObject])
+                                posts.append(post)
+                            }
+                            finished(posts: posts)
                         }
                     }
                 }
