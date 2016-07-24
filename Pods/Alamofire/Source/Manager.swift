@@ -1,24 +1,26 @@
-// Manager.swift
 //
-// Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Manager.swift
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 
 import Foundation
 
@@ -59,14 +61,37 @@ public class Manager {
                 let executable = info[kCFBundleExecutableKey as String] as? String ?? "Unknown"
                 let bundle = info[kCFBundleIdentifierKey as String] as? String ?? "Unknown"
                 let version = info[kCFBundleVersionKey as String] as? String ?? "Unknown"
-                let os = NSProcessInfo.processInfo().operatingSystemVersionString
 
-                var mutableUserAgent = NSMutableString(string: "\(executable)/\(bundle) (\(version); OS \(os))") as CFMutableString
-                let transform = NSString(string: "Any-Latin; Latin-ASCII; [:^ASCII:] Remove") as CFString
+                let osNameVersion: String = {
+                    let versionString: String
 
-                if CFStringTransform(mutableUserAgent, UnsafeMutablePointer<CFRange>(nil), transform, false) {
-                    return mutableUserAgent as String
-                }
+                    if #available(OSX 10.10, *) {
+                        let version = NSProcessInfo.processInfo().operatingSystemVersion
+                        versionString = "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
+                    } else {
+                        versionString = "10.9"
+                    }
+
+                    let osName: String = {
+                        #if os(iOS)
+                            return "iOS"
+                        #elseif os(watchOS)
+                            return "watchOS"
+                        #elseif os(tvOS)
+                            return "tvOS"
+                        #elseif os(OSX)
+                            return "OS X"
+                        #elseif os(Linux)
+                            return "Linux"
+                        #else
+                            return "Unknown"
+                        #endif
+                    }()
+
+                    return "\(osName) \(versionString)"
+                }()
+
+                return "\(executable)/\(bundle) (\(version); \(osNameVersion))"
             }
 
             return "Alamofire"
@@ -143,10 +168,10 @@ public class Manager {
         delegate: SessionDelegate,
         serverTrustPolicyManager: ServerTrustPolicyManager? = nil)
     {
+        guard delegate === session.delegate else { return nil }
+
         self.delegate = delegate
         self.session = session
-
-        guard delegate === session.delegate else { return nil }
 
         commonInit(serverTrustPolicyManager: serverTrustPolicyManager)
     }
@@ -218,18 +243,18 @@ public class Manager {
     /**
         Responsible for handling all delegate callbacks for the underlying session.
     */
-    public final class SessionDelegate: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate {
+    public class SessionDelegate: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate {
         private var subdelegates: [Int: Request.TaskDelegate] = [:]
         private let subdelegateQueue = dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT)
 
-        subscript(task: NSURLSessionTask) -> Request.TaskDelegate? {
+        /// Access the task delegate for the specified task in a thread-safe manner.
+        public subscript(task: NSURLSessionTask) -> Request.TaskDelegate? {
             get {
                 var subdelegate: Request.TaskDelegate?
                 dispatch_sync(subdelegateQueue) { subdelegate = self.subdelegates[task.taskIdentifier] }
 
                 return subdelegate
             }
-
             set {
                 dispatch_barrier_async(subdelegateQueue) { self.subdelegates[task.taskIdentifier] = newValue }
             }
@@ -740,11 +765,11 @@ public class Manager {
             case #selector(NSURLSessionDelegate.URLSession(_:didBecomeInvalidWithError:)):
                 return sessionDidBecomeInvalidWithError != nil
             case #selector(NSURLSessionDelegate.URLSession(_:didReceiveChallenge:completionHandler:)):
-                return sessionDidReceiveChallenge != nil
+                return (sessionDidReceiveChallenge != nil  || sessionDidReceiveChallengeWithCompletion != nil)
             case #selector(NSURLSessionTaskDelegate.URLSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)):
-                return taskWillPerformHTTPRedirection != nil
+                return (taskWillPerformHTTPRedirection != nil || taskWillPerformHTTPRedirectionWithCompletion != nil)
             case #selector(NSURLSessionDataDelegate.URLSession(_:dataTask:didReceiveResponse:completionHandler:)):
-                return dataTaskDidReceiveResponse != nil
+                return (dataTaskDidReceiveResponse != nil || dataTaskDidReceiveResponseWithCompletion != nil)
             default:
                 return self.dynamicType.instancesRespondToSelector(selector)
             }

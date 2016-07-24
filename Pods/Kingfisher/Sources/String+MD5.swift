@@ -2,12 +2,9 @@
 //  String+MD5.swift
 //  Kingfisher
 //
-// This file is stolen from HanekeSwift: https://github.com/Haneke/HanekeSwift/blob/master/Haneke/CryptoSwiftMD5.swift
-// which is a modified version of CryptoSwift:
-//
 // To date, adding CommonCrypto to a Swift framework is problematic. See:
 // http://stackoverflow.com/questions/25248598/importing-commoncrypto-in-a-swift-framework
-// We're using a subset of CryptoSwift as a (temporary?) alternative.
+// We're using a subset and modified version of CryptoSwift as an alternative.
 // The following is an altered source version that only includes MD5. The original software can be found at:
 // https://github.com/krzyzanowskim/CryptoSwift
 // This is the original copyright notice:
@@ -106,15 +103,6 @@ extension HashProtocol {
         return tmpMessage
     }
 }
-// func anyGenerator is renamed to AnyGenerator in Swift 2.2,
-// until then it's just dirty hack for linux (because swift >= 2.2 is available for Linux)
-private func CS_AnyGenerator<Element>(body: () -> Element?) -> AnyGenerator<Element> {
-    #if os(Linux)
-        return AnyGenerator(body: body)
-    #else
-        return AnyGenerator(body: body)
-    #endif
-}
 
 func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
     var result = Array<UInt32>()
@@ -132,20 +120,32 @@ func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
     return result
 }
 
+struct BytesGenerator: GeneratorType {
+    
+    let chunkSize: Int
+    let data: [UInt8]
+    
+    init(chunkSize: Int, data: [UInt8]) {
+        self.chunkSize = chunkSize
+        self.data = data
+    }
+    
+    var offset = 0
+    
+    mutating func next() -> ArraySlice<UInt8>? {
+        let end = min(chunkSize, data.count - offset)
+        let result = data[offset..<offset + end]
+        offset += result.count
+        return result.count > 0 ? result : nil
+    }
+}
+
 struct BytesSequence: SequenceType {
     let chunkSize: Int
     let data: [UInt8]
     
-    func generate() -> AnyGenerator<ArraySlice<UInt8>> {
-        
-        var offset: Int = 0
-        
-        return CS_AnyGenerator {
-            let end = min(self.chunkSize, self.data.count - offset)
-            let result = self.data[offset..<offset + end]
-            offset += result.count
-            return result.count > 0 ? result : nil
-        }
+    func generate() -> BytesGenerator {
+        return BytesGenerator(chunkSize: chunkSize, data: data)
     }
 }
 
@@ -163,10 +163,10 @@ class MD5: HashProtocol {
     }
     
     /** specifies the per-round shift amounts */
-    private let shifts: [UInt32] = [7, 12, 17, 22,  7, 12, 17, 22,  7, 12, 17, 22,  7, 12, 17, 22,
-        5,  9, 14, 20,  5,  9, 14, 20,  5,  9, 14, 20,  5,  9, 14, 20,
-        4, 11, 16, 23,  4, 11, 16, 23,  4, 11, 16, 23,  4, 11, 16, 23,
-        6, 10, 15, 21,  6, 10, 15, 21,  6, 10, 15, 21,  6, 10, 15, 21]
+    private let shifts: [UInt32] = [7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22,
+                                    5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20,
+                                    4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23,
+                                    6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21]
     
     /** binary integer part of the sines of integers (Radians) */
     private let sines: [UInt32] = [0xd76aa478, 0xe8c7b756, 0x242070db, 0xc1bdceee,

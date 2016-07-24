@@ -1,24 +1,26 @@
-// NetworkReachabilityManager.swift
 //
-// Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
+//  NetworkReachabilityManager.swift
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 
 #if !os(watchOS)
 
@@ -114,32 +116,23 @@ public class NetworkReachabilityManager {
     }
 
     /**
-        Creates a `NetworkReachabilityManager` instance with the default socket IPv4 or IPv6 address.
+        Creates a `NetworkReachabilityManager` instance that monitors the address 0.0.0.0.
+
+        Reachability treats the 0.0.0.0 address as a special token that causes it to monitor the general routing
+        status of the device, both IPv4 and IPv6.
 
         - returns: The new `NetworkReachabilityManager` instance.
-     */
+    */
     public convenience init?() {
-        if #available(iOS 9.0, OSX 10.10, *) {
-            var address = sockaddr_in6()
-            address.sin6_len = UInt8(sizeofValue(address))
-            address.sin6_family = sa_family_t(AF_INET6)
+        var address = sockaddr_in()
+        address.sin_len = UInt8(sizeofValue(address))
+        address.sin_family = sa_family_t(AF_INET)
 
-            guard let reachability = withUnsafePointer(&address, {
-                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-            }) else { return nil }
+        guard let reachability = withUnsafePointer(&address, {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+        }) else { return nil }
 
-            self.init(reachability: reachability)
-        } else {
-            var address = sockaddr_in()
-            address.sin_len = UInt8(sizeofValue(address))
-            address.sin_family = sa_family_t(AF_INET)
-
-            guard let reachability = withUnsafePointer(&address, {
-                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-            }) else { return nil }
-
-            self.init(reachability: reachability)
-        }
+        self.init(reachability: reachability)
     }
 
     private init(reachability: SCNetworkReachability) {

@@ -8,7 +8,9 @@ pod "Kingfisher"
 pod "SVProgressHUD"
 pod "FDFullscreenPopGesture", "~> 1.1"
 pod "Alamofire"
+# pod "AlamofireObjectMapper"
+pod "RxSwift"
+pod "RxCocoa"
 pod "SwiftyJSON"
-
 end
 

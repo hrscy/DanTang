@@ -1,24 +1,26 @@
-// ResponseSerialization.swift
 //
-// Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
+//  ResponseSerialization.swift
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 
 import Foundation
 
@@ -161,7 +163,7 @@ extension Request {
 
             guard let validData = data else {
                 let failureReason = "Data could not be serialized. Input data was nil."
-                let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
+                let error = Error.error(code: .DataSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
 
@@ -209,7 +211,7 @@ extension Request {
 
             guard let validData = data else {
                 let failureReason = "String could not be serialized. Input data was nil."
-                let error = Error.errorWithCode(.StringSerializationFailed, failureReason: failureReason)
+                let error = Error.error(code: .StringSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
             
@@ -227,7 +229,7 @@ extension Request {
                 return .Success(string)
             } else {
                 let failureReason = "String could not be serialized with encoding: \(actualEncoding)"
-                let error = Error.errorWithCode(.StringSerializationFailed, failureReason: failureReason)
+                let error = Error.error(code: .StringSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
         }
@@ -280,7 +282,7 @@ extension Request {
 
             guard let validData = data where validData.length > 0 else {
                 let failureReason = "JSON could not be serialized. Input data was nil or zero length."
-                let error = Error.errorWithCode(.JSONSerializationFailed, failureReason: failureReason)
+                let error = Error.error(code: .JSONSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
 
@@ -338,7 +340,7 @@ extension Request {
 
             guard let validData = data where validData.length > 0 else {
                 let failureReason = "Property list could not be serialized. Input data was nil or zero length."
-                let error = Error.errorWithCode(.PropertyListSerializationFailed, failureReason: failureReason)
+                let error = Error.error(code: .PropertyListSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
 

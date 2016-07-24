@@ -42,13 +42,15 @@ Items could be added into KingfisherOptionsInfo.
 
 - TargetCache: The associated value of this member should be an ImageCache object. Kingfisher will use the specified cache object when handling related operations, including trying to retrieve the cached images and store the downloaded image to it.
 - Downloader:  The associated value of this member should be an ImageDownloader object. Kingfisher will use this downloader to download the images.
-- Transition:  Member for animation transition when using UIImageView. Kingfisher will use the `ImageTransition` of this enum to animate the image in if it is downloaded from web. The transition will not happen when the image is retrieved from either memory or disk cache.
+- Transition:  Member for animation transition when using UIImageView. Kingfisher will use the `ImageTransition` of this enum to animate the image in if it is downloaded from web. The transition will not happen when the image is retrieved from either memory or disk cache by default. If you need to do the transition even when the image being retrieved from cache, set `ForceTransition` as well.
 - DownloadPriority: Associated `Float` value will be set as the priority of image download task. The value for it should be between 0.0~1.0. If this option not set, the default value (`NSURLSessionTaskPriorityDefault`) will be used.
 - ForceRefresh: If set, `Kingfisher` will ignore the cache and try to fire a download task for the resource.
+- ForceTransition: If set, setting the image to an image view will happen with transition even when retrieved from cache. See `Transition` option for more.
 - CacheMemoryOnly: If set, `Kingfisher` will only cache the value in memory but not in disk.
 - BackgroundDecode: Decode the image in background thread before using.
 - CallbackDispatchQueue: The associated value of this member will be used as the target queue of dispatch callbacks when retrieving images from cache. If not set, `Kingfisher` will use main quese for callbacks.
 - ScaleFactor: The associated value of this member will be used as the scale factor when converting retrieved data to an image.
+- PreloadAllGIFData: Whether all the GIF data should be preloaded. Default it false, which means following frames will be loaded on need. If true, all the GIF data will be loaded and decoded into memory. This option is mainly used for back compatibility internally. You should not set it directly. `AnimatedImageView` will not preload all data, while a normal image view (`UIImageView` or `NSImageView`) will load all data. Choose to use corresponding image view type instead of setting this option.
 */
 public enum KingfisherOptionsInfoItem {
     case TargetCache(ImageCache?)
@@ -56,10 +58,12 @@ public enum KingfisherOptionsInfoItem {
     case Transition(ImageTransition)
     case DownloadPriority(Float)
     case ForceRefresh
+    case ForceTransition
     case CacheMemoryOnly
     case BackgroundDecode
     case CallbackDispatchQueue(dispatch_queue_t?)
     case ScaleFactor(CGFloat)
+    case PreloadAllGIFData
 }
 
 infix operator <== {
@@ -70,15 +74,18 @@ infix operator <== {
 // This operator returns true if two `KingfisherOptionsInfoItem` enum is the same, without considering the associated values.
 func <== (lhs: KingfisherOptionsInfoItem, rhs: KingfisherOptionsInfoItem) -> Bool {
     switch (lhs, rhs) {
-    case (.TargetCache(_), .TargetCache(_)): return true
-    case (.Downloader(_), .Downloader(_)): return true
-    case (.Transition(_), .Transition(_)): return true
-    case (.DownloadPriority(_), .DownloadPriority(_)): return true
-    case (.ForceRefresh, .ForceRefresh): return true
-    case (.CacheMemoryOnly, .CacheMemoryOnly): return true
-    case (.BackgroundDecode, .BackgroundDecode): return true
-    case (.CallbackDispatchQueue(_), .CallbackDispatchQueue(_)): return true
-    case (.ScaleFactor(_), .ScaleFactor(_)): return true
+    case (.TargetCache(_), .TargetCache(_)): fallthrough
+    case (.Downloader(_), .Downloader(_)): fallthrough
+    case (.Transition(_), .Transition(_)): fallthrough
+    case (.DownloadPriority(_), .DownloadPriority(_)): fallthrough
+    case (.ForceRefresh, .ForceRefresh): fallthrough
+    case (.ForceTransition, .ForceTransition): fallthrough
+    case (.CacheMemoryOnly, .CacheMemoryOnly): fallthrough
+    case (.BackgroundDecode, .BackgroundDecode): fallthrough
+    case (.CallbackDispatchQueue(_), .CallbackDispatchQueue(_)): fallthrough
+    case (.ScaleFactor(_), .ScaleFactor(_)): fallthrough
+    case (.PreloadAllGIFData, .PreloadAllGIFData): return true
+        
     default: return false
     }
 }
@@ -134,12 +141,20 @@ extension CollectionType where Generator.Element == KingfisherOptionsInfoItem {
         return contains{ $0 <== .ForceRefresh }
     }
     
+    var forceTransition: Bool {
+        return contains{ $0 <== .ForceTransition }
+    }
+    
     var cacheMemoryOnly: Bool {
         return contains{ $0 <== .CacheMemoryOnly }
     }
     
     var backgroundDecode: Bool {
         return contains{ $0 <== .BackgroundDecode }
+    }
+    
+    var preloadAllGIFData: Bool {
+        return contains { $0 <== .PreloadAllGIFData }
     }
     
     var callbackDispatchQueue: dispatch_queue_t {
