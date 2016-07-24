@@ -10,16 +10,18 @@
 
 import UIKit
 
-class YMMeViewController: YMBaseViewController, UITableViewDataSource, UITableViewDelegate {
+class YMMeViewController: YMBaseViewController {
+    
+    var cellCount = 0
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
     }
     
@@ -32,32 +34,7 @@ class YMMeViewController: YMBaseViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableHeaderView = headerView
-        tableView.tableFooterView = UIView()
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        if offsetY < 0 {
-            var tempFrame = headerView.bgImageView.frame
-            tempFrame.origin.y = offsetY
-            tempFrame.size.height = kYMMineHeaderImageHeight - offsetY
-            headerView.bgImageView.frame = tempFrame
-        }
-        
+        tableView.tableFooterView = footerView
     }
     
     private lazy var headerView: YMMineHeaderView = {
@@ -105,9 +82,51 @@ class YMMeViewController: YMBaseViewController, UITableViewDataSource, UITableVi
         navigationController?.pushViewController(settingVC, animated: true)
     }
     
+    private lazy var footerView: YMMeFooterView = {
+        let footerView = YMMeFooterView()
+        footerView.width = SCREENW
+        footerView.height = 200
+        return footerView
+    }()
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
+extension YMMeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let choiceView = YMMeChoiceView()
+        return choiceView
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellCount
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < 0 {
+            var tempFrame = headerView.bgImageView.frame
+            tempFrame.origin.y = offsetY
+            tempFrame.size.height = kYMMineHeaderImageHeight - offsetY
+            headerView.bgImageView.frame = tempFrame
+        }
+        
+    }
 }

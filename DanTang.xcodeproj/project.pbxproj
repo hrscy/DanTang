@@ -47,6 +47,9 @@
 		25AD3BAA1D42202E001610B7 /* YMFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */; };
 		25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */; };
 		94A4410B1D4463A9005E73FE /* YMCategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */; };
+		94A4410D1D44FCD4005E73FE /* YMMeChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4410C1D44FCD4005E73FE /* YMMeChoiceView.swift */; };
+		94A441111D4509AC005E73FE /* UITableView+EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441101D4509AC005E73FE /* UITableView+EmptyData.swift */; };
+		94A441131D451096005E73FE /* YMMeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441121D451096005E73FE /* YMMeFooterView.swift */; };
 		94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */; };
 		94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */; };
 		94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */; };
@@ -149,6 +152,9 @@
 		25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMFirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
 		94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryBottomView.swift; sourceTree = "<group>"; };
+		94A4410C1D44FCD4005E73FE /* YMMeChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeChoiceView.swift; sourceTree = "<group>"; };
+		94A441101D4509AC005E73FE /* UITableView+EmptyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyData.swift"; sourceTree = "<group>"; };
+		94A441121D451096005E73FE /* YMMeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeFooterView.swift; sourceTree = "<group>"; };
 		94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
 		94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
 		94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +297,7 @@
 			children = (
 				2586E1FD1D3F3E1B007C5178 /* String+Extension.swift */,
 				2586E1FB1D3F3E0E007C5178 /* UIView+Extension.swift */,
+				94A441101D4509AC005E73FE /* UITableView+EmptyData.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -537,6 +544,8 @@
 				94E044D91D42F75800BCB4B1 /* YMMineHeaderView.swift */,
 				94E044E01D4315D800BCB4B1 /* YMSettingCell.swift */,
 				94E044E11D4315D800BCB4B1 /* YMSettingCell.xib */,
+				94A4410C1D44FCD4005E73FE /* YMMeChoiceView.swift */,
+				94A441121D451096005E73FE /* YMMeFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -760,10 +769,12 @@
 				94E66C1F1D444B3F009E9609 /* YMCollectionDetailController.swift in Sources */,
 				94E66C191D43AF37009E9609 /* YMTMALLViewController.swift in Sources */,
 				2586E2061D3F7C05007C5178 /* YMDetailViewController.swift in Sources */,
+				94A441131D451096005E73FE /* YMMeFooterView.swift in Sources */,
 				25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */,
 				94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */,
 				2586E2081D3F7E95007C5178 /* YMGoodsDetailViewController.swift in Sources */,
 				94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */,
+				94A4410D1D44FCD4005E73FE /* YMMeChoiceView.swift in Sources */,
 				25AD3BA61D420F18001610B7 /* YMSecondTableViewCell.swift in Sources */,
 				25AD3B7D1D41DDB4001610B7 /* YMVerticalButton.swift in Sources */,
 				25AD3B751D40CDD4001610B7 /* YMProductDetailViewController.swift in Sources */,
@@ -777,6 +788,7 @@
 				94E66C141D434571009E9609 /* YMActionSheet.swift in Sources */,
 				2586E1ED1D3F246D007C5178 /* YMNetworkTool.swift in Sources */,
 				2586E1FC1D3F3E0E007C5178 /* UIView+Extension.swift in Sources */,
+				94A441111D4509AC005E73FE /* UITableView+EmptyData.swift in Sources */,
 				94E66C161D439D62009E9609 /* YMShareButtonView.swift in Sources */,
 				2586E20C1D3F811E007C5178 /* YMLoginViewController.swift in Sources */,
 				94E044D51D42F27400BCB4B1 /* YMMessageViewController.swift in Sources */,
