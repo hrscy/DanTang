@@ -46,6 +46,7 @@
 		25AD3BA71D420F18001610B7 /* YMSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA51D420F18001610B7 /* YMSecondTableViewCell.xib */; };
 		25AD3BAA1D42202E001610B7 /* YMFirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */; };
 		25AD3BAB1D42202E001610B7 /* YMFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */; };
+		944007BC8168EA2A6F772CA0 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016FC91CD082D1BA52B6798C /* Pods_DanTang.framework */; };
 		94A4410B1D4463A9005E73FE /* YMCategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */; };
 		94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */; };
 		94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */; };
@@ -80,7 +81,6 @@
 		94E66C261D4452DD009E9609 /* YMCollectionPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C251D4452DD009E9609 /* YMCollectionPost.swift */; };
 		94E66C291D4459F0009E9609 /* YMPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E66C271D4459F0009E9609 /* YMPostDetailViewController.swift */; };
 		94E66C2A1D4459F0009E9609 /* YMPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94E66C281D4459F0009E9609 /* YMPostDetailViewController.xib */; };
-		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053967763D40EE721AE073DA /* Pods_DanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig"; sourceTree = "<group>"; };
+		016FC91CD082D1BA52B6798C /* Pods_DanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05AFD19B51D66E7539D7F056 /* Pods-DanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig"; sourceTree = "<group>"; };
 		250041901D3DD15D00994B58 /* DanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2500419A1D3DD15D00994B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250041A41D3DD15D00994B58 /* DanTangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +147,6 @@
 		25AD3BA51D420F18001610B7 /* YMSecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSecondTableViewCell.xib; sourceTree = "<group>"; };
 		25AD3BA81D42202E001610B7 /* YMFirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMFirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		25AD3BA91D42202E001610B7 /* YMFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMFirstCollectionViewCell.xib; sourceTree = "<group>"; };
-		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
 		94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryBottomView.swift; sourceTree = "<group>"; };
 		94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
 		94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 		94E66C251D4452DD009E9609 /* YMCollectionPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionPost.swift; sourceTree = "<group>"; };
 		94E66C271D4459F0009E9609 /* YMPostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMPostDetailViewController.swift; sourceTree = "<group>"; };
 		94E66C281D4459F0009E9609 /* YMPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMPostDetailViewController.xib; sourceTree = "<group>"; };
+		C61C722F4AE68EC9CA3035C1 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */,
+				944007BC8168EA2A6F772CA0 /* Pods_DanTang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +217,8 @@
 				250041A71D3DD15D00994B58 /* DanTangTests */,
 				250041B21D3DD15D00994B58 /* DanTangUITests */,
 				250041911D3DD15D00994B58 /* Products */,
-				897123692A8351DD9B82F159 /* Pods */,
-				71334DDCB8E57963AC7AE1DC /* Frameworks */,
+				CBBB1A7C7CBA9703E3D8A47E /* Pods */,
+				F9EC4E4DBC15902595DB98D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -366,23 +366,6 @@
 				94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		71334DDCB8E57963AC7AE1DC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				053967763D40EE721AE073DA /* Pods_DanTang.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		897123692A8351DD9B82F159 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */,
-				91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		94E044AF1D3E7B1300BCB4B1 /* Classes */ = {
@@ -549,6 +532,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CBBB1A7C7CBA9703E3D8A47E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05AFD19B51D66E7539D7F056 /* Pods-DanTang.debug.xcconfig */,
+				C61C722F4AE68EC9CA3035C1 /* Pods-DanTang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9EC4E4DBC15902595DB98D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016FC91CD082D1BA52B6798C /* Pods_DanTang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -556,12 +556,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 250041B81D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTang" */;
 			buildPhases = (
-				8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */,
+				47DBFB9B304D79B8BABCB4E9 /* [CP] Check Pods Manifest.lock */,
 				2500418C1D3DD15D00994B58 /* Sources */,
 				2500418D1D3DD15D00994B58 /* Frameworks */,
 				2500418E1D3DD15D00994B58 /* Resources */,
-				CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */,
-				5B460329EE786A3126AB2760 /* Copy Pods Resources */,
+				DF4A2FE4275C623FBA7EFAB1 /* [CP] Embed Pods Frameworks */,
+				014BD1DC80A1243B7525D2BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -699,14 +699,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B460329EE786A3126AB2760 /* Copy Pods Resources */ = {
+		014BD1DC80A1243B7525D2BE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,14 +714,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */ = {
+		47DBFB9B304D79B8BABCB4E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,14 +729,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */ = {
+		DF4A2FE4275C623FBA7EFAB1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -920,7 +920,7 @@
 		};
 		250041B91D3DD15D00994B58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */;
+			baseConfigurationReference = 05AFD19B51D66E7539D7F056 /* Pods-DanTang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -934,7 +934,7 @@
 		};
 		250041BA1D3DD15D00994B58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */;
+			baseConfigurationReference = C61C722F4AE68EC9CA3035C1 /* Pods-DanTang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -449,7 +449,7 @@ class ImageDownloaderSessionHandler: NSObject, NSURLSessionDataDelegate, Authent
             if let fetchLoad = downloader.fetchLoadForKey(URL) {
                 
                 let options = fetchLoad.options ?? KingfisherEmptyOptionsInfo
-                if let image = Image.kf_imageWithData(fetchLoad.responseData, scale: options.scaleFactor, preloadAllGIFData: options.preloadAllGIFData) {
+                if let image = Image.kf_imageWithData(fetchLoad.responseData, scale: options.scaleFactor) {
                     
                     downloader.delegate?.imageDownloader?(downloader, didDownloadImage: image, forURL: URL, withResponse: task.response!)
                     
