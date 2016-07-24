@@ -41,6 +41,7 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let homeCell = tableView.dequeueReusableCellWithIdentifier(homeCellID) as! YMHomeCell
+        homeCell.selectionStyle = .None
         homeCell.homeItem = items[indexPath.row]
         homeCell.delegate = self
         return homeCell

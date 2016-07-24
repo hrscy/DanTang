@@ -212,8 +212,8 @@ class YMNetworkTool: NSObject {
                             // outGroups 存储两个 inGroups 数组，inGroups 存储 YMGroup 对象
                             // outGroups 是一个二维数组
                             var outGroups = [AnyObject]()
-                            var inGroups = [YMGroup]()
                             for channel_group in channel_groups {
+                                var inGroups = [YMGroup]()
                                 let channels = channel_group["channels"] as! [AnyObject]
                                 for channel in channels {
                                     let group = YMGroup(dict: channel as! [String: AnyObject])
@@ -228,5 +228,37 @@ class YMNetworkTool: NSObject {
         }
     }
     
-    
+    /// 底部 风格品类 -> 列表
+    func loadStylesOrCategoryInfo(id: Int, finished:(items: [YMCollectionPost]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v1/channels/\(id)/items?limit=20&offset=0"
+        Alamofire
+            .request(.GET, url)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionary {
+                        if let itemsData = data["items"]?.arrayObject {
+                            var items = [YMCollectionPost]()
+                            for item in itemsData {
+                                let post = YMCollectionPost(dict: item as! [String: AnyObject])
+                                items.append(post)
+                            }
+                            finished(items: items)
+                        }
+                    }
+                }
+        }
+    }
 }

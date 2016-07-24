@@ -21,7 +21,6 @@ class YMShareButtonView: UIView {
     private func setupUI() {
         
         let maxCols = 3
-//        let index = 0
         
         let buttonW: CGFloat = 70
         let buttonH: CGFloat = buttonW + 30

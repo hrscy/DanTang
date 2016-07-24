@@ -72,7 +72,10 @@ class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDele
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let collectionDetailVC = YMCollectionDetailController()
-        collectionDetailVC.collection = collections[indexPath.row]
+        let collection = collections[indexPath.row]
+        collectionDetailVC.title = collection.title
+        collectionDetailVC.id = collection.id
+        collectionDetailVC.type = "专题合集"
         navigationController?.pushViewController(collectionDetailVC, animated: true)
     }
     

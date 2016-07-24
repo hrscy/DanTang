@@ -19,7 +19,6 @@ class YMCollectionTableViewCell: UITableViewCell {
             }
             titleLabel.text = collectionPost!.title
             likeButton.setTitle(" \(collectionPost!.likes_count!) ", forState: .Normal)
-            
         }
     }
     
@@ -33,7 +32,8 @@ class YMCollectionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        bgImageView.layer.cornerRadius = kCornerRadius
+        bgImageView.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

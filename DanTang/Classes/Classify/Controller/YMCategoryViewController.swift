@@ -14,95 +14,52 @@ let categoryGroupFirstID = "categoryGroupFirstID"
 let categoryGroupSecondID = "categoryGroupSecondID"
 
 
-class YMCategoryViewController: YMBaseViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var outGroups = [AnyObject]()
-    
-    weak var tableView = UITableView()
+class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .Plain, target: self, action: #selector(categoryRightBBClick))
-        
-        
-        setupTableView()
-        
-        /// 分类界面 风格,品类
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadCategoryGroup { (outGroups) in
-            weakSelf?.outGroups = outGroups
-            weakSelf?.tableView?.reloadData()
-        }
+        setupScrollView()
     }
     
-    private func setupTableView() {
-        let tableView = UITableView()
-        tableView.frame = view.bounds
-        tableView.delegate = self
-        tableView.dataSource = self
-        // 顶部专题合集
-        tableView.tableHeaderView = setupHeaderView()
-        tableView.tableFooterView = UIView()
-        tableView.separatorStyle = .None
-//        let firstNib = UINib(nibName: String(YMFirstGroupCell), bundle: nil)
-//        tableView.registerNib(firstNib, forCellReuseIdentifier: categoryGroupFirstID)
-//        let secondNib = UINib(nibName: String(YMSecondTableViewCell), bundle: nil)
-//        tableView.registerNib(secondNib, forCellReuseIdentifier: categoryGroupSecondID)
-        tableView.registerClass(YMFirstGroupCell.self, forCellReuseIdentifier: categoryGroupFirstID)
-        tableView.registerClass(YMSecondTableViewCell.self, forCellReuseIdentifier: categoryGroupSecondID)
-        view.addSubview(tableView)
-        self.tableView = tableView
-    }
-    
-    private func setupHeaderView() -> UIView {
+    private func setupScrollView() {
+        view.addSubview(scrollView)
+
         let headerViewController = YMCategoryHeaderViewController()
         addChildViewController(headerViewController)
         
-        let bgView = UIView(frame: CGRectMake(0, kTitlesViewY, SCREENW, 150))
-        view.addSubview(bgView)
+        let topBGView = UIView(frame: CGRectMake(0, 0, SCREENW, 135))
+        scrollView.addSubview(topBGView)
+        
         let headerVC = childViewControllers[0]
-        bgView.addSubview(headerVC.view)
-        return bgView
+        topBGView.addSubview(headerVC.view)
+        
+        let bottomBGView = YMCategoryBottomView(frame: CGRectMake(0, CGRectGetMaxY(topBGView.frame) + 10, SCREENW, SCREENH - 160))
+        bottomBGView.backgroundColor = YMGlobalColor()
+        bottomBGView.delegate = self
+        scrollView.addSubview(bottomBGView)
+        scrollView.contentSize = CGSizeMake(SCREENW, CGRectGetMaxY(bottomBGView.frame))
     }
     
     func categoryRightBBClick() {
         print(#function)
     }
     
-    // MARK: - UITableViewDataSource
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return outGroups.count
-    }
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.scrollEnabled = true
+        scrollView.backgroundColor = YMGlobalColor()
+        scrollView.frame = CGRectMake(0, 0, SCREENW, SCREENH)
+        return scrollView
+    }()
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(categoryGroupFirstID) as! YMFirstGroupCell
-            cell.selectionStyle = .None
-            cell.groups = outGroups[indexPath.section] as! [YMGroup]
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(categoryGroupSecondID) as! YMSecondTableViewCell
-            cell.selectionStyle = .None
-            cell.groups = outGroups[indexPath.section] as! [YMGroup]
-            return cell
-        }
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return CGFloat(150)
-        } else if indexPath.section == 1 {
-            return CGFloat(250)
-        }
-        return 0
-    }
-
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return kMargin
+    // MARK: - YMCategoryBottomViewDelegate
+    func bottomViewButtonDidClicked(button: UIButton) {
+        let collectionDetailVC = YMCollectionDetailController()
+        collectionDetailVC.title = button.titleLabel?.text!
+        collectionDetailVC.id = button.tag
+        collectionDetailVC.type = "风格品类"
+        navigationController?.pushViewController(collectionDetailVC, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

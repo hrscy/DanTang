@@ -12,10 +12,12 @@ let collectionTableCellID = "YMCollectionTableViewCell"
 
 
 class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    var type = String()
+    
     var posts = [YMCollectionPost]()
     
-    var collection: YMCollection?
+    var id: Int?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,9 +28,16 @@ class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITab
         tableView.rowHeight = 150
         tableView.separatorStyle = .None
         weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadCollectionPosts(collection!.id!) { (posts) in
-            weakSelf!.posts = posts
-            weakSelf!.tableView.reloadData()
+        if type == "专题合集" {
+            YMNetworkTool.shareNetworkTool.loadCollectionPosts(id!) { (posts) in
+                weakSelf!.posts = posts
+                weakSelf!.tableView.reloadData()
+            }
+        } else {
+            YMNetworkTool.shareNetworkTool.loadStylesOrCategoryInfo(id!, finished: { (items) in
+                weakSelf!.posts = items
+                weakSelf!.tableView.reloadData()
+            })
         }
     }
     
@@ -38,19 +47,21 @@ class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(collectionTableCellID) as! YMCollectionTableViewCell
+        cell.selectionStyle = .None
         cell.collectionPost = posts[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        let postDetailVC = YMPostDetailViewController()
+        postDetailVC.post = posts[indexPath.row]
+        postDetailVC.title = "攻略详情"
+        navigationController?.pushViewController(postDetailVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

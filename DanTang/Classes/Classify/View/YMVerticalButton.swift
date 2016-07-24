@@ -31,14 +31,14 @@ class YMVerticalButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         // 调整图片
-        imageView?.x = 0
+        imageView?.x = 10
         imageView?.y = 0
-        imageView?.width = self.width
+        imageView?.width = self.width - 20
         imageView?.height = imageView!.width
         // 调整文字
         titleLabel?.x = 0
         titleLabel?.y = imageView!.height
-        titleLabel?.width = imageView!.width
+        titleLabel?.width = self.width
         titleLabel?.height = self.height - self.titleLabel!.y
     }
     
