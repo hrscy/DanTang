@@ -32,7 +32,7 @@ class YMCollectionDetailController: UIViewController {
                 weakSelf!.posts = posts
                 weakSelf!.tableView.reloadData()
             }
-        } else {
+        } else if type == "风格品类" {
             YMNetworkTool.shareNetworkTool.loadStylesOrCategoryInfo(id!, finished: { (items) in
                 weakSelf!.posts = items
                 weakSelf!.tableView.reloadData()

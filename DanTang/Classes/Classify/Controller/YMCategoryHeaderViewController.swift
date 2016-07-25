@@ -24,7 +24,7 @@ class YMCategoryHeaderViewController: YMBaseViewController {
         // 设置 UI
         setupUI()
         /// 分类界面 顶部 专题合集
-        YMNetworkTool.shareNetworkTool.loadCategoryCollection { (collections) in
+        YMNetworkTool.shareNetworkTool.loadCategoryCollection(6) { (collections) in
             self.collections = collections
             self.collectionView!.reloadData()
         }
@@ -56,8 +56,9 @@ extension YMCategoryHeaderViewController: UICollectionViewDelegate, UICollection
     
     // MARK: - YMTopHeaderViewDelegate
     func topViewDidClickedMoreButton(button: UIButton) {
-        let seeMoreVC = YMSeeMoreController()
-        navigationController?.pushViewController(seeMoreVC, animated: true)
+        let seeAllVC = YMSeeAllController()
+        seeAllVC.title = "查看全部"
+        navigationController?.pushViewController(seeAllVC, animated: true)
     }
     
     // MARK: - UICollectionViewDataSource

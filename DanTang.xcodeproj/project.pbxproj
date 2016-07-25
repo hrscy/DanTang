@@ -38,7 +38,10 @@
 		25AD3B871D41EF46001610B7 /* YMCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3B851D41EF46001610B7 /* YMCategoryCollectionViewCell.xib */; };
 		25AD3B9B1D420A4F001610B7 /* YMTopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B9A1D420A4F001610B7 /* YMTopHeaderView.swift */; };
 		25AD3B9D1D420A59001610B7 /* YMTopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3B9C1D420A59001610B7 /* YMTopHeaderView.xib */; };
-		25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */; };
+		25AD3B9F1D420C90001610B7 /* YMSeeAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3B9E1D420C90001610B7 /* YMSeeAllController.swift */; };
+		25AD3BB01D45BEE3001610B7 /* YMSeeAllTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD3BAE1D45BEE3001610B7 /* YMSeeAllTopicCell.swift */; };
+		25AD3BB11D45BEE3001610B7 /* YMSeeAllTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BAF1D45BEE3001610B7 /* YMSeeAllTopicCell.xib */; };
+		25AD3BB31D45C684001610B7 /* YMSeeAllController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AD3BB21D45C684001610B7 /* YMSeeAllController.xib */; };
 		94A4410B1D4463A9005E73FE /* YMCategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */; };
 		94A4410D1D44FCD4005E73FE /* YMMeChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4410C1D44FCD4005E73FE /* YMMeChoiceView.swift */; };
 		94A441111D4509AC005E73FE /* UITableView+EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441101D4509AC005E73FE /* UITableView+EmptyData.swift */; };
@@ -135,7 +138,10 @@
 		25AD3B851D41EF46001610B7 /* YMCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		25AD3B9A1D420A4F001610B7 /* YMTopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopHeaderView.swift; sourceTree = "<group>"; };
 		25AD3B9C1D420A59001610B7 /* YMTopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTopHeaderView.xib; sourceTree = "<group>"; };
-		25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeMoreController.swift; sourceTree = "<group>"; };
+		25AD3B9E1D420C90001610B7 /* YMSeeAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllController.swift; sourceTree = "<group>"; };
+		25AD3BAE1D45BEE3001610B7 /* YMSeeAllTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllTopicCell.swift; sourceTree = "<group>"; };
+		25AD3BAF1D45BEE3001610B7 /* YMSeeAllTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllTopicCell.xib; sourceTree = "<group>"; };
+		25AD3BB21D45C684001610B7 /* YMSeeAllController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllController.xib; sourceTree = "<group>"; };
 		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
 		94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryBottomView.swift; sourceTree = "<group>"; };
 		94A4410C1D44FCD4005E73FE /* YMMeChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeChoiceView.swift; sourceTree = "<group>"; };
@@ -350,6 +356,8 @@
 				94E66C211D444FC3009E9609 /* YMCollectionTableViewCell.swift */,
 				94E66C221D444FC3009E9609 /* YMCollectionTableViewCell.xib */,
 				94A4410A1D4463A9005E73FE /* YMCategoryBottomView.swift */,
+				25AD3BAE1D45BEE3001610B7 /* YMSeeAllTopicCell.swift */,
+				25AD3BAF1D45BEE3001610B7 /* YMSeeAllTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,7 +410,8 @@
 			children = (
 				94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */,
 				25AD3B801D41E80C001610B7 /* YMCategoryHeaderViewController.swift */,
-				25AD3B9E1D420C90001610B7 /* YMSeeMoreController.swift */,
+				25AD3B9E1D420C90001610B7 /* YMSeeAllController.swift */,
+				25AD3BB21D45C684001610B7 /* YMSeeAllController.xib */,
 				94E66C1D1D444B3F009E9609 /* YMCollectionDetailController.swift */,
 				94E66C1E1D444B3F009E9609 /* YMCollectionDetailController.xib */,
 				94E66C271D4459F0009E9609 /* YMPostDetailViewController.swift */,
@@ -650,6 +659,7 @@
 				2586E20E1D3F820B007C5178 /* YMLoginViewController.xib in Resources */,
 				94E66C2A1D4459F0009E9609 /* YMPostDetailViewController.xib in Resources */,
 				25AD3B701D40B4DF001610B7 /* YMCollectionViewCell.xib in Resources */,
+				25AD3BB11D45BEE3001610B7 /* YMSeeAllTopicCell.xib in Resources */,
 				94E66C241D444FC3009E9609 /* YMCollectionTableViewCell.xib in Resources */,
 				94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */,
 				94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */,
@@ -657,6 +667,7 @@
 				94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */,
 				94E66C201D444B3F009E9609 /* YMCollectionDetailController.xib in Resources */,
 				25AD3B871D41EF46001610B7 /* YMCategoryCollectionViewCell.xib in Resources */,
+				25AD3BB31D45C684001610B7 /* YMSeeAllController.xib in Resources */,
 				94E044DC1D430B1900BCB4B1 /* SettingCell.plist in Resources */,
 				2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */,
 				94E044E31D4315D800BCB4B1 /* YMSettingCell.xib in Resources */,
@@ -744,9 +755,10 @@
 				94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */,
 				94E66C1F1D444B3F009E9609 /* YMCollectionDetailController.swift in Sources */,
 				94E66C191D43AF37009E9609 /* YMTMALLViewController.swift in Sources */,
+				25AD3BB01D45BEE3001610B7 /* YMSeeAllTopicCell.swift in Sources */,
 				2586E2061D3F7C05007C5178 /* YMDetailViewController.swift in Sources */,
 				94A441131D451096005E73FE /* YMMeFooterView.swift in Sources */,
-				25AD3B9F1D420C90001610B7 /* YMSeeMoreController.swift in Sources */,
+				25AD3B9F1D420C90001610B7 /* YMSeeAllController.swift in Sources */,
 				94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */,
 				2586E2081D3F7E95007C5178 /* YMGoodsDetailViewController.swift in Sources */,
 				94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */,

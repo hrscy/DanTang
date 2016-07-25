@@ -24,13 +24,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-wX-l5B">
-                        <rect key="frame" x="250" y="18" width="52" height="25"/>
+                        <rect key="frame" x="276" y="18" width="26" height="25"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="NtT-6j-QDs"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <state key="normal" title="3000" image="Feed_FavoriteIcon_17x17_"/>
+                        <state key="normal" title="0" image="Feed_FavoriteIcon_17x17_"/>
                         <connections>
                             <action selector="favoriteButtonClick:" destination="C4I-gb-W3S" eventType="touchUpInside" id="Elc-zN-G2z"/>
                         </connections>

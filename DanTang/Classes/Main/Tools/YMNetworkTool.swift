@@ -120,9 +120,9 @@ class YMNetworkTool: NSObject {
     }
     
     /// 分类界面 顶部 专题合集
-    func loadCategoryCollection(finished:(collections: [YMCollection]) -> ()) {
+    func loadCategoryCollection(limit: Int, finished:(collections: [YMCollection]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/collections?limit=6&offset=0"
+        let url = BASE_URL + "v1/collections?limit=\(limit)&offset=0"
         Alamofire
             .request(.GET, url)
             .responseJSON { (response) in
