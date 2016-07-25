@@ -66,6 +66,7 @@ extension YMProductViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let productDetailVC = YMProductDetailViewController()
         productDetailVC.title = "商品详情"
+        productDetailVC.type = String(self)
         productDetailVC.product = products[indexPath.item]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }

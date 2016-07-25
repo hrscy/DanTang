@@ -17,6 +17,19 @@ class YMCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: YMCollectionViewCellDelegate?
     
+    var result: YMSearchResult? {
+        didSet {
+            let url = result!.cover_image_url!
+            productImageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderBtn.hidden = true
+            }
+            likeButton.setTitle(" " + String(result!.favorites_count!) + " ", forState: .Normal)
+            titleLabel.text = result!.name
+            priceLabel.text = "￥" + String(result!.price!)
+        }
+    }
+    
+    
     var product: YMProduct? {
         didSet {
             let url = product!.cover_image_url!

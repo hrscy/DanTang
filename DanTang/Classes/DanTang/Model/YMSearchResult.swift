@@ -29,7 +29,7 @@ class YMSearchResult: NSObject {
     init(dict: [String: AnyObject]) {
         id = dict["id"] as? Int
         name = dict["name"] as? String
-        favorites_count = dict["editable"] as? Int
+        favorites_count = dict["favorites_count"] as? Int
         price = dict["price"] as? String
         liked = dict["liked"] as? Bool
         cover_image_url = dict["cover_image_url"] as? String

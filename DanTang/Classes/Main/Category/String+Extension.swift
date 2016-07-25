@@ -25,5 +25,4 @@ public extension String {
         let predicate = NSPredicate(format: "SELF MATCHES %@", patternString)
         return predicate.evaluateWithObject(string)
     }
-    
 }

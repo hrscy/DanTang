@@ -15,6 +15,10 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     
     var product: YMProduct?
     
+    var result: YMSearchResult?
+    
+    var type = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

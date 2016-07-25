@@ -58,9 +58,11 @@ class YMNetworkTool: NSObject {
     /// 获取首页顶部选择数据
     func loadHomeTopData(finished:(ym_channels: [YMChannel]) -> ()) {
         
-        let url = BASE_URL + "v2/channels/preset?gender=1&generation=1"
+        let url = BASE_URL + "v2/channels/preset"
+        let params = ["gender": 1,
+                      "generation": 1]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -91,7 +93,7 @@ class YMNetworkTool: NSObject {
     /// 搜索界面数据
     func loadHotWords(finished:(words: [String]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/search/hot_words?"
+        let url = BASE_URL + "v1/search/hot_words"
         Alamofire
             .request(.GET, url)
             .responseJSON { (response) in
@@ -120,16 +122,14 @@ class YMNetworkTool: NSObject {
     /// 根据搜索条件进行搜索
     func loadSearchResult(keyword: String, sort: String, finished:(results: [YMSearchResult]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-//        let url = BASE_URL + "v1/search/item?keyword=\(keyword)&limit=20&offset=0&sort=\(sort)"
         let url = "http://api.dantangapp.com/v1/search/item"
-//        let url = "http://api.dantangapp.com/v1/search/item?keyword=%E6%88%92%E6%8C%87&limit=20&offset=0&sort="
         
-        let params = ["keyword": "%E6%88%92%E6%8C%87",
+        let params = ["keyword": keyword,
                       "limit": 20,
                       "offset": 0,
-                      "sort": ""]
+                      "sort": sort]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(.GET, url, parameters: params as? [String : AnyObject])
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -143,7 +143,6 @@ class YMNetworkTool: NSObject {
                         SVProgressHUD.showInfoWithStatus(message)
                         return
                     }
-                    print(value)
                     SVProgressHUD.dismiss()
                     let data = dict["data"].dictionary
                     if let items = data!["items"]?.arrayObject {
@@ -161,9 +160,13 @@ class YMNetworkTool: NSObject {
     /// 获取单品数据
     func loadProductData(finished:(products: [YMProduct]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v2/items?gender=1&generation=1&limit=20&offset=0"
+        let url = BASE_URL + "v2/items"
+        let params = ["gender": 1,
+                      "generation": 1,
+                      "limit": 20,
+                      "offset": 0]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -197,9 +200,11 @@ class YMNetworkTool: NSObject {
     /// 分类界面 顶部 专题合集
     func loadCategoryCollection(limit: Int, finished:(collections: [YMCollection]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/collections?limit=\(limit)&offset=0"
+        let url = BASE_URL + "v1/collections"
+        let params = ["limit": limit,
+                      "offset": 0]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -231,9 +236,13 @@ class YMNetworkTool: NSObject {
     /// 顶部 专题合集 -> 专题列表
     func loadCollectionPosts(id: Int, finished:(posts: [YMCollectionPost]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/collections/\(id)/posts?gender=1&generation=1&limit=20&offset=0"
+        let url = BASE_URL + "v1/collections/\(id)/posts"
+        let params = ["gender": 1,
+                      "generation": 1,
+                      "limit": 20,
+                      "offset": 0]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -265,7 +274,7 @@ class YMNetworkTool: NSObject {
     /// 分类界面 风格,品类
     func loadCategoryGroup(finished:(outGroups: [AnyObject]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/channel_groups/all?"
+        let url = BASE_URL + "v1/channel_groups/all"
         Alamofire
             .request(.GET, url)
             .responseJSON { (response) in
@@ -306,9 +315,11 @@ class YMNetworkTool: NSObject {
     /// 底部 风格品类 -> 列表
     func loadStylesOrCategoryInfo(id: Int, finished:(items: [YMCollectionPost]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/channels/\(id)/items?limit=20&offset=0"
+        let url = BASE_URL + "v1/channels/\(id)/items"
+        let params = ["limit": 20,
+                      "offset": 0]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
