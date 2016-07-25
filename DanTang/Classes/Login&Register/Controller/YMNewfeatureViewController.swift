@@ -26,7 +26,9 @@ class YMNewfeatureViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView?.registerClass(YMNewfeatureCell.self, forCellWithReuseIdentifier: newFeatureID)
     }
+}
 
+extension YMNewfeatureViewController {
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return kNewFeatureCount
     }

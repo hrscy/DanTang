@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -13,6 +13,10 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-F0-K7c">
+                        <rect key="frame" x="59" y="25" width="31" height="26"/>
+                        <state key="normal" image="PlaceHolderImage_small_31x26_"/>
+                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZYf-QF-qAw">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
                     </imageView>
@@ -20,7 +24,9 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstItem="9gy-F0-K7c" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6Ek-ns-yIL"/>
                 <constraint firstAttribute="trailing" secondItem="ZYf-QF-qAw" secondAttribute="trailing" id="7op-Bz-LFB"/>
+                <constraint firstItem="9gy-F0-K7c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="E3P-Rw-2mc"/>
                 <constraint firstItem="ZYf-QF-qAw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="X6h-Vj-xDV"/>
                 <constraint firstAttribute="bottom" secondItem="ZYf-QF-qAw" secondAttribute="bottom" id="vqz-cL-6mX"/>
                 <constraint firstItem="ZYf-QF-qAw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xfz-Fd-lin"/>
@@ -32,8 +38,12 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="collectionImageView" destination="ZYf-QF-qAw" id="5jh-D0-2k8"/>
+                <outlet property="placeholderButton" destination="9gy-F0-K7c" id="qIE-sJ-8sJ"/>
             </connections>
             <point key="canvasLocation" x="126" y="206"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="PlaceHolderImage_small_31x26_" width="31" height="26"/>
+    </resources>
 </document>

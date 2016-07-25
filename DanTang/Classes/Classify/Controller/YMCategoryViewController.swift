@@ -10,10 +10,6 @@
 
 import UIKit
 
-let categoryGroupFirstID = "categoryGroupFirstID"
-let categoryGroupSecondID = "categoryGroupSecondID"
-
-
 class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelegate {
     
     override func viewDidLoad() {

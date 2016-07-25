@@ -20,7 +20,7 @@ class YMProductDetailToolBar: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        likeButton.layer.borderColor = YMColor(242, g: 84, b: 85, a: 1.0).CGColor
+        likeButton.layer.borderColor = YMGlobalRedColor().CGColor
         likeButton.layer.borderWidth = klineWidth
         likeButton.setImage(UIImage(named: "content-details_like_16x16_"), forState: .Normal)
         likeButton.setImage(UIImage(named: "content-details_like_selected_16x16_"), forState: .Selected)

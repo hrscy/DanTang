@@ -9,12 +9,14 @@
 import UIKit
 
 class YMShareButtonView: UIView {
-    
+    // 图片数组
     let images = ["Share_WeChatTimelineIcon_70x70_", "Share_WeChatSessionIcon_70x70_", "Share_WeiboIcon_70x70_", "Share_QzoneIcon_70x70_", "Share_QQIcon_70x70_", "Share_CopyLinkIcon_70x70_"]
+    // 标题数组
     let titles = ["微信朋友圈", "微信好友", "微博", "QQ 空间", "QQ 好友", "复制链接"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setupUI()
     }
     

@@ -5,14 +5,14 @@
 //  Created by 杨蒙 on 16/7/19.
 //  Copyright © 2016年 hrscy. All rights reserved.
 //
-//  单品
+//  单品界面
 //
 
 import UIKit
 
 let collectionCellID = "YMCollectionViewCell"
 
-class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate {
+class YMProductViewController: YMBaseViewController {
     
     var products = [YMProduct]()
     
@@ -42,6 +42,14 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
         self.collectionView = collectionView
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension YMProductViewController: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate {
+    
     // MARK: - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count ?? 0
@@ -56,11 +64,12 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
     
     // MARK: - UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-         let productDetailVC = YMProductDetailViewController()
+        let productDetailVC = YMProductDetailViewController()
         productDetailVC.title = "商品详情"
         productDetailVC.product = products[indexPath.item]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }
+    
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width: CGFloat = (UIScreen.mainScreen().bounds.width - 20) / 2
@@ -74,11 +83,13 @@ class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, U
     
     // MARK: - YMCollectionViewCellDelegate
     func collectionViewCellDidClickedLikeButton(button: UIButton) {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if !NSUserDefaults.standardUserDefaults().boolForKey(isLogin) {
+            let loginVC = YMLoginViewController()
+            loginVC.title = "登录"
+            let nav = YMNavigationController(rootViewController: loginVC)
+            presentViewController(nav, animated: true, completion: nil)
+        } else {
+            
+        }
     }
 }

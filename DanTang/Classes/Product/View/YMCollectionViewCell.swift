@@ -28,15 +28,15 @@ class YMCollectionViewCell: UICollectionViewCell {
             priceLabel.text = "￥" + String(product!.price!)
         }
     }
-    
+    // 占位图片
     @IBOutlet weak var placeholderBtn: UIButton!
-    
+    // 背景图片
     @IBOutlet weak var productImageView: UIImageView!
-    
+    // 标题
     @IBOutlet weak var titleLabel: UILabel!
-    
+    // 价格
     @IBOutlet weak var priceLabel: UILabel!
-    
+    // 喜欢按钮
     @IBOutlet weak var likeButton: UIButton!
     
     override func awakeFromNib() {

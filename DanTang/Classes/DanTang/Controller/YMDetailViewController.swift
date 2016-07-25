@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class YMDetailViewController: YMBaseViewController,UIWebViewDelegate {
+class YMDetailViewController: YMBaseViewController {
 
     var homeItem: YMHomeItem?
     
@@ -27,6 +27,15 @@ class YMDetailViewController: YMBaseViewController,UIWebViewDelegate {
         view.addSubview(webView)
     }
     
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension YMDetailViewController: UIWebViewDelegate {
+    
     func webViewDidStartLoad(webView: UIWebView) {
         SVProgressHUD.setStatus("正在加载...")
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -39,15 +48,8 @@ class YMDetailViewController: YMBaseViewController,UIWebViewDelegate {
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        
-        
-        
         return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
+
+

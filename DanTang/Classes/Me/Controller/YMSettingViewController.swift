@@ -8,17 +8,18 @@
 
 import UIKit
 
-class YMSettingViewController: YMBaseViewController ,UITableViewDataSource, UITableViewDelegate {
+class YMSettingViewController: YMBaseViewController {
     
     var settings = [AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 从 plist 文件在加载数据
         configCellFromPlist()
         
         setupTableView()
     }
-    
+    /// 从 plist 文件在加载数据
     func configCellFromPlist() {
         let path = NSBundle.mainBundle().pathForResource("SettingCell", ofType: ".plist")
         let settingsPlist = NSArray.init(contentsOfFile: path!)
@@ -46,6 +47,14 @@ class YMSettingViewController: YMBaseViewController ,UITableViewDataSource, UITa
         tableView.tableFooterView = UIView()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension YMSettingViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return settings.count ?? 0
     }
@@ -68,10 +77,5 @@ class YMSettingViewController: YMBaseViewController ,UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

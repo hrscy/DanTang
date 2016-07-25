@@ -5,10 +5,12 @@
 //  Created by 杨蒙 on 16/7/23.
 //  Copyright © 2016年 hrscy. All rights reserved.
 //
+//  去天猫购买
+//
 
 import UIKit
 
-class YMTMALLViewController: YMBaseViewController, UIWebViewDelegate {
+class YMTMALLViewController: YMBaseViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
@@ -24,14 +26,6 @@ class YMTMALLViewController: YMBaseViewController, UIWebViewDelegate {
         let url = NSURL(string: product!.purchase_url!)
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
-    }
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     private func setupNav() {
@@ -51,5 +45,15 @@ class YMTMALLViewController: YMBaseViewController, UIWebViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
+extension YMTMALLViewController: UIWebViewDelegate {
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
 }

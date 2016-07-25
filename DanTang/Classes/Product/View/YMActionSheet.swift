@@ -99,7 +99,7 @@ class YMActionSheet: UIView {
         let cancelButton = UIButton()
         cancelButton.setTitle("取消", forState: .Normal)
         cancelButton.titleLabel?.font = UIFont.systemFontOfSize(18)
-        cancelButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        cancelButton.setTitleColor(YMColor(37, g: 142, b: 240, a: 1.0), forState: .Normal)
         cancelButton.backgroundColor = UIColor.whiteColor()
         cancelButton.addTarget(self, action: #selector(cancelButtonClick), forControlEvents: .TouchUpInside)
         cancelButton.layer.cornerRadius = kCornerRadius
@@ -108,7 +108,11 @@ class YMActionSheet: UIView {
     }()
     
     func cancelButtonClick() {
-        self.removeFromSuperview()
+        UIView.animateWithDuration(kAnimationDuration, animations: {
+            self.bgView.y = SCREENH
+        }) { (_) in
+            self.removeFromSuperview()
+        }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

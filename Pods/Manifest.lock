@@ -2,9 +2,6 @@ PODS:
   - Alamofire (3.4.1)
   - FDFullscreenPopGesture (1.1)
   - Kingfisher (2.4.1)
-  - RxCocoa (2.5.0):
-    - RxSwift (~> 2.5)
-  - RxSwift (2.5.0)
   - SnapKit (0.21.1)
   - SVProgressHUD (2.0.3)
   - SwiftyJSON (2.3.2)
@@ -13,8 +10,6 @@ DEPENDENCIES:
   - Alamofire
   - FDFullscreenPopGesture (~> 1.1)
   - Kingfisher
-  - RxCocoa
-  - RxSwift
   - SnapKit
   - SVProgressHUD
   - SwiftyJSON
@@ -23,8 +18,6 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
-  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
-  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a

@@ -10,7 +10,7 @@ import UIKit
 
 let messageCellID = "messageCellID"
 
-class YMMessageViewController: YMBaseViewController ,UITableViewDataSource, UITableViewDelegate {
+class YMMessageViewController: YMBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,14 @@ class YMMessageViewController: YMBaseViewController ,UITableViewDataSource, UITa
         tableView.tableFooterView = UIView()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+extension YMMessageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
@@ -38,10 +46,8 @@ class YMMessageViewController: YMBaseViewController ,UITableViewDataSource, UITa
         cell?.textLabel?.text = "消息---" + String(indexPath.row)
         return cell!
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }

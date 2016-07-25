@@ -11,10 +11,14 @@ import Kingfisher
 
 class YMCategoryCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var placeholderButton: UIButton!
+    
     var collection: YMCollection? {
         didSet {
             let url = collection!.banner_image_url
-            collectionImageView.kf_setImageWithURL(NSURL(string: url!)!)
+            collectionImageView.kf_setImageWithURL(NSURL(string: url!)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderButton.hidden = true
+            }
         }
     }
     

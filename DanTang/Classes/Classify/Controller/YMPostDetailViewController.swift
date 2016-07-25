@@ -4,11 +4,13 @@
 //
 //  Created by 杨蒙 on 16/7/24.
 //  Copyright © 2016年 hrscy. All rights reserved.
+//  
+//  详情
 //
 
 import UIKit
 
-class YMPostDetailViewController: UIViewController, UIWebViewDelegate {
+class YMPostDetailViewController: YMBaseViewController {
 
     var post: YMCollectionPost?
     
@@ -30,6 +32,10 @@ class YMPostDetailViewController: UIViewController, UIWebViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+}
+
+extension YMPostDetailViewController: UIWebViewDelegate {
     
     func webViewDidStartLoad(webView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true

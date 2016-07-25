@@ -29,6 +29,7 @@ class YMLoginViewController: YMBaseViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
     @IBAction func loginButtonClick(sender: UIButton) {
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: isLogin)
         dismissViewControllerAnimated(true, completion: nil)

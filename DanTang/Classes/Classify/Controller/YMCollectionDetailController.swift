@@ -10,8 +10,7 @@ import UIKit
 
 let collectionTableCellID = "YMCollectionTableViewCell"
 
-
-class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YMCollectionDetailController: UIViewController {
     
     var type = String()
     
@@ -41,6 +40,15 @@ class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension YMCollectionDetailController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count ?? 0
     }
@@ -58,10 +66,5 @@ class YMCollectionDetailController: UIViewController, UITableViewDelegate, UITab
         postDetailVC.post = posts[indexPath.row]
         postDetailVC.title = "攻略详情"
         navigationController?.pushViewController(postDetailVC, animated: true)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

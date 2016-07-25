@@ -55,3 +55,4 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         presentViewController(nav, animated: true, completion: nil)
     }
 }
+

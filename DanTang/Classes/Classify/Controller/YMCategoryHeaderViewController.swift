@@ -11,9 +11,8 @@
 import UIKit
 
 let categoryCollectionCellID = "YMCategoryCollectionViewCell"
-let categoryHeaderViewID = "YMCategoryHeaderView"
 
-class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YMTopHeaderViewDelegate {
+class YMCategoryHeaderViewController: YMBaseViewController {
     
     var collections = [YMCollection]()
     
@@ -51,6 +50,9 @@ class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDele
         view.addSubview(collectionView)
         self.collectionView = collectionView
     }
+}
+
+extension YMCategoryHeaderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YMTopHeaderViewDelegate {
     
     // MARK: - YMTopHeaderViewDelegate
     func topViewDidClickedMoreButton(button: UIButton) {
@@ -87,5 +89,4 @@ class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDele
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(kMargin, kMargin, kMargin, kMargin)
     }
-    
 }

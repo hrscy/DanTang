@@ -37,6 +37,7 @@ class YMCategoryBottomView: UIView {
         
         let topGroups = outGroups[0]
         let bottomGroups = outGroups[1]
+        
         let buttonW: CGFloat = SCREENW / 4
         let buttonH: CGFloat = buttonW
         let styleLabelH: CGFloat = 40

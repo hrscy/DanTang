@@ -15,7 +15,7 @@ class YMNavigationController: UINavigationController {
         super.initialize()
         /// 设置导航栏标题
         let navBar = UINavigationBar.appearance()
-        navBar.barTintColor = YMColor(245, g: 80, b: 83, a: 1.0)
+        navBar.barTintColor = YMGlobalRedColor()
         navBar.tintColor = UIColor.whiteColor()
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(20)]
     }

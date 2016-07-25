@@ -10,7 +10,7 @@ import UIKit
 
 let homeCellID = "homeCellID"
 
-class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableViewDataSource, YMHomeCellDelegate {
+class YMTopicViewController: YMBaseViewController {
     
     var type = Int()
     
@@ -34,6 +34,28 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
         }
     }
     
+    func setupTableView() {
+        let tableView = UITableView()
+        tableView.frame = view.bounds
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 160
+        tableView.separatorStyle = .None
+        tableView.contentInset = UIEdgeInsetsMake(kTitlesViewY + kTitlesViewH, 0, tabBarController!.tabBar.height, 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset
+        let nib = UINib(nibName: String(YMHomeCell), bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: homeCellID)
+        view.addSubview(tableView)
+        self.tableView = tableView
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension YMTopicViewController: UITableViewDelegate, UITableViewDataSource, YMHomeCellDelegate {
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count ?? 0
@@ -56,29 +78,14 @@ class YMTopicViewController: YMBaseViewController, UITableViewDelegate, UITableV
     
     // MARK: - YMHomeCellDelegate
     func homeCellDidClickedFavoriteButton(button: UIButton) {
-        let loginVC = YMLoginViewController()
-        loginVC.title = "登录"
-        let nav = YMNavigationController(rootViewController: loginVC)
-        presentViewController(nav, animated: true, completion: nil)
+        if !NSUserDefaults.standardUserDefaults().boolForKey(isLogin) {
+            let loginVC = YMLoginViewController()
+            loginVC.title = "登录"
+            let nav = YMNavigationController(rootViewController: loginVC)
+            presentViewController(nav, animated: true, completion: nil)
+        } else {
+            
+        }
     }
     
-    func setupTableView() {
-        let tableView = UITableView()
-        tableView.frame = view.bounds
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 160
-        tableView.separatorStyle = .None
-        tableView.contentInset = UIEdgeInsetsMake(kTitlesViewY + kTitlesViewH, 0, tabBarController!.tabBar.height, 0)
-        tableView.scrollIndicatorInsets = tableView.contentInset
-        let nib = UINib(nibName: String(YMHomeCell), bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: homeCellID)
-        view.addSubview(tableView)
-        self.tableView = tableView
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
