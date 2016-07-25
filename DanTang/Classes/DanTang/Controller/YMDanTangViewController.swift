@@ -159,7 +159,8 @@ class YMDanTangViewController: YMBaseViewController {
     }
 
     func dantangRightBBClick() {
-        print(#function)
+        let searchBarVC = YMSearchViewController()
+        navigationController?.pushViewController(searchBarVC, animated: true)
     }
 }
 

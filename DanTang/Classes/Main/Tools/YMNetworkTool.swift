@@ -83,6 +83,64 @@ class YMNetworkTool: NSObject {
         }
     }
     
+    /// 搜索界面数据
+    func loadHotWords(finished:(words: [String]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v1/search/hot_words?"
+        Alamofire
+            .request(.GET, url)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionary {
+                        if let hot_words = data["hot_words"]?.arrayObject {
+                            finished(words: hot_words as! [String])
+                        }
+                    }
+                }
+        }
+    }
+    
+    /// 根据搜索条件进行搜索
+    func loadSearchResult(keywords: String, sort: String, finished:(words: [String]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v1/search/item?keyword=\(keywords)&limit=20&offset=0&sort=\(sort)"
+        Alamofire
+            .request(.GET, url)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionary {
+                        if let hot_words = data["hot_words"]?.arrayObject {
+                            finished(words: hot_words as! [String])
+                        }
+                    }
+                }
+        }
+    }
+    
     /// 获取单品数据
     func loadProductData(finished:(products: [YMProduct]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")

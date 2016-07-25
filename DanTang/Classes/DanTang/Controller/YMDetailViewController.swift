@@ -44,7 +44,6 @@ extension YMDetailViewController: UIWebViewDelegate {
     func webViewDidFinishLoad(webView: UIWebView) {
         SVProgressHUD.dismiss()
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        print(webView.stringByEvaluatingJavaScriptFromString("document.documentElement.innerHTML"))
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
