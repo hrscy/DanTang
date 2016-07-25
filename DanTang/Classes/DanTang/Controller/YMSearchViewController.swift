@@ -65,8 +65,14 @@ class YMSearchViewController: YMBaseViewController {
     
     /// 搜索条件点击
     func sortButtonClick() {
-        
+        popView.show()
     }
+    
+    private lazy var popView: YMSortTableView = {
+        let popView = YMSortTableView()
+        
+        return popView
+    }()
     
     /// 返回按钮、取消按钮点击
     func navigationBackClick() {
@@ -76,7 +82,6 @@ class YMSearchViewController: YMBaseViewController {
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "搜索商品、专题"
-        searchBar.height = 35;
         return searchBar
     }()
 

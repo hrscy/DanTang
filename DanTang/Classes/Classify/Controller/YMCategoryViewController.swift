@@ -38,7 +38,8 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
     }
     
     func categoryRightBBClick() {
-        print(#function)
+        let searchBarVC = YMSearchViewController()
+        navigationController?.pushViewController(searchBarVC, animated: true)
     }
     
     private lazy var scrollView: UIScrollView = {
