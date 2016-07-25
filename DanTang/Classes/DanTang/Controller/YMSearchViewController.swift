@@ -30,7 +30,12 @@ class YMSearchViewController: YMBaseViewController {
         YMNetworkTool.shareNetworkTool.loadHotWords { (hot_words) in
             self.words = hot_words
         }
+        
+        
+        
     }
+    
+    
     
     func setupNav() {
         navigationItem.titleView = searchBar
@@ -40,9 +45,10 @@ class YMSearchViewController: YMBaseViewController {
     }
     
     func searchBarCancelButtonCLick() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .Plain, target: self, action: #selector(navigationBackClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_sort_21x21_"), style: .Plain, target: self, action: #selector(sortButtonClick))
-        searchBar.resignFirstResponder()
+        navigationController?.popViewControllerAnimated(true)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .Plain, target: self, action: #selector(navigationBackClick))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_sort_21x21_"), style: .Plain, target: self, action: #selector(sortButtonClick))
+//        searchBar.resignFirstResponder()
     }
     
     /// 搜索条件点击
@@ -71,10 +77,11 @@ class YMSearchViewController: YMBaseViewController {
 extension YMSearchViewController: UISearchBarDelegate {
     
     
-    
     /// 搜索按钮点击
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        
+        YMNetworkTool.shareNetworkTool.loadSearchResult("戒指", sort: "") { (results) in
+            
+        }
     }
     
     

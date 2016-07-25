@@ -18,9 +18,14 @@ class YMNetworkTool: NSObject {
     /// 获取首页数据
     func loadHomeInfo(id: Int, finished:(homeItems: [YMHomeItem]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
+//        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
+        let url = BASE_URL + "v1/channels/\(id)/items"
+        let params = ["gender": 1,
+                      "generation": 1,
+                      "limit": 20,
+                      "offset": 0]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -113,11 +118,18 @@ class YMNetworkTool: NSObject {
     }
     
     /// 根据搜索条件进行搜索
-    func loadSearchResult(keywords: String, sort: String, finished:(words: [String]) -> ()) {
+    func loadSearchResult(keyword: String, sort: String, finished:(results: [YMSearchResult]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")
-        let url = BASE_URL + "v1/search/item?keyword=\(keywords)&limit=20&offset=0&sort=\(sort)"
+//        let url = BASE_URL + "v1/search/item?keyword=\(keyword)&limit=20&offset=0&sort=\(sort)"
+        let url = "http://api.dantangapp.com/v1/search/item"
+//        let url = "http://api.dantangapp.com/v1/search/item?keyword=%E6%88%92%E6%8C%87&limit=20&offset=0&sort="
+        
+        let params = ["keyword": "%E6%88%92%E6%8C%87",
+                      "limit": 20,
+                      "offset": 0,
+                      "sort": ""]
         Alamofire
-            .request(.GET, url)
+            .request(.GET, url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
                     SVProgressHUD.showErrorWithStatus("加载失败...")
@@ -131,11 +143,16 @@ class YMNetworkTool: NSObject {
                         SVProgressHUD.showInfoWithStatus(message)
                         return
                     }
+                    print(value)
                     SVProgressHUD.dismiss()
-                    if let data = dict["data"].dictionary {
-                        if let hot_words = data["hot_words"]?.arrayObject {
-                            finished(words: hot_words as! [String])
+                    let data = dict["data"].dictionary
+                    if let items = data!["items"]?.arrayObject {
+                        var results = [YMSearchResult]()
+                        for item in items {
+                            let result = YMSearchResult(dict: item as! [String: AnyObject])
+                            results.append(result)
                         }
+                        finished(results: results)
                     }
                 }
         }
