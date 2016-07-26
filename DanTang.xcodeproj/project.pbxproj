@@ -60,10 +60,6 @@
 		94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044BB1D3E7B1300BCB4B1 /* AppDelegate.swift */; };
 		94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E044BC1D3E7B1300BCB4B1 /* Info.plist */; };
 		94E044CA1D3E7B1300BCB4B1 /* YMProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */; };
-		94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C11D3E7B1300BCB4B1 /* base.string */; };
-		94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C21D3E7B1300BCB4B1 /* calendar.js */; };
-		94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */; };
-		94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */ = {isa = PBXBuildFile; fileRef = 94E044C41D3E7B1300BCB4B1 /* sub.string */; };
 		94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044D01D3E7D9600BCB4B1 /* YMTabBarController.swift */; };
 		94E044D31D3E7DA900BCB4B1 /* YMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044D21D3E7DA900BCB4B1 /* YMNavigationController.swift */; };
 		94E044D51D42F27400BCB4B1 /* YMMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044D41D42F27400BCB4B1 /* YMMessageViewController.swift */; };
@@ -169,10 +165,6 @@
 		94E044BB1D3E7B1300BCB4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E044BC1D3E7B1300BCB4B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94E044BF1D3E7B1300BCB4B1 /* YMProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductViewController.swift; sourceTree = "<group>"; };
-		94E044C11D3E7B1300BCB4B1 /* base.string */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = base.string; sourceTree = "<group>"; };
-		94E044C21D3E7B1300BCB4B1 /* calendar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = calendar.js; sourceTree = "<group>"; };
-		94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLTXHK.TTF; sourceTree = "<group>"; };
-		94E044C41D3E7B1300BCB4B1 /* sub.string */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub.string; sourceTree = "<group>"; };
 		94E044D01D3E7D9600BCB4B1 /* YMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTabBarController.swift; sourceTree = "<group>"; };
 		94E044D21D3E7DA900BCB4B1 /* YMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNavigationController.swift; sourceTree = "<group>"; };
 		94E044D41D42F27400BCB4B1 /* YMMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMessageViewController.swift; sourceTree = "<group>"; };
@@ -413,7 +405,6 @@
 				94E044B71D3E7B1300BCB4B1 /* Me(我) */,
 				94E044B61D3E7B1300BCB4B1 /* Main */,
 				94E044BA1D3E7B1300BCB4B1 /* Others */,
-				94E044C01D3E7B1300BCB4B1 /* Resource */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -527,17 +518,6 @@
 				94E66C181D43AF37009E9609 /* YMTMALLViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		94E044C01D3E7B1300BCB4B1 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				94E044C11D3E7B1300BCB4B1 /* base.string */,
-				94E044C21D3E7B1300BCB4B1 /* calendar.js */,
-				94E044C31D3E7B1300BCB4B1 /* FZLTXHK.TTF */,
-				94E044C41D3E7B1300BCB4B1 /* sub.string */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		94E044CF1D3E7D7B00BCB4B1 /* Controller */ = {
@@ -685,8 +665,6 @@
 				25AD3B701D40B4DF001610B7 /* YMCollectionViewCell.xib in Resources */,
 				25AD3BB11D45BEE3001610B7 /* YMSeeAllTopicCell.xib in Resources */,
 				94E66C241D444FC3009E9609 /* YMCollectionTableViewCell.xib in Resources */,
-				94E044CC1D3E7B1300BCB4B1 /* calendar.js in Resources */,
-				94E044CE1D3E7B1300BCB4B1 /* sub.string in Resources */,
 				2586E1F71D3F3327007C5178 /* YMHomeCell.xib in Resources */,
 				94E044C91D3E7B1300BCB4B1 /* Info.plist in Resources */,
 				25A285461D4705C10090498C /* YMSortCell.xib in Resources */,
@@ -699,8 +677,6 @@
 				94E044E31D4315D800BCB4B1 /* YMSettingCell.xib in Resources */,
 				94E66C1A1D43AF37009E9609 /* YMTMALLViewController.xib in Resources */,
 				94E66C121D433ECF009E9609 /* YMProductDetailToolBar.xib in Resources */,
-				94E044CB1D3E7B1300BCB4B1 /* base.string in Resources */,
-				94E044CD1D3E7B1300BCB4B1 /* FZLTXHK.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

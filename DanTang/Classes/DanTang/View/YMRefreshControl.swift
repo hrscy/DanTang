@@ -42,7 +42,6 @@ class YMRefreshControl: UIRefreshControl {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        print(frame.origin.y)
         // 过滤掉不需要的数据
         if frame.origin.y >= 0 {
             return
