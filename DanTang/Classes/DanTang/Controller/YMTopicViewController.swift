@@ -10,12 +10,9 @@ import UIKit
 
 let homeCellID = "homeCellID"
 
-class YMTopicViewController: YMBaseViewController {
+class YMTopicViewController: UITableViewController {
     
     var type = Int()
-    
-    weak var tableView: UITableView?
-    
     
     /// 首页列表数据
     var items = [YMHomeItem]()
@@ -26,27 +23,36 @@ class YMTopicViewController: YMBaseViewController {
         
         setupTableView()
         
+        // 添加刷新控件
+        refreshControl = YMRefreshControl()
+        refreshControl?.beginRefreshing()
+        refreshControl?.addTarget(self, action: #selector(loadHomeData), forControlEvents: .ValueChanged)
         // 获取首页数据
         weak var weakSelf = self
         YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { (homeItems) in
             weakSelf!.items = homeItems
             weakSelf!.tableView!.reloadData()
+            weakSelf!.refreshControl?.endRefreshing()
+        }
+    }
+    
+    func loadHomeData() {
+        // 获取首页数据
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { (homeItems) in
+            weakSelf!.items = homeItems
+            weakSelf!.tableView!.reloadData()
+            weakSelf!.refreshControl?.endRefreshing()
         }
     }
     
     func setupTableView() {
-        let tableView = UITableView()
-        tableView.frame = view.bounds
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.rowHeight = 160
         tableView.separatorStyle = .None
         tableView.contentInset = UIEdgeInsetsMake(kTitlesViewY + kTitlesViewH, 0, tabBarController!.tabBar.height, 0)
         tableView.scrollIndicatorInsets = tableView.contentInset
         let nib = UINib(nibName: String(YMHomeCell), bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: homeCellID)
-        view.addSubview(tableView)
-        self.tableView = tableView
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,13 +61,13 @@ class YMTopicViewController: YMBaseViewController {
     }
 }
 
-extension YMTopicViewController: UITableViewDelegate, UITableViewDataSource, YMHomeCellDelegate {
+extension YMTopicViewController: YMHomeCellDelegate {
     // MARK: - UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count ?? 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let homeCell = tableView.dequeueReusableCellWithIdentifier(homeCellID) as! YMHomeCell
         homeCell.selectionStyle = .None
         homeCell.homeItem = items[indexPath.row]
@@ -69,7 +75,7 @@ extension YMTopicViewController: UITableViewDelegate, UITableViewDataSource, YMH
         return homeCell
     }
     // MARK: - UITableViewDelegate
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailVC = YMDetailViewController()
         detailVC.homeItem = items[indexPath.row]
         detailVC.title = "攻略详情"

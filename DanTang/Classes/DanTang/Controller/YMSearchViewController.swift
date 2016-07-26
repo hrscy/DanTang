@@ -70,7 +70,7 @@ class YMSearchViewController: YMBaseViewController {
     
     private lazy var popView: YMSortTableView = {
         let popView = YMSortTableView()
-        
+        popView.delegate = self
         return popView
     }()
     
@@ -91,7 +91,7 @@ class YMSearchViewController: YMBaseViewController {
     }
 }
 
-extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate {
+extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate, YMSortTableViewDelegate {
     /// 搜索按钮点击
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -147,6 +147,18 @@ extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate,
             presentViewController(nav, animated: true, completion: nil)
         } else {
             
+        }
+    }
+    
+    // MARK: - YMSortTableViewDelegate
+    func sortView(sortView: YMSortTableView, didSelectSortAtIndexPath sort: String) {
+        /// 根据搜索条件进行搜索
+        let keyword = searchBar.text
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: sort) { (results) in
+            sortView.dismiss()
+            weakSelf!.results = results
+            weakSelf!.collectionView!.reloadData()
         }
     }
     

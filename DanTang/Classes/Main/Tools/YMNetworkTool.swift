@@ -17,7 +17,6 @@ class YMNetworkTool: NSObject {
     
     /// 获取首页数据
     func loadHomeInfo(id: Int, finished:(homeItems: [YMHomeItem]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
 //        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
         let url = BASE_URL + "v1/channels/\(id)/items"
         let params = ["gender": 1,
@@ -39,8 +38,6 @@ class YMNetworkTool: NSObject {
                         SVProgressHUD.showInfoWithStatus(message)
                         return
                     }
-                    // 移除加载提示
-                    SVProgressHUD.dismiss()
                     let data = dict["data"].dictionary
                     //  字典转成模型
                     if let items = data!["items"]?.arrayObject {
