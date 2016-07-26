@@ -9,7 +9,6 @@
 import Foundation
 
 class YMProduct: NSObject {
-    var brand_order: Int?
     var cover_image_url: String?
     var created_at: Int?
     var describe: String?
@@ -29,7 +28,6 @@ class YMProduct: NSObject {
     
     init(dict: [String: AnyObject]) {
         super.init()
-        brand_order = dict["brand_order"] as? Int
         cover_image_url = dict["cover_image_url"] as? String
         created_at = dict["created_at"] as? Int
         describe = dict["description"] as? String
