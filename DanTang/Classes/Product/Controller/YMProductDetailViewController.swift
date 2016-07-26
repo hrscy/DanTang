@@ -41,8 +41,11 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         view.addSubview(scrollView)
         // 添加底部栏
         view.addSubview(toolBarView)
+        // 添加顶部滚动视图
         topScrollView.product = product
         scrollView.addSubview(topScrollView)
+        
+        scrollView.addSubview(bottomScrollView)
         
         scrollView.snp_makeConstraints { (make) in
             make.top.left.right.equalTo(view)
@@ -56,9 +59,17 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         
         topScrollView.snp_makeConstraints { (make) in
             make.left.right.equalTo(view)
-            make.top.equalTo(view.snp_top).offset(64)
+            make.top.equalTo(scrollView.snp_top)
             make.height.equalTo(520)
         }
+        
+        bottomScrollView.snp_makeConstraints { (make) in
+            make.left.right.equalTo(view)
+            make.top.equalTo(topScrollView.snp_bottom).offset(kMargin)
+            make.height.equalTo(SCREENH - 64 - 45)
+        }
+        
+        scrollView.contentSize = CGSizeMake(SCREENW, SCREENH - 64 - 45 + kMargin + 520)
         
     }
     
@@ -79,11 +90,19 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         return topScrollView
     }()
     
+    /// 底部滚动视图
+    private lazy var bottomScrollView: YMProductDetailBottomView = {
+        let bottomScrollView = YMProductDetailBottomView()
+        bottomScrollView.backgroundColor = UIColor.whiteColor()
+        return bottomScrollView
+    }()
+    
     /// scrollView
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.backgroundColor = UIColor.cyanColor()
+        scrollView.delegate = self
         return scrollView
     }()
     
@@ -102,6 +121,17 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
 //        tmallVC.product = product
         let nav = YMNavigationController(rootViewController: tmallVC)
         presentViewController(nav, animated: true, completion: nil)
+    }
+}
+
+extension YMProductDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var offsetY = scrollView.contentOffset.y
+        print(offsetY)
+        if offsetY >= 465 {
+            offsetY = CGFloat(465)
+            scrollView.contentOffset = CGPointMake(0, offsetY)
+        }
     }
 }
 

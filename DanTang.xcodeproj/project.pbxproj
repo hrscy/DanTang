@@ -58,6 +58,10 @@
 		94A4415F1D47968E005E73FE /* YMProductDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4415E1D47968E005E73FE /* YMProductDetailTopView.swift */; };
 		94A441621D47A5D4005E73FE /* YMDetailCollectionCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441601D47A5D4005E73FE /* YMDetailCollectionCellCollectionViewCell.swift */; };
 		94A441631D47A5D4005E73FE /* YMDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A441611D47A5D4005E73FE /* YMDetailCollectionViewCell.xib */; };
+		94A441651D482876005E73FE /* YMDetailBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441641D482876005E73FE /* YMDetailBottomViewController.swift */; };
+		94A441671D482976005E73FE /* YMProductDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441661D482976005E73FE /* YMProductDetailBottomView.swift */; };
+		94A441691D482E60005E73FE /* YMDetailChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A441681D482E60005E73FE /* YMDetailChoiceButtonView.swift */; };
+		94A4416B1D482E83005E73FE /* YMDetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A4416A1D482E83005E73FE /* YMDetailChoiceButtonView.xib */; };
 		94E044C51D3E7B1300BCB4B1 /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */; };
 		94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */; };
 		94E044C71D3E7B1300BCB4B1 /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */; };
@@ -167,6 +171,10 @@
 		94A4415E1D47968E005E73FE /* YMProductDetailTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailTopView.swift; sourceTree = "<group>"; };
 		94A441601D47A5D4005E73FE /* YMDetailCollectionCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailCollectionCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		94A441611D47A5D4005E73FE /* YMDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		94A441641D482876005E73FE /* YMDetailBottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailBottomViewController.swift; sourceTree = "<group>"; };
+		94A441661D482976005E73FE /* YMProductDetailBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailBottomView.swift; sourceTree = "<group>"; };
+		94A441681D482E60005E73FE /* YMDetailChoiceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailChoiceButtonView.swift; sourceTree = "<group>"; };
+		94A4416A1D482E83005E73FE /* YMDetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailChoiceButtonView.xib; sourceTree = "<group>"; };
 		94E044B21D3E7B1300BCB4B1 /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
 		94E044B51D3E7B1300BCB4B1 /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
 		94E044B91D3E7B1300BCB4B1 /* YMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +358,9 @@
 				94A4415E1D47968E005E73FE /* YMProductDetailTopView.swift */,
 				94A441601D47A5D4005E73FE /* YMDetailCollectionCellCollectionViewCell.swift */,
 				94A441611D47A5D4005E73FE /* YMDetailCollectionViewCell.xib */,
+				94A441661D482976005E73FE /* YMProductDetailBottomView.swift */,
+				94A441681D482E60005E73FE /* YMDetailChoiceButtonView.swift */,
+				94A4416A1D482E83005E73FE /* YMDetailChoiceButtonView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +539,7 @@
 				25AD3B741D40CDD4001610B7 /* YMProductDetailViewController.swift */,
 				94E66C171D43AF37009E9609 /* YMTMALLViewController.swift */,
 				94E66C181D43AF37009E9609 /* YMTMALLViewController.xib */,
+				94A441641D482876005E73FE /* YMDetailBottomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,6 +686,7 @@
 				94A441631D47A5D4005E73FE /* YMDetailCollectionViewCell.xib in Resources */,
 				25AD3B9D1D420A59001610B7 /* YMTopHeaderView.xib in Resources */,
 				2586E20E1D3F820B007C5178 /* YMLoginViewController.xib in Resources */,
+				94A4416B1D482E83005E73FE /* YMDetailChoiceButtonView.xib in Resources */,
 				94E66C2A1D4459F0009E9609 /* YMPostDetailViewController.xib in Resources */,
 				25AD3B701D40B4DF001610B7 /* YMCollectionViewCell.xib in Resources */,
 				25AD3BB11D45BEE3001610B7 /* YMSeeAllTopicCell.xib in Resources */,
@@ -767,6 +780,7 @@
 				94E66C291D4459F0009E9609 /* YMPostDetailViewController.swift in Sources */,
 				94A4410B1D4463A9005E73FE /* YMCategoryBottomView.swift in Sources */,
 				94E044C81D3E7B1300BCB4B1 /* AppDelegate.swift in Sources */,
+				94A441691D482E60005E73FE /* YMDetailChoiceButtonView.swift in Sources */,
 				94E044D11D3E7D9600BCB4B1 /* YMTabBarController.swift in Sources */,
 				94E66C1F1D444B3F009E9609 /* YMCollectionDetailController.swift in Sources */,
 				94E66C191D43AF37009E9609 /* YMTMALLViewController.swift in Sources */,
@@ -778,6 +792,7 @@
 				94E044C61D3E7B1300BCB4B1 /* YMDanTangViewController.swift in Sources */,
 				94A4415F1D47968E005E73FE /* YMProductDetailTopView.swift in Sources */,
 				94A4410D1D44FCD4005E73FE /* YMMeChoiceView.swift in Sources */,
+				94A441651D482876005E73FE /* YMDetailBottomViewController.swift in Sources */,
 				25A285501D4711850090498C /* YMRefreshControl.swift in Sources */,
 				25AD3B7D1D41DDB4001610B7 /* YMVerticalButton.swift in Sources */,
 				25AD3B751D40CDD4001610B7 /* YMProductDetailViewController.swift in Sources */,
@@ -805,6 +820,7 @@
 				94E044D71D42F27E00BCB4B1 /* YMSettingViewController.swift in Sources */,
 				2586E2041D3F511B007C5178 /* YMTopicViewController.swift in Sources */,
 				2586E1F91D3F3734007C5178 /* YMChannel.swift in Sources */,
+				94A441671D482976005E73FE /* YMProductDetailBottomView.swift in Sources */,
 				25A285451D4705C10090498C /* YMSortCell.swift in Sources */,
 				25AD3B6F1D40B4DF001610B7 /* YMCollectionViewCell.swift in Sources */,
 				25AD3B811D41E80C001610B7 /* YMCategoryHeaderViewController.swift in Sources */,

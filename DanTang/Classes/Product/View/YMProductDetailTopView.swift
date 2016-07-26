@@ -46,27 +46,25 @@ class YMProductDetailTopView: UIView {
         }
         
         titleLabel.snp_makeConstraints { (make) in
-            make.top.equalTo(collectionView.snp_bottom).offset(kMargin)
-            make.left.equalTo(self).offset(kMargin)
-            make.right.equalTo(self.snp_right).offset(-kMargin)
+            make.top.equalTo(collectionView.snp_bottom).offset(5)
+            make.left.equalTo(self).offset(5)
+            make.right.equalTo(self.snp_right).offset(-5)
             make.height.equalTo(30)
         }
         
         priceLabel.snp_makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp_left)
             make.right.equalTo(titleLabel.snp_right)
-            make.top.equalTo(titleLabel.snp_bottom).offset(kMargin)
+            make.top.equalTo(titleLabel.snp_bottom).offset(5)
             make.height.equalTo(25)
         }
         
         describeLabel.snp_makeConstraints { (make) in
             make.left.equalTo(priceLabel.snp_left)
             make.right.equalTo(priceLabel.snp_right)
-            make.top.equalTo(priceLabel.snp_bottom).offset(kMargin)
-            make.bottom.equalTo(self.snp_bottom).offset(-kMargin)
+            make.top.equalTo(priceLabel.snp_bottom).offset(5)
+            make.bottom.equalTo(self.snp_bottom).offset(-5)
         }
-        
-        
     }
     
     private lazy var collectionView: UICollectionView = {
