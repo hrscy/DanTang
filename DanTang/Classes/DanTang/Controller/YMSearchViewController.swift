@@ -11,8 +11,7 @@ import UIKit
 let searchCollectionCellID = "searchCollectionCellID"
 
 class YMSearchViewController: YMBaseViewController {
-    /// 关键词
-    var words = [String]()
+    
     /// 搜索结果列表
     var results = [YMSearchResult]()
     
@@ -33,13 +32,7 @@ class YMSearchViewController: YMBaseViewController {
         // 设置导航栏
         setupNav()
         
-        /// 搜索界面数据
-        YMNetworkTool.shareNetworkTool.loadHotWords { (hot_words) in
-            self.words = hot_words
-        }
-
-        /// 设置collectionView
-        setupCollectionView()
+        view.addSubview(searchRecordView)
         
     }
     
@@ -55,6 +48,7 @@ class YMSearchViewController: YMBaseViewController {
     private func setupCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.delegate = self
+        collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
         collectionView.backgroundColor = view.backgroundColor
         collectionView.dataSource = self
         let nib = UINib(nibName: String(YMCollectionViewCell), bundle: nil)
@@ -84,6 +78,13 @@ class YMSearchViewController: YMBaseViewController {
         searchBar.placeholder = "搜索商品、专题"
         return searchBar
     }()
+    
+    private lazy var searchRecordView: YMSearchRecordView = {
+        let searchRecordView = YMSearchRecordView()
+        searchRecordView.backgroundColor = YMGlobalColor()
+        searchRecordView.frame = CGRectMake(0, 64, SCREENW, SCREENH - 64)
+        return searchRecordView
+    }()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -92,6 +93,13 @@ class YMSearchViewController: YMBaseViewController {
 }
 
 extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate, YMSortTableViewDelegate {
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        /// 设置collectionView
+        setupCollectionView()
+        return true
+    }
+    
     /// 搜索按钮点击
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()

@@ -25,7 +25,7 @@
 		2586E20E1D3F820B007C5178 /* YMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2586E20D1D3F820B007C5178 /* YMLoginViewController.xib */; };
 		25A285451D4705C10090498C /* YMSortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285431D4705C10090498C /* YMSortCell.swift */; };
 		25A285461D4705C10090498C /* YMSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285441D4705C10090498C /* YMSortCell.xib */; };
-		25A285481D470A650090498C /* YMSearchRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285471D470A650090498C /* YMSearchRecord.swift */; };
+		25A285481D470A650090498C /* YMSearchRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285471D470A650090498C /* YMSearchRecordView.swift */; };
 		25A2854A1D470C7E0090498C /* YMRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285491D470C7E0090498C /* YMRefreshView.swift */; };
 		25A2854E1D470C920090498C /* YMRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A2854D1D470C920090498C /* YMRefreshView.xib */; };
 		25A285501D4711850090498C /* YMRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2854F1D4711850090498C /* YMRefreshControl.swift */; };
@@ -129,7 +129,7 @@
 		2586E20D1D3F820B007C5178 /* YMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMLoginViewController.xib; sourceTree = "<group>"; };
 		25A285431D4705C10090498C /* YMSortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSortCell.swift; sourceTree = "<group>"; };
 		25A285441D4705C10090498C /* YMSortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSortCell.xib; sourceTree = "<group>"; };
-		25A285471D470A650090498C /* YMSearchRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchRecord.swift; sourceTree = "<group>"; };
+		25A285471D470A650090498C /* YMSearchRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchRecordView.swift; sourceTree = "<group>"; };
 		25A285491D470C7E0090498C /* YMRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshView.swift; sourceTree = "<group>"; };
 		25A2854D1D470C920090498C /* YMRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMRefreshView.xib; sourceTree = "<group>"; };
 		25A2854F1D4711850090498C /* YMRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshControl.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 				94A4415A1D46547D005E73FE /* YMSortTableView.swift */,
 				25A285431D4705C10090498C /* YMSortCell.swift */,
 				25A285441D4705C10090498C /* YMSortCell.xib */,
-				25A285471D470A650090498C /* YMSearchRecord.swift */,
+				25A285471D470A650090498C /* YMSearchRecordView.swift */,
 				25A285491D470C7E0090498C /* YMRefreshView.swift */,
 				25A2854D1D470C920090498C /* YMRefreshView.xib */,
 				25A2854F1D4711850090498C /* YMRefreshControl.swift */,
@@ -781,7 +781,7 @@
 				94E66C161D439D62009E9609 /* YMShareButtonView.swift in Sources */,
 				2586E20C1D3F811E007C5178 /* YMLoginViewController.swift in Sources */,
 				94E044D51D42F27400BCB4B1 /* YMMessageViewController.swift in Sources */,
-				25A285481D470A650090498C /* YMSearchRecord.swift in Sources */,
+				25A285481D470A650090498C /* YMSearchRecordView.swift in Sources */,
 				2586E1EB1D3F2453007C5178 /* YMConst.swift in Sources */,
 				25AD3B861D41EF46001610B7 /* YMCategoryCollectionViewCell.swift in Sources */,
 				94E044CA1D3E7B1300BCB4B1 /* YMProductViewController.swift in Sources */,
