@@ -194,6 +194,70 @@ class YMNetworkTool: NSObject {
         }
     }
     
+    /// 获取单品详情数据
+    func loadProductDetailData(id: Int, finished:(productDetail: YMProductDetail) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v2/items/\(id)"
+        Alamofire
+            .request(.GET, url)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionaryObject {
+                        let productDetail = YMProductDetail(dict: data)
+                        finished(productDetail: productDetail)
+                    }
+                }
+        }
+    }
+    
+    /// 商品详情 评论
+    func loadProductDetailComments(id: Int, finished:(comments: [YMComment]) -> ()) {
+        SVProgressHUD.showWithStatus("正在加载...")
+        let url = BASE_URL + "v2/items/\(id)/comments"
+        let params = ["limit": 20,
+                      "offset": 0]
+        Alamofire
+            .request(.GET, url, parameters: params)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    return
+                }
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfoWithStatus(message)
+                        return
+                    }
+                    SVProgressHUD.dismiss()
+                    if let data = dict["data"].dictionary {
+                        if let commentsData = data["comments"]?.arrayObject {
+                            var comments = [YMComment]()
+                            for item in commentsData {
+                                let comment = YMComment(dict: item as! [String: AnyObject])
+                                comments.append(comment)
+                            }
+                            finished(comments: comments)
+                        }
+                    }
+                }
+        }
+    }
+    
     /// 分类界面 顶部 专题合集
     func loadCategoryCollection(limit: Int, finished:(collections: [YMCollection]) -> ()) {
         SVProgressHUD.showWithStatus("正在加载...")

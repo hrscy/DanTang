@@ -33,7 +33,6 @@ class YMSearchViewController: YMBaseViewController {
         setupNav()
         
         view.addSubview(searchRecordView)
-        
     }
     
     // 设置导航栏

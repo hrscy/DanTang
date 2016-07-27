@@ -36,7 +36,15 @@ class YMSearchRecordView: UIView {
         hotLabel.frame = CGRectMake(10, 20, 200, 20)
         topView.addSubview(hotLabel)
         
-        
+        for index in 0..<words.count {
+            let button = UIButton()
+            button.tag = index
+            button.setTitle(words[index], forState: .Normal)
+            button.sizeToFit()
+
+            topView.addSubview(button)
+            print(button.width)
+        }
         
         // 历史纪录
         let bottomView = UIView()
