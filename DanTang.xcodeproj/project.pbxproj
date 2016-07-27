@@ -83,7 +83,7 @@
 		25A286011D48493C0090498C /* YMCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B01D48493C0090498C /* YMCollectionViewCell.xib */; };
 		25A286021D48493C0090498C /* YMDetailChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */; };
 		25A286031D48493C0090498C /* YMDetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */; };
-		25A286041D48493C0090498C /* YMDetailCollectionCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B31D48493C0090498C /* YMDetailCollectionCellCollectionViewCell.swift */; };
+		25A286041D48493C0090498C /* YMDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */; };
 		25A286051D48493C0090498C /* YMDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */; };
 		25A286061D48493C0090498C /* YMProductDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */; };
 		25A286071D48493C0090498C /* YMProductDetailToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */; };
@@ -198,7 +198,7 @@
 		25A285B01D48493C0090498C /* YMCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionViewCell.xib; sourceTree = "<group>"; };
 		25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailChoiceButtonView.swift; sourceTree = "<group>"; };
 		25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailChoiceButtonView.xib; sourceTree = "<group>"; };
-		25A285B31D48493C0090498C /* YMDetailCollectionCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailCollectionCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailBottomView.swift; sourceTree = "<group>"; };
 		25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailToolBar.swift; sourceTree = "<group>"; };
@@ -548,7 +548,7 @@
 				25A285B01D48493C0090498C /* YMCollectionViewCell.xib */,
 				25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */,
 				25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */,
-				25A285B31D48493C0090498C /* YMDetailCollectionCellCollectionViewCell.swift */,
+				25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */,
 				25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */,
 				25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */,
 				25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */,
@@ -793,7 +793,7 @@
 				25A285E41D48493C0090498C /* String+Extension.swift in Sources */,
 				25A2861C1D488F520090498C /* YMComment.swift in Sources */,
 				25A285D51D48493C0090498C /* YMSearchResult.swift in Sources */,
-				25A286041D48493C0090498C /* YMDetailCollectionCellCollectionViewCell.swift in Sources */,
+				25A286041D48493C0090498C /* YMDetailCollectionViewCell.swift in Sources */,
 				25A285CC1D48493C0090498C /* YMTopHeaderView.swift in Sources */,
 				25A2860A1D48493C0090498C /* YMShareButtonView.swift in Sources */,
 				25A285F51D48493C0090498C /* AppDelegate.swift in Sources */,

@@ -83,8 +83,8 @@
 		- YMCollectionViewCell.xib
 		- YMDetailChoiceButtonView.swift
 		- YMDetailChoiceButtonView.xib
-		- YMDetailCollectionCellCollectionViewCell.swift
-		- YMDetailCollectionCellCollectionViewCell.xib
+		- YMDetailCollectionViewCell.swift
+		- YMDetailCollectionViewCell.xib
 		- YMProductDetailBottomView.swift
 		- YMProductDetailToolBar.swift
 		- YMProductDetailToolBar.xib
@@ -145,7 +145,9 @@
 		- YMNewfeatureViewController.swift
 - Main（主要）
 	- Category
-	
+		- String+Extension.swift
+		- UITableView+EmptyData.swift
+		- UIView+Extension.swift
 	- Controller
 		- YMBaseViewController.swift
 		- YMNavigationController.swift

@@ -96,8 +96,8 @@ extension YMProductDetailBottomView: YMDetailChoiceButtonViewDegegate, UIWebView
     
     // MARK: - YMDetailChoiceButtonViewDegegate
     func choiceIntroduceButtonClick() {
-        tableView.hidden = false
-        webView.hidden = true
+        tableView.hidden = true
+        webView.hidden = false
     }
     
     func choicecommentButtonClick() {
