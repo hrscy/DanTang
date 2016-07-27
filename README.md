@@ -11,6 +11,8 @@
 
 ## 项目截图
 
+![单糖](http://o9z3a1y1u.bkt.clouddn.com/dangtang.gif)
+
 ![首页](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.29.png)
 
 ![单品](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.32.png)
