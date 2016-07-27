@@ -22,30 +22,22 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNav()
-        
-        
-        
-        
-//        YMNetworkTool.shareNetworkTool.loadProductDetailData(product!.id!) { (productDetail) in
-//            
-//        }
-        
+        setupUI()
     }
     
     
     /// 设置导航栏和底部栏
-    func setupNav() {
+    func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .Plain, target: self, action: #selector(shareBBItemClick))
         
         view.addSubview(scrollView)
         // 添加底部栏
         view.addSubview(toolBarView)
-        // 添加顶部滚动视图
-        topScrollView.product = product
-        scrollView.addSubview(topScrollView)
-        
-        scrollView.addSubview(bottomScrollView)
+        if type == String(YMSearchViewController) {
+            
+        } else if type == String(YMProductViewController) {
+            scrollView.product = product
+        }
         
         scrollView.snp_makeConstraints { (make) in
             make.top.left.right.equalTo(view)
@@ -57,20 +49,7 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
             make.height.equalTo(45)
         }
         
-        topScrollView.snp_makeConstraints { (make) in
-            make.left.right.equalTo(view)
-            make.top.equalTo(scrollView.snp_top)
-            make.height.equalTo(520)
-        }
-        
-        bottomScrollView.snp_makeConstraints { (make) in
-            make.left.right.equalTo(view)
-            make.top.equalTo(topScrollView.snp_bottom).offset(kMargin)
-            make.height.equalTo(SCREENH - 64 - 45)
-        }
-        
         scrollView.contentSize = CGSizeMake(SCREENW, SCREENH - 64 - 45 + kMargin + 520)
-        
     }
     
     /// 分享按钮点击
@@ -83,25 +62,10 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         // Dispose of any resources that can be recreated.
     }
     
-    /// 顶部滚动视图
-    private lazy var topScrollView: YMProductDetailTopView = {
-        let topScrollView = YMProductDetailTopView()
-        topScrollView.backgroundColor = UIColor.whiteColor()
-        return topScrollView
-    }()
-    
-    /// 底部滚动视图
-    private lazy var bottomScrollView: YMProductDetailBottomView = {
-        let bottomScrollView = YMProductDetailBottomView()
-        bottomScrollView.backgroundColor = UIColor.whiteColor()
-        return bottomScrollView
-    }()
-    
     /// scrollView
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
+    private lazy var scrollView: YMDetailScrollView = {
+        let scrollView = YMDetailScrollView()
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.backgroundColor = UIColor.cyanColor()
         scrollView.delegate = self
         return scrollView
     }()
@@ -118,7 +82,7 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     func toolBarDidClickedTMALLButton() {
         let tmallVC = YMTMALLViewController()
         tmallVC.title = "商品详情"
-//        tmallVC.product = product
+        tmallVC.product = product
         let nav = YMNavigationController(rootViewController: tmallVC)
         presentViewController(nav, animated: true, completion: nil)
     }
@@ -127,7 +91,6 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
 extension YMProductDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         var offsetY = scrollView.contentOffset.y
-        print(offsetY)
         if offsetY >= 465 {
             offsetY = CGFloat(465)
             scrollView.contentOffset = CGPointMake(0, offsetY)

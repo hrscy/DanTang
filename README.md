@@ -11,13 +11,27 @@
 
 ## 项目截图
 
-![](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.29.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.32.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.49.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.34.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.22.54.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.36.png)
-![](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.40.png)
+![首页](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.29.png)
+
+![单品](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.32.png)
+
+![单品详情](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8827%E6%97%A5%20%E4%B8%8B%E5%8D%883.21.14.png)
+
+![攻略详情](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.49.png)
+
+![图文介绍](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8827%E6%97%A5%20%E4%B8%8B%E5%8D%883.21.18.png)
+
+![评论](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8827%E6%97%A5%20%E4%B8%8B%E5%8D%883.21.19.png)
+
+![分享](http://oat16akgn.bkt.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8827%E6%97%A5%20%E4%B8%8B%E5%8D%883.21.25.png)
+
+![分类](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.34.png)
+
+![搜索](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.22.54.png)
+
+![我](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.36.png)
+
+![设置](http://oat16akgn.bkt.clouddn.com/dantang/Simulator%20Screen%20Shot%202016%E5%B9%B47%E6%9C%8826%E6%97%A5%20%E4%B8%8B%E5%8D%885.14.40.png)
 
 ## 项目环境
 
@@ -34,17 +48,118 @@
 
 ## 项目结构
 
-![](http://oat16akgn.bkt.clouddn.com/dantang_structure.png)
+![项目结构](http://oat16akgn.bkt.clouddn.com/dantang_structure.png)
 
 由于刚接触 Swift，以及对 MVVM 的理解的不深，所以没有使用 MVVM 设计模式，项目使用传统的 MVC 设计模式。
 
 - 首页（单糖）
-- 单品
-- 分类
-- 我
-- 登录和注册
+	- Model
+		- YMChannel.swift
+		- YMHomeItem.swift
+		- YMSearchResult.swift
+	- View
+		- YMHomeCell.swift
+		- YMHomeCell.xib
+		- YMRefreshControl.swift
+		- YMRefreshView.swift
+		- YMRefreshView.xib
+		- YMSearchRecordView.swift
+		- YMSortCell.swift
+		- YMSortCell.xib
+		- YMSortTableView.swift
+	- Controller
+		- YMDanTangViewController.swift
+		- YMTopicViewController.swift
+		- YMDetailViewController.swift
+		- YMSearchViewController.swift
+- Product（单品）
+	- Model
+		- YMProduct.swift
+		- YMProductDetail.swift
+		- YMComment.swift
+	- View
+		- YMActionSheet.swift
+		- YMCollectionViewCell.swift
+		- YMCollectionViewCell.xib
+		- YMDetailChoiceButtonView.swift
+		- YMDetailChoiceButtonView.xib
+		- YMDetailCollectionCellCollectionViewCell.swift
+		- YMDetailCollectionCellCollectionViewCell.xib
+		- YMProductDetailBottomView.swift
+		- YMProductDetailToolBar.swift
+		- YMProductDetailToolBar.xib
+		- YMProductDetailTopView.swift
+		- YMShareButtonView.swift
+		- YMDetailScrollView.swift
+		- YMCommentCell.swift
+		- YMCommentCell.xib
+	- Controller
+		- YMProductViewController.swift
+		- YMProductDetailViewController.swift
+		- YMTMALLViewController.swift
+		- YMTMALLViewController.xib
+- Classify（分类）
+	- Model
+		- YMCollection.swift
+		- YMCollectionPost.swift
+		- YMGroup.swift
+	- View
+		- YMCategoryBottomView.swift
+		- YMCategoryCollectionViewCell.swift
+		- YMCategoryCollectionViewCell.xib
+		- YMCollectionTableViewCell.swift
+		- YMCollectionTableViewCell.xib
+		- YMSeeAllTopicCell.swift
+		- YMSeeAllTopicCell.xib
+		- YMTopHeaderView.swift
+		- YMTopHeaderView.xib
+		- YMVerticalButton.swift
+	- Controller
+		- YMCategoryHeaderViewController.swift
+		- YMCategoryViewController.swift
+		- YMCollectionDetailController.swift
+		- YMCollectionDetailController.xib
+		- YMPostDetailViewController.swift
+		- YMPostDetailViewController.xib
+		- YMSeeAllController.swift
+		- YMSeeAllController.xib
+- Me（我）
+ 	- Model
+ 		- YMSetting.swift
+	- View
+		- YMMeChoiceView.swift
+		- YMMeFooterView.swift
+		- YMMineHeaderView.swift
+		- YMSettingCell.swift
+		- YMSettingCell.xib
+	- Controller
+		- YMMessageViewController.swift
+		- YMMeViewController.swift
+		- YMSettingViewController.swift
+- Login&Register（登录和注册）
+	- Controller
+		- YMLoginViewController.swift
+		- YMLoginViewController.xib
+		- YMRegisterViewController.swift
+		- YMRegisterViewController.xib
+		- YMNewfeatureViewController.swift
+- Main（主要）
+	- Category
+	
+	- Controller
+		- YMBaseViewController.swift
+		- YMNavigationController.swift
+		- YMTabBarController.swift
+	- Tools
+		- YMConst.swift
+		- YMNetworkTool.swift
 
-抓取的数据接口请看 [单糖数据接口](#单糖数据接口.md) 和 [单糖数据接口详细数据](单糖数据接口详细数据.md)。
+## 项目文档和数据接口
+
+#### 抓取的数据接口请看 [单糖数据接口](单糖数据接口.md) 和 [单糖数据接口详细数据](单糖数据接口详细数据.md)。
+
+#### 下载项目之后，点击此处，查看项目文档 [项目文档](docs/index.html) 或者直接打开文件目录 『docs/index.html』。
+
 
 ## 运行项目出现的问题都可以给我留言，我会尽快回复。
 

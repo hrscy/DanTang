@@ -18,5 +18,5 @@ class YMDetailCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

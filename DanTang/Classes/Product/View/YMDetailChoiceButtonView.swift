@@ -8,27 +8,44 @@
 
 import UIKit
 
-class YMDetailChoiceButtonView: UIView {
+protocol YMDetailChoiceButtonViewDegegate: NSObjectProtocol {
+    /// 图文介绍按钮点击
+    func choiceIntroduceButtonClick()
+    /// 评论按钮点击
+    func choicecommentButtonClick()
+}
 
+class YMDetailChoiceButtonView: UIView {
+    
+    weak var delegate: YMDetailChoiceButtonViewDegegate?
+
+    @IBOutlet weak var lineView: UIView!
+    
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var commentButton: UIButton!
     
     @IBAction func introduceButtonClick(sender: UIButton) {
         UIView.animateWithDuration(kAnimationDuration) {
-            self.leadingConstraint.constant = 0
-            self.layoutIfNeeded()
+            self.lineView.x = 0
         }
+        delegate?.choiceIntroduceButtonClick()
     }
     
     @IBAction func commentButtonClick(sender: UIButton) {
-        UIView.animateWithDuration(kAnimationDuration) { 
-            self.leadingConstraint.constant = SCREENW * 0.5
-            self.layoutIfNeeded()
+        UIView.animateWithDuration(kAnimationDuration) {
+            self.lineView.x = SCREENW * 0.5
         }
+        delegate?.choicecommentButtonClick()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-
+    
+    class func choiceButtonView() -> YMDetailChoiceButtonView{
+        return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last as! YMDetailChoiceButtonView
+    }
+    
 }
