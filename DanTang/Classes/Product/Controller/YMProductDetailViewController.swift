@@ -82,7 +82,7 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     func toolBarDidClickedTMALLButton() {
         let tmallVC = YMTMALLViewController()
         tmallVC.title = "商品详情"
-//        tmallVC.product = product
+        tmallVC.product = product
         let nav = YMNavigationController(rootViewController: tmallVC)
         presentViewController(nav, animated: true, completion: nil)
     }

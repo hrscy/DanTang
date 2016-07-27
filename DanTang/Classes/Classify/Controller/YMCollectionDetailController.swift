@@ -56,7 +56,8 @@ extension YMCollectionDetailController: UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(collectionTableCellID) as! YMCollectionTableViewCell
         cell.selectionStyle = .None
-        cell.collectionPost = posts[indexPath.row]
+        cell.collectionPost = posts[indexPath.row
+        ]
         return cell
     }
     

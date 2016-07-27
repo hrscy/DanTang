@@ -24,7 +24,6 @@ class YMSearchRecordView: UIView {
             weakSelf!.setupUI()
         }
         
-        
     }
     
     func setupUI() {
@@ -41,7 +40,7 @@ class YMSearchRecordView: UIView {
             button.tag = index
             button.setTitle(words[index], forState: .Normal)
             button.sizeToFit()
-
+            
             topView.addSubview(button)
             print(button.width)
         }

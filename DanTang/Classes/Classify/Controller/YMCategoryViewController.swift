@@ -20,7 +20,7 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
     
     private func setupScrollView() {
         view.addSubview(scrollView)
-
+        // 顶部控制器
         let headerViewController = YMCategoryHeaderViewController()
         addChildViewController(headerViewController)
         
@@ -42,6 +42,7 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
         navigationController?.pushViewController(searchBarVC, animated: true)
     }
     
+    /// 懒加载创建 scrollView
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.scrollEnabled = true
