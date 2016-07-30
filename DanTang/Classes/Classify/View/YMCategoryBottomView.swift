@@ -34,9 +34,8 @@ class YMCategoryBottomView: UIView {
     }
 
     private func setupUI() {
-        
-        let topGroups = outGroups[0] as! [YMGroup]
-        let bottomGroups = outGroups[1] as! [YMGroup]
+        let topGroups = outGroups[0] as! NSArray
+        let bottomGroups = outGroups[1] as! NSArray
         
         // 风格
         let topView = UIView()
@@ -47,7 +46,7 @@ class YMCategoryBottomView: UIView {
         topView.addSubview(styleLabel)
         
         for index in 0..<topGroups.count {
-            let group = topGroups[index]
+            let group = topGroups[index] as! YMGroup
             let button = setupButton(index, group: group)
             topView.addSubview(button)
             if index == topGroups.count - 1 {
@@ -65,7 +64,7 @@ class YMCategoryBottomView: UIView {
         bottomView.addSubview(categoryLabel)
         
         for index in 0..<bottomGroups.count {
-            let group = bottomGroups[index]
+            let group = bottomGroups[index] as! YMGroup
             let button = setupButton(index, group: group)
             bottomView.addSubview(button)
             if index == bottomGroups.count - 1 {
