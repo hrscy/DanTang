@@ -25,6 +25,7 @@ class YMNewfeatureViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.registerClass(YMNewfeatureCell.self, forCellWithReuseIdentifier: newFeatureID)
+        
     }
 }
 

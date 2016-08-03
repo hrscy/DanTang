@@ -26,16 +26,15 @@ class YMCollectionDetailController: UIViewController {
         tableView.registerNib(nib, forCellReuseIdentifier: collectionTableCellID)
         tableView.rowHeight = 150
         tableView.separatorStyle = .None
-        weak var weakSelf = self
         if type == "专题合集" {
-            YMNetworkTool.shareNetworkTool.loadCollectionPosts(id!) { (posts) in
-                weakSelf!.posts = posts
-                weakSelf!.tableView.reloadData()
+            YMNetworkTool.shareNetworkTool.loadCollectionPosts(id!) { [weak self] (posts) in
+                self!.posts = posts
+                self!.tableView.reloadData()
             }
         } else if type == "风格品类" {
-            YMNetworkTool.shareNetworkTool.loadStylesOrCategoryInfo(id!, finished: { (items) in
-                weakSelf!.posts = items
-                weakSelf!.tableView.reloadData()
+            YMNetworkTool.shareNetworkTool.loadStylesOrCategoryInfo(id!, finished: { [weak self] (items) in
+                self!.posts = items
+                self!.tableView.reloadData()
             })
         }
     }

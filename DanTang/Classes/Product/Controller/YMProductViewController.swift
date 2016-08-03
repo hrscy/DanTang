@@ -23,10 +23,9 @@ class YMProductViewController: YMBaseViewController {
         /// 设置collectionView
         setupCollectionView()
         
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadProductData { (products) in
-            weakSelf!.products = products
-            weakSelf!.collectionView!.reloadData()
+        YMNetworkTool.shareNetworkTool.loadProductData { [weak self] (products) in
+            self!.products = products
+            self!.collectionView!.reloadData()
         }
     }
     

@@ -26,19 +26,18 @@ class YMDanTangViewController: YMBaseViewController {
         super.viewDidLoad()
         // 设置导航栏
         setupNav()
-        weak var weakSelf = self
         // 获取首页顶部选择数据
-        YMNetworkTool.shareNetworkTool.loadHomeTopData { (ym_channels) in
+        YMNetworkTool.shareNetworkTool.loadHomeTopData { [weak self] (ym_channels) in
             for channel in ym_channels {
                 let vc = YMTopicViewController()
                 vc.title = channel.name!
                 vc.type = channel.id!
-                weakSelf!.addChildViewController(vc)
+                self!.addChildViewController(vc)
             }
             //设置顶部标签栏
-            weakSelf!.setupTitlesView()
+            self!.setupTitlesView()
             // 底部的scrollview
-            weakSelf!.setupContentView()
+            self!.setupContentView()
         }
     }
     

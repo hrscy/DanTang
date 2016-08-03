@@ -22,10 +22,9 @@ class YMCategoryBottomView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         /// 分类界面 风格,品类
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadCategoryGroup { (outGroups) in
-            weakSelf!.outGroups = outGroups
-            weakSelf!.setupUI()
+        YMNetworkTool.shareNetworkTool.loadCategoryGroup { [weak self] (outGroups) in
+            self!.outGroups = outGroups
+            self!.setupUI()
         }
     }
     

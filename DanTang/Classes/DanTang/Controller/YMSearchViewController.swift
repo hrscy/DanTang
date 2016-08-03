@@ -106,10 +106,9 @@ extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate,
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_sort_21x21_"), style: .Plain, target: self, action: #selector(sortButtonClick))
         /// 根据搜索条件进行搜索
         let keyword = searchBar.text
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: "") { (results) in
-            weakSelf!.results = results
-            weakSelf!.collectionView!.reloadData()
+        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: "") { [weak self] (results) in
+            self!.results = results
+            self!.collectionView!.reloadData()
         }
     }
     
@@ -161,11 +160,10 @@ extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate,
     func sortView(sortView: YMSortTableView, didSelectSortAtIndexPath sort: String) {
         /// 根据搜索条件进行搜索
         let keyword = searchBar.text
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: sort) { (results) in
+        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: sort) { [weak self] (results) in
             sortView.dismiss()
-            weakSelf!.results = results
-            weakSelf!.collectionView!.reloadData()
+            self!.results = results
+            self!.collectionView!.reloadData()
         }
     }
     

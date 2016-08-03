@@ -28,21 +28,19 @@ class YMTopicViewController: UITableViewController {
         refreshControl?.beginRefreshing()
         refreshControl?.addTarget(self, action: #selector(loadHomeData), forControlEvents: .ValueChanged)
         // 获取首页数据
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { (homeItems) in
-            weakSelf!.items = homeItems
-            weakSelf!.tableView!.reloadData()
-            weakSelf!.refreshControl?.endRefreshing()
+        YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { [weak self] (homeItems) in
+            self!.items = homeItems
+            self!.tableView!.reloadData()
+            self!.refreshControl?.endRefreshing()
         }
     }
     
     func loadHomeData() {
         // 获取首页数据
-        weak var weakSelf = self
-        YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { (homeItems) in
-            weakSelf!.items = homeItems
-            weakSelf!.tableView!.reloadData()
-            weakSelf!.refreshControl?.endRefreshing()
+        YMNetworkTool.shareNetworkTool.loadHomeInfo(type) { [weak self] (homeItems) in
+            self!.items = homeItems
+            self!.tableView!.reloadData()
+            self!.refreshControl?.endRefreshing()
         }
     }
     
