@@ -16,6 +16,7 @@ class YMNewfeatureViewController: UICollectionViewController {
     private var layout: UICollectionViewFlowLayout = YMNewfeatureLayout()
     init() {
         super.init(collectionViewLayout: layout)
+        collectionView?.showsHorizontalScrollIndicator = false
     }
     
     required init?(coder aDecoder: NSCoder) {

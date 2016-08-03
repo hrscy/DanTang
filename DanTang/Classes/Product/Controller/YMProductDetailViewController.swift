@@ -33,11 +33,7 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         view.addSubview(scrollView)
         // 添加底部栏
         view.addSubview(toolBarView)
-        if type == String(YMSearchViewController) {
-            
-        } else if type == String(YMProductViewController) {
-            scrollView.product = product
-        }
+        scrollView.product = product
         
         scrollView.snp_makeConstraints { (make) in
             make.top.left.right.equalTo(view)

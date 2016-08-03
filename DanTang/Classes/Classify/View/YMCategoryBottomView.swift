@@ -33,9 +33,8 @@ class YMCategoryBottomView: UIView {
     }
 
     private func setupUI() {
-        
-        let topGroups = outGroups[0]
-        let bottomGroups = outGroups[1]
+        let topGroups = outGroups[0] as! NSArray
+        let bottomGroups = outGroups[1] as! NSArray
         
         // 风格
         let topView = UIView()
