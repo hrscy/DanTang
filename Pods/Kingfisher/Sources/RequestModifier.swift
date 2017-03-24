@@ -1,7 +1,10 @@
 //
-//  SnapKit
+//  RequestModifier.swift
+//  Kingfisher
 //
-//  Copyright (c) 2011-2015 SnapKit Team - https://github.com/SnapKit
+//  Created by Wei Wang on 2016/09/05.
+//
+//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,18 +24,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if os(iOS) || os(tvOS)
-import UIKit
-public typealias EdgeInsets = UIEdgeInsets
-public func EdgeInsetsMake(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> EdgeInsets {
-    return EdgeInsets(top: top, left: left, bottom: bottom, right: right)
+import Foundation
+
+/// Request modifier of image downloader.
+public protocol ImageDownloadRequestModifier {
+    func modified(for request: URLRequest) -> URLRequest?
 }
-public let EdgeInsetsZero = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-#else
-import AppKit
-public typealias EdgeInsets = NSEdgeInsets
-public func EdgeInsetsMake(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> EdgeInsets {
-    return EdgeInsets(top: top, left: left, bottom: bottom, right: right)
+
+struct NoModifier: ImageDownloadRequestModifier {
+    static let `default` = NoModifier()
+    private init() {}
+    func modified(for request: URLRequest) -> URLRequest? {
+        return request
+    }
 }
-public let EdgeInsetsZero = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-#endif
+
+public struct AnyModifier: ImageDownloadRequestModifier {
+    
+    let block: (URLRequest) -> URLRequest?
+    
+    public func modified(for request: URLRequest) -> URLRequest? {
+        return block(request)
+    }
+    
+    public init(modify: @escaping (URLRequest) -> URLRequest? ) {
+        block = modify
+    }
+}

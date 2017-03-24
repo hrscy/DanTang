@@ -11,7 +11,7 @@ import SnapKit
 
 let commentCellID = "commentCellID"
 
-class YMProductDetailBottomView: UIView {
+class YMProductDetailBottomView: UIView, YMDetailChoiceButtonViewDegegate, UIWebViewDelegate, UITableViewDataSource {
     
     var comments = [YMComment]()
     
@@ -19,12 +19,12 @@ class YMProductDetailBottomView: UIView {
         didSet {
             weak var weakSelf = self
             /// 获取单品详细数据
-            YMNetworkTool.shareNetworkTool.loadProductDetailData(product!.id!) { (productDetail) in
-                weakSelf!.choiceButtonView.commentButton.setTitle("评论(\(productDetail.comments_count!))", forState: .Normal)
+            YMNetworkTool.shareNetworkTool.loadProductDetailData(id: product!.id!) { (productDetail) in
+                weakSelf!.choiceButtonView.commentButton.setTitle("评论(\(productDetail.comments_count!))", for: .normal)
                 weakSelf!.webView.loadHTMLString(productDetail.detail_html!, baseURL: nil)
             }
             /// 获取评论数据
-            YMNetworkTool.shareNetworkTool.loadProductDetailComments(product!.id!) { (comments) in
+            YMNetworkTool.shareNetworkTool.loadProductDetailComments(id: product!.id!) { (comments) in
                 weakSelf!.comments = comments
                 weakSelf!.tableView.reloadData()
             }
@@ -45,18 +45,18 @@ class YMProductDetailBottomView: UIView {
         
         addSubview(webView)
         
-        choiceButtonView.snp_makeConstraints { (make) in
-            make.size.equalTo(CGSizeMake(SCREENW, 44))
+        choiceButtonView.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: SCREENW, height: 44))
             make.top.equalTo(self)
         }
         
-        tableView.snp_makeConstraints { (make) in
-            make.top.equalTo(choiceButtonView.snp_bottom)
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(choiceButtonView.snp.bottom)
             make.left.right.bottom.equalTo(self)
         }
         
-        webView.snp_makeConstraints { (make) in
-            make.top.equalTo(choiceButtonView.snp_bottom)
+        webView.snp.makeConstraints { (make) in
+            make.top.equalTo(choiceButtonView.snp.bottom)
             make.left.right.bottom.equalTo(self)
         }
     }
@@ -65,7 +65,7 @@ class YMProductDetailBottomView: UIView {
         let webView = UIWebView()
         /// 自动对页面进行缩放以适应屏幕
         webView.scalesPageToFit = true
-        webView.dataDetectorTypes = .All
+        webView.dataDetectorTypes = .all
         webView.delegate = self
         return webView
     }()
@@ -78,11 +78,11 @@ class YMProductDetailBottomView: UIView {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.hidden = true
-        let nib = UINib(nibName: String(YMCommentCell), bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: commentCellID)
+        tableView.isHidden = true
+        let nib = UINib(nibName: String(describing: YMCommentCell.self), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: commentCellID)
         tableView.dataSource = self
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .none
         tableView.rowHeight = 64
         return tableView
     }()
@@ -90,40 +90,36 @@ class YMProductDetailBottomView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension YMProductDetailBottomView: YMDetailChoiceButtonViewDegegate, UIWebViewDelegate, UITableViewDataSource {
     
     // MARK: - YMDetailChoiceButtonViewDegegate
     func choiceIntroduceButtonClick() {
-        tableView.hidden = true
-        webView.hidden = false
+        tableView.isHidden = true
+        webView.isHidden = false
     }
     
     func choicecommentButtonClick() {
-        tableView.hidden = false
-        webView.hidden = true
+        tableView.isHidden = false
+        webView.isHidden = true
         
     }
     
     // MARK: - UIWebViewDelegate
-    func webViewDidStartLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    private func webViewDidStartLoad(webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    private func webViewDidFinishLoad(webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     // MARK: - UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(commentCellID) as! YMCommentCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: commentCellID) as! YMCommentCell
         cell.comment = comments[indexPath.row]
         return cell
     }
-    
 }

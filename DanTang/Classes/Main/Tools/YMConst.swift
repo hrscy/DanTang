@@ -73,11 +73,11 @@ let kTitlesViewY: CGFloat = 64
 /// 动画时长
 let kAnimationDuration = 0.25
 /// 屏幕的宽
-let SCREENW = UIScreen.mainScreen().bounds.size.width
+let SCREENW = UIScreen.main.bounds.size.width
 /// 屏幕的高
-let SCREENH = UIScreen.mainScreen().bounds.size.height
+let SCREENH = UIScreen.main.bounds.size.height
 /// 分类界面 顶部 item 的高
-let kitemH: CGFloat = 75
+let kitemH: CGFloat = 100
 /// 分类界面 顶部 item 的宽
 let kitemW: CGFloat = 150
 /// 我的界面头部图像的高度
@@ -93,12 +93,12 @@ func YMColor(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
 
 /// 背景灰色
 func YMGlobalColor() -> UIColor {
-    return YMColor(240, g: 240, b: 240, a: 1)
+    return YMColor(r: 240, g: 240, b: 240, a: 1)
 }
 
 /// 红色
 func YMGlobalRedColor() -> UIColor {
-    return YMColor(245, g: 80, b: 83, a: 1.0)
+    return YMColor(r: 245, g: 80, b: 83, a: 1.0)
 }
 
 /// iPhone 5

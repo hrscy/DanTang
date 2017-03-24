@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YMSettingViewController: YMBaseViewController {
+class YMSettingViewController: YMBaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     var settings = [AnyObject]()
     
@@ -21,7 +21,7 @@ class YMSettingViewController: YMBaseViewController {
     }
     /// 从 plist 文件在加载数据
     func configCellFromPlist() {
-        let path = NSBundle.mainBundle().pathForResource("SettingCell", ofType: ".plist")
+        let path = Bundle.main.path(forResource: "SettingCell", ofType: ".plist")
         let settingsPlist = NSArray.init(contentsOfFile: path!)
         for arrayDict in settingsPlist! {
             let array = arrayDict as! NSArray
@@ -30,7 +30,7 @@ class YMSettingViewController: YMBaseViewController {
                 let setting = YMSetting(dict: dict as! [String: AnyObject])
                 sections.append(setting)
             }
-            settings.append(sections)
+            settings.append(sections as AnyObject)
         }
     }
     
@@ -41,41 +41,39 @@ class YMSettingViewController: YMBaseViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .None
-        let nib = UINib(nibName: String(YMSettingCell), bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: messageCellID)
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 44
+        let nib = UINib(nibName: String(describing: YMSettingCell.self), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: messageCellID)
         tableView.tableFooterView = UIView()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-extension YMSettingViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return settings.count ?? 0
+        return settings.count 
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let setting = settings[section] as! [YMSetting]
-        return setting.count ?? 0
+        return setting.count 
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(messageCellID) as! YMSettingCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: messageCellID) as! YMSettingCell
         let setting = settings[indexPath.section] as! [YMSetting]
         cell.setting = setting[indexPath.row]
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kMargin + 5
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }

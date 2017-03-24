@@ -10,19 +10,19 @@ import UIKit
 
 let searchCollectionCellID = "searchCollectionCellID"
 
-class YMSearchViewController: YMBaseViewController {
+class YMSearchViewController: YMBaseViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate, YMSortTableViewDelegate {
     
     /// 搜索结果列表
     var results = [YMSearchResult]()
     
     weak var collectionView: UICollectionView?
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         searchBar.becomeFirstResponder()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         searchBar.resignFirstResponder()
     }
@@ -40,7 +40,7 @@ class YMSearchViewController: YMBaseViewController {
         navigationItem.titleView = searchBar
         searchBar.delegate = self
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIView())
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "取消", style: .Plain, target: self, action: #selector(navigationBackClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(navigationBackClick))
     }
     
     /// 设置collectionView
@@ -50,8 +50,8 @@ class YMSearchViewController: YMBaseViewController {
         collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
         collectionView.backgroundColor = view.backgroundColor
         collectionView.dataSource = self
-        let nib = UINib(nibName: String(YMCollectionViewCell), bundle: nil)
-        collectionView.registerNib(nib, forCellWithReuseIdentifier: searchCollectionCellID)
+        let nib = UINib(nibName: String(describing: YMCollectionViewCell.self), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: searchCollectionCellID)
         view.addSubview(collectionView)
         self.collectionView = collectionView
     }
@@ -69,7 +69,7 @@ class YMSearchViewController: YMBaseViewController {
     
     /// 返回按钮、取消按钮点击
     func navigationBackClick() {
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     private lazy var searchBar: UISearchBar = {
@@ -81,76 +81,69 @@ class YMSearchViewController: YMBaseViewController {
     private lazy var searchRecordView: YMSearchRecordView = {
         let searchRecordView = YMSearchRecordView()
         searchRecordView.backgroundColor = YMGlobalColor()
-        searchRecordView.frame = CGRectMake(0, 64, SCREENW, SCREENH - 64)
+        searchRecordView.frame = CGRect(x: 0, y: 64, width: SCREENW, height: SCREENH - 64)
         return searchRecordView
     }()
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate, YMSortTableViewDelegate {
     
-    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+    private func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         /// 设置collectionView
         setupCollectionView()
         return true
     }
     
     /// 搜索按钮点击
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    private func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .Plain, target: self, action: #selector(navigationBackClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_sort_21x21_"), style: .Plain, target: self, action: #selector(sortButtonClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .plain, target: self, action: #selector(navigationBackClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_sort_21x21_"), style: .plain, target: self, action: #selector(sortButtonClick))
         /// 根据搜索条件进行搜索
         let keyword = searchBar.text
-        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: "") { [weak self] (results) in
-            self!.results = results
-            self!.collectionView!.reloadData()
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword: keyword!, sort: "") { (results) in
+            weakSelf!.results = results
+            weakSelf!.collectionView!.reloadData()
         }
     }
     
     // MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return results.count ?? 0
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return results.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(searchCollectionCellID, forIndexPath: indexPath) as! YMCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCollectionCellID, for: indexPath as IndexPath) as! YMCollectionViewCell
         cell.result = results[indexPath.item]
         cell.delegate = self
         return cell
     }
     
     // MARK: - UICollectionViewDelegate
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let productDetailVC = YMProductDetailViewController()
         productDetailVC.title = "商品详情"
-        productDetailVC.type = String(self)
+        productDetailVC.type = String(describing: self)
         productDetailVC.result = results[indexPath.item]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width: CGFloat = (UIScreen.mainScreen().bounds.width - 20) / 2
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = (UIScreen.main.bounds.width - 20) / 2
         let height: CGFloat = 245
-        return CGSizeMake(width, height)
+        return CGSize(width: width, height: height)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(5, 5, 5, 5)
     }
     
     // MARK: - YMCollectionViewCellDelegate
     func collectionViewCellDidClickedLikeButton(button: UIButton) {
-        if !NSUserDefaults.standardUserDefaults().boolForKey(isLogin) {
+        if !UserDefaults.standard.bool(forKey: isLogin) {
             let loginVC = YMLoginViewController()
             loginVC.title = "登录"
             let nav = YMNavigationController(rootViewController: loginVC)
-            presentViewController(nav, animated: true, completion: nil)
+            present(nav, animated: true, completion: nil)
         } else {
             
         }
@@ -160,11 +153,16 @@ extension YMSearchViewController: UISearchBarDelegate, UICollectionViewDelegate,
     func sortView(sortView: YMSortTableView, didSelectSortAtIndexPath sort: String) {
         /// 根据搜索条件进行搜索
         let keyword = searchBar.text
-        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword!, sort: sort) { [weak self] (results) in
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadSearchResult(keyword: keyword!, sort: sort) { (results) in
             sortView.dismiss()
-            self!.results = results
-            self!.collectionView!.reloadData()
+            weakSelf!.results = results
+            weakSelf!.collectionView!.reloadData()
         }
     }
-    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }

@@ -12,7 +12,7 @@ import UIKit
 
 let categoryCollectionCellID = "YMCategoryCollectionViewCell"
 
-class YMCategoryHeaderViewController: YMBaseViewController {
+class YMCategoryHeaderViewController: YMBaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YMTopHeaderViewDelegate {
     
     var collections = [YMCollection]()
     
@@ -20,11 +20,11 @@ class YMCategoryHeaderViewController: YMBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.clearColor()
+        view.backgroundColor = UIColor.clear
         // 设置 UI
         setupUI()
         /// 分类界面 顶部 专题合集
-        YMNetworkTool.shareNetworkTool.loadCategoryCollection(6) { (collections) in
+        YMNetworkTool.shareNetworkTool.loadCategoryCollection(limit: 6) { (collections) in
             self.collections = collections
             self.collectionView!.reloadData()
         }
@@ -33,26 +33,23 @@ class YMCategoryHeaderViewController: YMBaseViewController {
     // 设置 UI
     private func setupUI() {
         
-        let headerView = NSBundle.mainBundle().loadNibNamed(String(YMTopHeaderView), owner: nil, options: nil).last as! YMTopHeaderView
-        headerView.frame = CGRectMake(0, 0, SCREENW, 40)
+        let headerView = Bundle.main.loadNibNamed(String(describing: YMTopHeaderView.self), owner: nil, options: nil)?.last as! YMTopHeaderView
+        headerView.frame = CGRect(x: 0, y: 0, width: SCREENW, height: 40)
         headerView.delegate = self
         view.addSubview(headerView)
         
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .Horizontal
-        let collectionView = UICollectionView(frame: CGRectMake(0, 40, SCREENW, 95), collectionViewLayout: flowLayout)
+        flowLayout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 40, width: SCREENW, height: 95), collectionViewLayout: flowLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.whiteColor()
-        let cellNib = UINib(nibName: String(YMCategoryCollectionViewCell), bundle: nil)
-        collectionView.registerNib(cellNib, forCellWithReuseIdentifier: categoryCollectionCellID)
+        collectionView.backgroundColor = UIColor.white
+        let cellNib = UINib(nibName: String(describing: YMCategoryCollectionViewCell.self), bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: categoryCollectionCellID)
         view.addSubview(collectionView)
         self.collectionView = collectionView
     }
-}
-
-extension YMCategoryHeaderViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YMTopHeaderViewDelegate {
     
     // MARK: - YMTopHeaderViewDelegate
     func topViewDidClickedMoreButton(button: UIButton) {
@@ -62,18 +59,18 @@ extension YMCategoryHeaderViewController: UICollectionViewDelegate, UICollection
     }
     
     // MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collections.count ?? 0
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collections.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(categoryCollectionCellID, forIndexPath: indexPath) as! YMCategoryCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoryCollectionCellID, for: indexPath as IndexPath) as! YMCategoryCollectionViewCell
         cell.collection = collections[indexPath.item]
         return cell
     }
     
     // MARK: - UICollectionViewDelegate
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let collectionDetailVC = YMCollectionDetailController()
         let collection = collections[indexPath.row]
         collectionDetailVC.title = collection.title
@@ -83,11 +80,12 @@ extension YMCategoryHeaderViewController: UICollectionViewDelegate, UICollection
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(kitemW, kitemH)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: kitemW, height: kitemH)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(kMargin, kMargin, kMargin, kMargin)
     }
 }
+

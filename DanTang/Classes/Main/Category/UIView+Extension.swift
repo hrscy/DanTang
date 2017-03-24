@@ -1,22 +1,21 @@
 //
-//  UIViewExtension.swift
-//  LongLian369
+//  UIView+Extension.swift
+//  DanTang
 //
-//  Created by 杨蒙 on 16/7/3.
-//  Copyright © 2016年 北京龙链科技有限公司. All rights reserved.
+//  Created by 杨蒙 on 2017/3/24.
+//  Copyright © 2017年 hrscy. All rights reserved.
 //
 
 import UIKit
 
 extension UIView {
-    
     /// 裁剪 view 的圆角
     func clipRectCorner(direction: UIRectCorner, cornerRadius: CGFloat) {
-        let cornerSize = CGSizeMake(cornerRadius, cornerRadius)
+        let cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
         let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: direction, cornerRadii: cornerSize)
         let maskLayer = CAShapeLayer()
         maskLayer.frame = bounds
-        maskLayer.path = maskPath.CGPath
+        maskLayer.path = maskPath.cgPath
         layer.addSublayer(maskLayer)
         layer.mask = maskLayer
     }
@@ -105,4 +104,5 @@ extension UIView {
         }
     }
     
+
 }

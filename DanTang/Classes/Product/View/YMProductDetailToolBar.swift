@@ -20,21 +20,21 @@ class YMProductDetailToolBar: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        likeButton.layer.borderColor = YMGlobalRedColor().CGColor
+        likeButton.layer.borderColor = YMGlobalRedColor().cgColor
         likeButton.layer.borderWidth = klineWidth
-        likeButton.setImage(UIImage(named: "content-details_like_16x16_"), forState: .Normal)
-        likeButton.setImage(UIImage(named: "content-details_like_selected_16x16_"), forState: .Selected)
+        likeButton.setImage(UIImage(named: "content-details_like_16x16_"), for: .normal)
+        likeButton.setImage(UIImage(named: "content-details_like_selected_16x16_"), for: .selected)
     }
     
     @IBAction func likeButtonClick(sender: UIButton) {
         // 判断是否登录
-        if NSUserDefaults.standardUserDefaults().boolForKey(isLogin) {
-            sender.selected = !sender.selected
+        if UserDefaults.standard.bool(forKey: isLogin) {
+            sender.isSelected = !sender.isSelected
         } else {
             let loginVC = YMLoginViewController()
             loginVC.title = "登录"
             let nav = YMNavigationController(rootViewController: loginVC)
-            UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(nav, animated: true, completion: nil)
+            UIApplication.shared.keyWindow?.rootViewController?.present(nav, animated: true, completion: nil)
         }
     }
     

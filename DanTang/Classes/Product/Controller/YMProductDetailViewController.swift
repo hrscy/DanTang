@@ -28,24 +28,24 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     
     /// 设置导航栏和底部栏
     func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .Plain, target: self, action: #selector(shareBBItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .plain, target: self, action: #selector(shareBBItemClick))
         
         view.addSubview(scrollView)
         // 添加底部栏
         view.addSubview(toolBarView)
         scrollView.product = product
         
-        scrollView.snp_makeConstraints { (make) in
+        scrollView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(view)
-            make.bottom.equalTo(toolBarView.snp_top)
+            make.bottom.equalTo(toolBarView.snp.top)
         }
         
-        toolBarView.snp_makeConstraints { (make) in
+        toolBarView.snp.makeConstraints { (make) in
             make.left.bottom.right.equalTo(view)
             make.height.equalTo(45)
         }
         
-        scrollView.contentSize = CGSizeMake(SCREENW, SCREENH - 64 - 45 + kMargin + 520)
+        scrollView.contentSize = CGSize(width: SCREENW, height: SCREENH - 64 - 45 + kMargin + 520)
     }
     
     /// 分享按钮点击
@@ -68,8 +68,8 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
     
     /// 底部栏
     private lazy var toolBarView: YMProductDetailToolBar = {
-        let toolBarView = NSBundle.mainBundle().loadNibNamed(String(YMProductDetailToolBar), owner: nil
-            , options: nil).last as! YMProductDetailToolBar
+        let toolBarView = Bundle.main.loadNibNamed(String(describing: YMProductDetailToolBar.self), owner: nil
+            , options: nil)?.last as! YMProductDetailToolBar
         toolBarView.delegate = self
         return toolBarView
     }()
@@ -80,16 +80,16 @@ class YMProductDetailViewController: YMBaseViewController, YMProductDetailToolBa
         tmallVC.title = "商品详情"
         tmallVC.product = product
         let nav = YMNavigationController(rootViewController: tmallVC)
-        presentViewController(nav, animated: true, completion: nil)
+        present(nav, animated: true, completion: nil)
     }
 }
 
 extension YMProductDetailViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    private func scrollViewDidScroll(scrollView: UIScrollView) {
         var offsetY = scrollView.contentOffset.y
         if offsetY >= 465 {
             offsetY = CGFloat(465)
-            scrollView.contentOffset = CGPointMake(0, offsetY)
+            scrollView.contentOffset = CGPoint(x: 0, y: offsetY)
         }
     }
 }

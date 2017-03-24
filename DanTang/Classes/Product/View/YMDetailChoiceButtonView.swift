@@ -26,14 +26,14 @@ class YMDetailChoiceButtonView: UIView {
     @IBOutlet weak var commentButton: UIButton!
     
     @IBAction func introduceButtonClick(sender: UIButton) {
-        UIView.animateWithDuration(kAnimationDuration) {
+        UIView.animate(withDuration: kAnimationDuration) {
             self.lineView.x = 0
         }
         delegate?.choiceIntroduceButtonClick()
     }
     
     @IBAction func commentButtonClick(sender: UIButton) {
-        UIView.animateWithDuration(kAnimationDuration) {
+        UIView.animate(withDuration: kAnimationDuration) {
             self.lineView.x = SCREENW * 0.5
         }
         delegate?.choicecommentButtonClick()
@@ -45,7 +45,7 @@ class YMDetailChoiceButtonView: UIView {
     }
     
     class func choiceButtonView() -> YMDetailChoiceButtonView{
-        return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last as! YMDetailChoiceButtonView
+        return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)!.last as! YMDetailChoiceButtonView
     }
     
 }

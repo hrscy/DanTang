@@ -22,9 +22,10 @@ class YMCategoryBottomView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         /// 分类界面 风格,品类
-        YMNetworkTool.shareNetworkTool.loadCategoryGroup { [weak self] (outGroups) in
-            self!.outGroups = outGroups
-            self!.setupUI()
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadCategoryGroup { (outGroups) in
+            weakSelf!.outGroups = outGroups
+            weakSelf!.setupUI()
         }
     }
     
@@ -39,35 +40,35 @@ class YMCategoryBottomView: UIView {
         // 风格
         let topView = UIView()
         topView.width = SCREENW
-        topView.backgroundColor = UIColor.whiteColor()
+        topView.backgroundColor = UIColor.white
         addSubview(topView)
-        let styleLabel = setupLabel("风格")
+        let styleLabel = setupLabel(title: "风格")
         topView.addSubview(styleLabel)
         
         for index in 0..<topGroups.count {
             let group = topGroups[index] as! YMGroup
-            let button = setupButton(index, group: group)
+            let button = setupButton(index: index, group: group)
             topView.addSubview(button)
             if index == topGroups.count - 1 {
-                topView.height = CGRectGetMaxY(button.frame) + kMargin
+                topView.height = button.frame.maxY + kMargin
             }
         }
         
         // 品类
         let bottomView = UIView()
         bottomView.width = SCREENW
-        bottomView.y = CGRectGetMaxY(topView.frame) + kMargin
-        bottomView.backgroundColor = UIColor.whiteColor()
+        bottomView.y = topView.frame.maxY + kMargin
+        bottomView.backgroundColor = UIColor.white
         addSubview(bottomView)
-        let categoryLabel = setupLabel("品类")
+        let categoryLabel = setupLabel(title: "品类")
         bottomView.addSubview(categoryLabel)
         
         for index in 0..<bottomGroups.count {
             let group = bottomGroups[index] as! YMGroup
-            let button = setupButton(index, group: group)
+            let button = setupButton(index: index, group: group)
             bottomView.addSubview(button)
             if index == bottomGroups.count - 1 {
-                bottomView.height = CGRectGetMaxY(button.frame) + kMargin
+                bottomView.height = button.frame.maxY + kMargin
             }
         }
     }
@@ -86,23 +87,24 @@ class YMCategoryBottomView: UIView {
             button.y = buttonH * CGFloat(index / 4) + styleLabelH + kMargin
         }
         button.tag = group.id!
-        button.addTarget(self, action: #selector(groupButonClick(_:)), forControlEvents: .TouchUpInside)
-        button.titleLabel?.font = UIFont.systemFontOfSize(15)
-        button.setTitleColor(YMColor(0, g: 0, b: 0, a: 0.6), forState: .Normal)
-        button.kf_setImageWithURL(NSURL(string: group.icon_url!)!, forState: .Normal)
-        button.setTitle(group.name, forState: .Normal)
+        button.addTarget(self, action: #selector(groupButonClick), for: .touchUpInside)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.setTitleColor(YMColor(r: 0, g: 0, b: 0, a: 0.6), for: .normal)
+        button.kf.setImage(with: URL(string: group.icon_url!)!, for: .normal)
+        button.setTitle(group.name, for: .normal)
         return button
     }
     
     func groupButonClick(button: UIButton) {
-        delegate?.bottomViewButtonDidClicked(button)
+        print(button.tag)
+        delegate?.bottomViewButtonDidClicked(button: button)
     }
     
     private func setupLabel(title: String) -> UILabel {
-        let styleLabel = UILabel(frame: CGRectMake(10, 0, SCREENW - 10, 40))
+        let styleLabel = UILabel(frame: CGRect(x: 10, y: 0, width: SCREENW - 10, height: 40))
         styleLabel.text = title
-        styleLabel.textColor = YMColor(0, g: 0, b: 0, a: 0.6)
-        styleLabel.font = UIFont.systemFontOfSize(16)
+        styleLabel.textColor = YMColor(r: 0, g: 0, b: 0, a: 0.6)
+        styleLabel.font = UIFont.systemFont(ofSize: 16)
         return styleLabel
     }
 }

@@ -30,8 +30,8 @@ class YMSearchRecordView: UIView {
         // 大家都在搜
         let topView = UIView()
         addSubview(topView)
-        let hotLabel = setupLabel("大家都在搜")
-        hotLabel.frame = CGRectMake(10, 20, 200, 20)
+        let hotLabel = setupLabel(title: "大家都在搜")
+        hotLabel.frame = CGRect(x: 10, y: 20, width: 200, height: 20)
         topView.addSubview(hotLabel)
         
         
@@ -46,8 +46,8 @@ class YMSearchRecordView: UIView {
     func setupLabel(title: String) -> UILabel{
         let label = UILabel()
         label.text = title
-        label.font = UIFont.systemFontOfSize(13)
-        label.textColor = YMColor(0, g: 0, b: 0, a: 0.6)
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = YMColor(r: 0, g: 0, b: 0, a: 0.6)
         return label
     }
     

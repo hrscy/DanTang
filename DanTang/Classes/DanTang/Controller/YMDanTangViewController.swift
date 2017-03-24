@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMDanTangViewController: YMBaseViewController {
+class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
     
     var channels = [YMChannel]()
     // 标签
@@ -26,18 +26,19 @@ class YMDanTangViewController: YMBaseViewController {
         super.viewDidLoad()
         // 设置导航栏
         setupNav()
+        weak var weakSelf = self
         // 获取首页顶部选择数据
-        YMNetworkTool.shareNetworkTool.loadHomeTopData { [weak self] (ym_channels) in
+        YMNetworkTool.shareNetworkTool.loadHomeTopData { (ym_channels) in
             for channel in ym_channels {
                 let vc = YMTopicViewController()
                 vc.title = channel.name!
                 vc.type = channel.id!
-                self!.addChildViewController(vc)
+                weakSelf!.addChildViewController(vc)
             }
             //设置顶部标签栏
-            self!.setupTitlesView()
+            weakSelf!.setupTitlesView()
             // 底部的scrollview
-            self!.setupContentView()
+            weakSelf!.setupContentView()
         }
     }
     
@@ -55,12 +56,12 @@ class YMDanTangViewController: YMBaseViewController {
     func setupTitlesView() {
         // 顶部背景
         let bgView = UIView()
-        bgView.frame = CGRectMake(0, kTitlesViewY, SCREENW, kTitlesViewH)
+        bgView.frame = CGRect(x: 0, y: kTitlesViewY, width: SCREENW, height: kTitlesViewH)
         view.addSubview(bgView)
         // 标签
         let titlesView = UIView()
         titlesView.backgroundColor = YMGlobalColor()
-        titlesView.frame = CGRectMake(0, 0, SCREENW - kTitlesViewH, kTitlesViewH)
+        titlesView.frame = CGRect(x: 0, y: 0, width: SCREENW - kTitlesViewH, height: kTitlesViewH)
         bgView.addSubview(titlesView)
         self.titlesView = titlesView
         //底部红色指示器
@@ -73,9 +74,9 @@ class YMDanTangViewController: YMBaseViewController {
         
         // 选择按钮
         let arrowButton = UIButton()
-        arrowButton.frame = CGRectMake(SCREENW - kTitlesViewH, 0, kTitlesViewH, kTitlesViewH)
-        arrowButton.setImage(UIImage(named: "arrow_index_down_8x4_"), forState: .Normal)
-        arrowButton.addTarget(self, action: #selector(arrowButtonClick(_:)), forControlEvents: .TouchUpInside)
+        arrowButton.frame = CGRect(x: SCREENW - kTitlesViewH, y: 0, width: kTitlesViewH, height: kTitlesViewH)
+        arrowButton.setImage(UIImage(named: "arrow_index_down_8x4_"), for: .normal)
+        arrowButton.addTarget(self, action: #selector(arrowButtonClick), for: .touchUpInside)
         arrowButton.backgroundColor = YMGlobalColor()
         bgView.addSubview(arrowButton)
         
@@ -91,15 +92,15 @@ class YMDanTangViewController: YMBaseViewController {
             button.x = CGFloat(index) * width
             button.tag = index
             let vc = childViewControllers[index]
-            button.titleLabel!.font = UIFont.systemFontOfSize(14)
-            button.setTitle(vc.title!, forState: .Normal)
-            button.setTitleColor(UIColor.grayColor(), forState: .Normal)
-            button.setTitleColor(YMGlobalRedColor(), forState: .Disabled)
-            button.addTarget(self, action: #selector(titlesClick(_:)), forControlEvents: .TouchUpInside)
+            button.titleLabel!.font = UIFont.systemFont(ofSize: 14)
+            button.setTitle(vc.title!, for: .normal)
+            button.setTitleColor(UIColor.gray, for: .normal)
+            button.setTitleColor(YMGlobalRedColor(), for: .disabled)
+            button.addTarget(self, action: #selector(titlesClick), for: .touchUpInside)
             titlesView.addSubview(button)
             //默认点击了第一个按钮
             if index == 0 {
-                button.enabled = false
+                button.isEnabled = false
                 selectedButton = button
                 //让按钮内部的Label根据文字来计算内容
                 button.titleLabel?.sizeToFit()
@@ -113,19 +114,19 @@ class YMDanTangViewController: YMBaseViewController {
     
     /// 箭头按钮点击
     func arrowButtonClick(button: UIButton) {
-        UIView.animateWithDuration(kAnimationDuration) { 
-            button.imageView?.transform = CGAffineTransformRotate(button.imageView!.transform, CGFloat(M_PI))
+        UIView.animate(withDuration: kAnimationDuration) { 
+            button.imageView?.transform = button.imageView!.transform.rotated(by: CGFloat(M_PI))
         }
     }
     
     /// 标签上的按钮点击
     func titlesClick(button: UIButton) {
         // 修改按钮状态
-        selectedButton!.enabled = true
-        button.enabled = false
+        selectedButton!.isEnabled = true
+        button.isEnabled = false
         selectedButton = button
         // 让标签执行动画
-        UIView.animateWithDuration(kAnimationDuration) { 
+        UIView.animate(withDuration: kAnimationDuration) { 
             self.indicatorView!.width = self.selectedButton!.titleLabel!.width
             self.indicatorView!.centerX = self.selectedButton!.centerX
         }
@@ -143,9 +144,9 @@ class YMDanTangViewController: YMBaseViewController {
         let contentView = UIScrollView()
         contentView.frame = view.bounds
         contentView.delegate = self
-        contentView.contentSize = CGSizeMake(contentView.width * CGFloat(childViewControllers.count), 0)
-        contentView.pagingEnabled = true
-        view.insertSubview(contentView, atIndex: 0)
+        contentView.contentSize = CGSize(width: contentView.width * CGFloat(childViewControllers.count), height: 0)
+        contentView.isPagingEnabled = true
+        view.insertSubview(contentView, at: 0)
         self.contentView = contentView
         //添加第一个控制器的view
         scrollViewDidEndScrollingAnimation(contentView)
@@ -153,20 +154,17 @@ class YMDanTangViewController: YMBaseViewController {
     
     /// 设置导航栏
     func setupNav() {
-        view.backgroundColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .Plain, target: self, action: #selector(dantangRightBBClick))
+        view.backgroundColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .plain, target: self, action: #selector(dantangRightBBClick))
     }
 
     func dantangRightBBClick() {
         let searchBarVC = YMSearchViewController()
         navigationController?.pushViewController(searchBarVC, animated: true)
     }
-}
-
-
-extension YMDanTangViewController: UIScrollViewDelegate {
+    
     // MARK: - UIScrollViewDelegate
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         // 添加子控制器的 view
         // 当前索引
         let index = Int(scrollView.contentOffset.x / scrollView.width)
@@ -179,14 +177,15 @@ extension YMDanTangViewController: UIScrollViewDelegate {
         scrollView.addSubview(vc.view)
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewDidEndScrollingAnimation(scrollView)
         // 当前索引
         let index = Int(scrollView.contentOffset.x / scrollView.width)
         // 点击 Button
         let button = titlesView!.subviews[index] as! UIButton
-        titlesClick(button)
+        titlesClick(button: button)
     }
+    
 }
 
 

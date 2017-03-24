@@ -18,6 +18,6 @@ class YMTopHeaderView: UIView {
     
     /// 查看全部按钮
     @IBAction func viewAllButton(sender: UIButton) {
-        delegate?.topViewDidClickedMoreButton(sender)
+        delegate?.topViewDidClickedMoreButton(button: sender)
     }
 }

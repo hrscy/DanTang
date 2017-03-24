@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMTMALLViewController: YMBaseViewController {
+class YMTMALLViewController: YMBaseViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
     
@@ -22,15 +22,15 @@ class YMTMALLViewController: YMBaseViewController {
         
         /// 自动对页面进行缩放以适应屏幕
         webView.scalesPageToFit = true
-        webView.dataDetectorTypes = .All
-        let url = NSURL(string: product!.purchase_url!)
-        let request = NSURLRequest(URL: url!)
+        webView.dataDetectorTypes = .all
+        let url = URL(string: product!.purchase_url!)
+        let request = URLRequest(url: url!)
         webView.loadRequest(request)
     }
     
     private func setupNav() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .Plain, target: self, action: #selector(navigationBackClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .Plain, target: self, action: #selector(shareBBItemClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .plain, target: self, action: #selector(navigationBackClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "GiftShare_icon_18x22_"), style: .plain, target: self, action: #selector(shareBBItemClick))
     }
     
     func shareBBItemClick() {
@@ -38,22 +38,20 @@ class YMTMALLViewController: YMBaseViewController {
     }
     
     func navigationBackClick() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
 
-extension YMTMALLViewController: UIWebViewDelegate {
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    }
-}

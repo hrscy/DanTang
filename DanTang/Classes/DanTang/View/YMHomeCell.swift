@@ -29,11 +29,11 @@ class YMHomeCell: UITableViewCell {
     var homeItem: YMHomeItem? {
         didSet {
             let url = homeItem!.cover_image_url
-            bgImageView.kf_setImageWithURL(NSURL(string: url!)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-                self.placeholderBtn.hidden = true
+            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderBtn.isHidden = true
             }
             titleLabel.text = homeItem!.title
-            favoriteBtn.setTitle(" " + String(homeItem!.likes_count!) + " ", forState: .Normal)
+            favoriteBtn.setTitle(" " + String(homeItem!.likes_count!) + " ", for: .normal)
         }
     }
     
@@ -41,16 +41,16 @@ class YMHomeCell: UITableViewCell {
         super.awakeFromNib()
         favoriteBtn.layer.cornerRadius = favoriteBtn.height * 0.5
         favoriteBtn.layer.masksToBounds = true
-        favoriteBtn.layer.rasterizationScale = UIScreen.mainScreen().scale
+        favoriteBtn.layer.rasterizationScale = UIScreen.main.scale
         favoriteBtn.layer.shouldRasterize = true
         bgImageView.layer.cornerRadius = kCornerRadius
         bgImageView.layer.masksToBounds = true
         bgImageView.layer.shouldRasterize = true
-        bgImageView.layer.rasterizationScale = UIScreen.mainScreen().scale
+        bgImageView.layer.rasterizationScale = UIScreen.main.scale
     }
     
     /// 点击了喜欢按钮
     @IBAction func favoriteButtonClick(sender: UIButton) {
-        delegate?.homeCellDidClickedFavoriteButton(sender)
+        delegate?.homeCellDidClickedFavoriteButton(button: sender)
     }
 }

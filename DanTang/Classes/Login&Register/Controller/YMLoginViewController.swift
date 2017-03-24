@@ -31,19 +31,19 @@ class YMLoginViewController: YMBaseViewController {
     }
     
     @IBAction func loginButtonClick(sender: UIButton) {
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: isLogin)
-        dismissViewControllerAnimated(true, completion: nil)
+        UserDefaults.standard.set(true, forKey: isLogin)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - 设置导航栏按钮
     private func setupBarButtonItem() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .Plain, target: self, action: #selector(cancelButtonClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: #selector(regiisterButtonClick))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(cancelButtonClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(regiisterButtonClick))
     }
     
     /// 取消按钮点击
     func cancelButtonClick() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     /// 注册按钮点击
     func regiisterButtonClick() {

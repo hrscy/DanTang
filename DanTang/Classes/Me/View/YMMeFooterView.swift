@@ -25,24 +25,26 @@ class YMMeFooterView: UIView {
         
         addSubview(messageLabel)
         
-        meBlankButton.snp_makeConstraints { (make) in
-            make.size.equalTo(CGSizeMake(50, 50))
+        meBlankButton.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 50, height: 50))
+//            make.centerX.equalTo(SCREENW * 0.5)
+//            make.centerY.equalTo(self.height * 0.5)
             make.center.equalTo(self.center)
         }
         
-        messageLabel.snp_makeConstraints { (make) in
-            make.top.equalTo(meBlankButton.snp_bottom).offset(kMargin)
+        messageLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(meBlankButton.snp.bottom).offset(kMargin)
             make.left.right.equalTo(self)
         }
     }
     
     private lazy var meBlankButton: UIButton = {
         let meBlankButton = UIButton()
-        meBlankButton.setTitleColor(YMColor(200, g: 200, b: 200, a: 1.0), forState: .Normal)
+        meBlankButton.setTitleColor(YMColor(r: 200, g: 200, b: 200, a: 1.0), for: .normal)
         meBlankButton.width = 100
-        meBlankButton.titleLabel?.font = UIFont.systemFontOfSize(15)
-        meBlankButton.setImage(UIImage(named: "Me_blank_50x50_"), forState: .Normal)
-        meBlankButton.addTarget(self, action: #selector(footerViewButtonClick), forControlEvents: .TouchUpInside)
+        meBlankButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        meBlankButton.setImage(UIImage(named: "Me_blank_50x50_"), for: .normal)
+        meBlankButton.addTarget(self, action: #selector(footerViewButtonClick), for: .touchUpInside)
         meBlankButton.imageView?.sizeToFit()
         return meBlankButton
     }()
@@ -50,16 +52,16 @@ class YMMeFooterView: UIView {
     private lazy var messageLabel: UILabel = {
         let messageLabel = UILabel()
         messageLabel.text = "登录以享受功能"
-        messageLabel.textAlignment = .Center
-        messageLabel.font = UIFont.systemFontOfSize(15)
-        messageLabel.textColor = YMColor(200, g: 200, b: 200, a: 1.0)
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont.systemFont(ofSize: 15)
+        messageLabel.textColor = YMColor(r: 200, g: 200, b: 200, a: 1.0)
         return messageLabel
     }()
     
     
     func footerViewButtonClick() {
         let nav = YMNavigationController(rootViewController: YMLoginViewController())
-        UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(nav, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.present(nav, animated: true, completion: nil)
     }
     
 }

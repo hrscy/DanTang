@@ -14,8 +14,10 @@ class YMCommentCell: UITableViewCell {
     var comment: YMComment? {
         didSet {
             let user = comment!.user
-            let url = user!.avatar_url
-            avatarImageView.kf_setImageWithURL(NSURL(string: url!)!)
+            if let url = user!.avatar_url  {
+                avatarImageView.kf.setImage(with: URL(string: url))
+            }
+            
             nicknameLabel.text = user!.nickname
             contentLabel.text = comment!.content
         }
@@ -34,7 +36,7 @@ class YMCommentCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }

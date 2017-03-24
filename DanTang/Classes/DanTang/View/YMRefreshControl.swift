@@ -25,9 +25,9 @@ class YMRefreshControl: UIRefreshControl {
         // 添加刷新控件
         addSubview(refreshView)
         
-        refreshView.snp_makeConstraints { (make) in
+        refreshView.snp.makeConstraints { (make) in
             make.center.equalTo(self)
-            make.size.equalTo(CGSizeMake(170, 60))
+            make.size.equalTo(CGSize(width: 170, height: 60))
         }
         /*
          1.当用户下拉到一定程度的时候需要旋转箭头
@@ -38,17 +38,17 @@ class YMRefreshControl: UIRefreshControl {
          越往下拉: 值就越小
          越往上推: 值就越大
          */
-        addObserver(self, forKeyPath: "frame", options: .New, context: nil)
+        addObserver(self, forKeyPath: "frame", options: .new, context: nil)
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutableRawPointer) {
         // 过滤掉不需要的数据
         if frame.origin.y >= 0 {
             return
         }
         
         // 判断是否已经触发刷新事件
-        if refreshing && !loadingViewAnimationFlag {
+        if isRefreshing && !loadingViewAnimationFlag {
             // 执行动画
             loadingViewAnimationFlag = true
             
@@ -59,10 +59,10 @@ class YMRefreshControl: UIRefreshControl {
         if frame.origin.y >= -40 && rotationArrowFlag {
             // 旋转回原始位置
             rotationArrowFlag = false
-            refreshView.rotationArrowIcon(rotationArrowFlag)
+            refreshView.rotationArrowIcon(flag: rotationArrowFlag)
         } else if frame.origin.y < -40 && !rotationArrowFlag {
             rotationArrowFlag = true
-            refreshView.rotationArrowIcon(rotationArrowFlag)
+            refreshView.rotationArrowIcon(flag: rotationArrowFlag)
         }
         
     }

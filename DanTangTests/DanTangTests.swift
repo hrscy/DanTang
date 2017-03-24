@@ -2,8 +2,8 @@
 //  DanTangTests.swift
 //  DanTangTests
 //
-//  Created by 杨蒙 on 16/7/19.
-//  Copyright © 2016年 hrscy. All rights reserved.
+//  Created by 杨蒙 on 2017/3/24.
+//  Copyright © 2017年 hrscy. All rights reserved.
 //
 
 import XCTest
@@ -28,7 +28,7 @@ class DanTangTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

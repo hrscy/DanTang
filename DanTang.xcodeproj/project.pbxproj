@@ -7,228 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2500419A1D3DD15D00994B58 /* Assets.xcassets */; };
-		250041A91D3DD15D00994B58 /* DanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250041A81D3DD15D00994B58 /* DanTangTests.swift */; };
-		250041B41D3DD15D00994B58 /* DanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250041B31D3DD15D00994B58 /* DanTangUITests.swift */; };
-		25A285BA1D48493C0090498C /* YMCategoryHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285541D48493C0090498C /* YMCategoryHeaderViewController.swift */; };
-		25A285BB1D48493C0090498C /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285551D48493C0090498C /* YMCategoryViewController.swift */; };
-		25A285BC1D48493C0090498C /* YMCollectionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285561D48493C0090498C /* YMCollectionDetailController.swift */; };
-		25A285BD1D48493C0090498C /* YMCollectionDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285571D48493C0090498C /* YMCollectionDetailController.xib */; };
-		25A285BE1D48493C0090498C /* YMPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285581D48493C0090498C /* YMPostDetailViewController.swift */; };
-		25A285BF1D48493C0090498C /* YMPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285591D48493C0090498C /* YMPostDetailViewController.xib */; };
-		25A285C01D48493C0090498C /* YMSeeAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2855A1D48493C0090498C /* YMSeeAllController.swift */; };
-		25A285C11D48493C0090498C /* YMSeeAllController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A2855B1D48493C0090498C /* YMSeeAllController.xib */; };
-		25A285C21D48493C0090498C /* YMCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2855D1D48493C0090498C /* YMCollection.swift */; };
-		25A285C31D48493C0090498C /* YMCollectionPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2855E1D48493C0090498C /* YMCollectionPost.swift */; };
-		25A285C41D48493C0090498C /* YMGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2855F1D48493C0090498C /* YMGroup.swift */; };
-		25A285C51D48493C0090498C /* YMCategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285611D48493C0090498C /* YMCategoryBottomView.swift */; };
-		25A285C61D48493C0090498C /* YMCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285621D48493C0090498C /* YMCategoryCollectionViewCell.swift */; };
-		25A285C71D48493C0090498C /* YMCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285631D48493C0090498C /* YMCategoryCollectionViewCell.xib */; };
-		25A285C81D48493C0090498C /* YMCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285641D48493C0090498C /* YMCollectionTableViewCell.swift */; };
-		25A285C91D48493C0090498C /* YMCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285651D48493C0090498C /* YMCollectionTableViewCell.xib */; };
-		25A285CA1D48493C0090498C /* YMSeeAllTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285661D48493C0090498C /* YMSeeAllTopicCell.swift */; };
-		25A285CB1D48493C0090498C /* YMSeeAllTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285671D48493C0090498C /* YMSeeAllTopicCell.xib */; };
-		25A285CC1D48493C0090498C /* YMTopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285681D48493C0090498C /* YMTopHeaderView.swift */; };
-		25A285CD1D48493C0090498C /* YMTopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285691D48493C0090498C /* YMTopHeaderView.xib */; };
-		25A285CE1D48493C0090498C /* YMVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2856A1D48493C0090498C /* YMVerticalButton.swift */; };
-		25A285CF1D48493C0090498C /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2856D1D48493C0090498C /* YMDanTangViewController.swift */; };
-		25A285D01D48493C0090498C /* YMDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2856E1D48493C0090498C /* YMDetailViewController.swift */; };
-		25A285D11D48493C0090498C /* YMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2856F1D48493C0090498C /* YMSearchViewController.swift */; };
-		25A285D21D48493C0090498C /* YMTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285701D48493C0090498C /* YMTopicViewController.swift */; };
-		25A285D31D48493C0090498C /* YMChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285721D48493C0090498C /* YMChannel.swift */; };
-		25A285D41D48493C0090498C /* YMHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285731D48493C0090498C /* YMHomeItem.swift */; };
-		25A285D51D48493C0090498C /* YMSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285741D48493C0090498C /* YMSearchResult.swift */; };
-		25A285D61D48493C0090498C /* YMHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285761D48493C0090498C /* YMHomeCell.swift */; };
-		25A285D71D48493C0090498C /* YMHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285771D48493C0090498C /* YMHomeCell.xib */; };
-		25A285D81D48493C0090498C /* YMRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285781D48493C0090498C /* YMRefreshControl.swift */; };
-		25A285D91D48493C0090498C /* YMRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285791D48493C0090498C /* YMRefreshView.swift */; };
-		25A285DA1D48493C0090498C /* YMRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A2857A1D48493C0090498C /* YMRefreshView.xib */; };
-		25A285DB1D48493C0090498C /* YMSearchRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2857B1D48493C0090498C /* YMSearchRecordView.swift */; };
-		25A285DC1D48493C0090498C /* YMSortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2857C1D48493C0090498C /* YMSortCell.swift */; };
-		25A285DD1D48493C0090498C /* YMSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A2857D1D48493C0090498C /* YMSortCell.xib */; };
-		25A285DE1D48493C0090498C /* YMSortTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2857E1D48493C0090498C /* YMSortTableView.swift */; };
-		25A285DF1D48493C0090498C /* YMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285811D48493C0090498C /* YMLoginViewController.swift */; };
-		25A285E01D48493C0090498C /* YMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285821D48493C0090498C /* YMLoginViewController.xib */; };
-		25A285E11D48493C0090498C /* YMNewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285831D48493C0090498C /* YMNewfeatureViewController.swift */; };
-		25A285E21D48493C0090498C /* YMRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285841D48493C0090498C /* YMRegisterViewController.swift */; };
-		25A285E31D48493C0090498C /* YMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285851D48493C0090498C /* YMRegisterViewController.xib */; };
-		25A285E41D48493C0090498C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285881D48493C0090498C /* String+Extension.swift */; };
-		25A285E51D48493C0090498C /* UITableView+EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285891D48493C0090498C /* UITableView+EmptyData.swift */; };
-		25A285E61D48493C0090498C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2858A1D48493C0090498C /* UIView+Extension.swift */; };
-		25A285E71D48493C0090498C /* YMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2858C1D48493C0090498C /* YMBaseViewController.swift */; };
-		25A285E81D48493C0090498C /* YMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2858D1D48493C0090498C /* YMNavigationController.swift */; };
-		25A285E91D48493C0090498C /* YMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2858E1D48493C0090498C /* YMTabBarController.swift */; };
-		25A285EA1D48493C0090498C /* YMConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285901D48493C0090498C /* YMConst.swift */; };
-		25A285EB1D48493C0090498C /* YMNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285911D48493C0090498C /* YMNetworkTool.swift */; };
-		25A285EC1D48493C0090498C /* YMMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285941D48493C0090498C /* YMMessageViewController.swift */; };
-		25A285ED1D48493C0090498C /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285951D48493C0090498C /* YMMeViewController.swift */; };
-		25A285EE1D48493C0090498C /* YMSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285961D48493C0090498C /* YMSettingViewController.swift */; };
-		25A285EF1D48493C0090498C /* YMSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285981D48493C0090498C /* YMSetting.swift */; };
-		25A285F01D48493C0090498C /* YMMeChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2859A1D48493C0090498C /* YMMeChoiceView.swift */; };
-		25A285F11D48493C0090498C /* YMMeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2859B1D48493C0090498C /* YMMeFooterView.swift */; };
-		25A285F21D48493C0090498C /* YMMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2859C1D48493C0090498C /* YMMineHeaderView.swift */; };
-		25A285F31D48493C0090498C /* YMSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2859D1D48493C0090498C /* YMSettingCell.swift */; };
-		25A285F41D48493C0090498C /* YMSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A2859E1D48493C0090498C /* YMSettingCell.xib */; };
-		25A285F51D48493C0090498C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285A01D48493C0090498C /* AppDelegate.swift */; };
-		25A285F61D48493C0090498C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A285A11D48493C0090498C /* Info.plist */; };
-		25A285F71D48493C0090498C /* SettingCell.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A285A21D48493C0090498C /* SettingCell.plist */; };
-		25A285F91D48493C0090498C /* YMProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285A61D48493C0090498C /* YMProductDetailViewController.swift */; };
-		25A285FA1D48493C0090498C /* YMProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285A71D48493C0090498C /* YMProductViewController.swift */; };
-		25A285FB1D48493C0090498C /* YMTMALLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285A81D48493C0090498C /* YMTMALLViewController.swift */; };
-		25A285FC1D48493C0090498C /* YMTMALLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285A91D48493C0090498C /* YMTMALLViewController.xib */; };
-		25A285FD1D48493C0090498C /* YMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285AB1D48493C0090498C /* YMProduct.swift */; };
-		25A285FE1D48493C0090498C /* YMProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285AC1D48493C0090498C /* YMProductDetail.swift */; };
-		25A285FF1D48493C0090498C /* YMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285AE1D48493C0090498C /* YMActionSheet.swift */; };
-		25A286001D48493C0090498C /* YMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285AF1D48493C0090498C /* YMCollectionViewCell.swift */; };
-		25A286011D48493C0090498C /* YMCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B01D48493C0090498C /* YMCollectionViewCell.xib */; };
-		25A286021D48493C0090498C /* YMDetailChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */; };
-		25A286031D48493C0090498C /* YMDetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */; };
-		25A286041D48493C0090498C /* YMDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */; };
-		25A286051D48493C0090498C /* YMDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */; };
-		25A286061D48493C0090498C /* YMProductDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */; };
-		25A286071D48493C0090498C /* YMProductDetailToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */; };
-		25A286081D48493C0090498C /* YMProductDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A285B71D48493C0090498C /* YMProductDetailToolBar.xib */; };
-		25A286091D48493C0090498C /* YMProductDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B81D48493C0090498C /* YMProductDetailTopView.swift */; };
-		25A2860A1D48493C0090498C /* YMShareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A285B91D48493C0090498C /* YMShareButtonView.swift */; };
-		25A286161D486F860090498C /* YMDetailScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A286151D486F860090498C /* YMDetailScrollView.swift */; };
-		25A286191D488E310090498C /* YMCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A286171D488E310090498C /* YMCommentCell.swift */; };
-		25A2861A1D488E310090498C /* YMCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A286181D488E310090498C /* YMCommentCell.xib */; };
-		25A2861C1D488F520090498C /* YMComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2861B1D488F520090498C /* YMComment.swift */; };
-		F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053967763D40EE721AE073DA /* Pods_DanTang.framework */; };
+		9498751A1E84A83400E9800F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949875191E84A83400E9800F /* Assets.xcassets */; };
+		949875281E84A83400E9800F /* DanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875271E84A83400E9800F /* DanTangTests.swift */; };
+		949875331E84A83400E9800F /* DanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875321E84A83400E9800F /* DanTangUITests.swift */; };
+		9498755D1E84AA6C00E9800F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875561E84AA6C00E9800F /* AppDelegate.swift */; };
+		9498755E1E84AA6C00E9800F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 949875571E84AA6C00E9800F /* Info.plist */; };
+		9498755F1E84AA6C00E9800F /* SettingCell.plist in Resources */ = {isa = PBXBuildFile; fileRef = 949875581E84AA6C00E9800F /* SettingCell.plist */; };
+		949875611E84AB1700E9800F /* YMNewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875601E84AB1700E9800F /* YMNewfeatureViewController.swift */; };
+		949875651E84AE3100E9800F /* YMConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875641E84AE3100E9800F /* YMConst.swift */; };
+		949875671E84AEA900E9800F /* YMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875661E84AEA900E9800F /* YMTabBarController.swift */; };
+		949875691E84AF7F00E9800F /* YMNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875681E84AF7F00E9800F /* YMNavigationController.swift */; };
+		9498756B1E84B07700E9800F /* YMDanTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498756A1E84B07700E9800F /* YMDanTangViewController.swift */; };
+		9498756D1E84B09300E9800F /* YMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498756C1E84B09300E9800F /* YMMeViewController.swift */; };
+		9498756F1E84B0A400E9800F /* YMProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498756E1E84B0A400E9800F /* YMProductViewController.swift */; };
+		949875711E84B0B500E9800F /* YMCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875701E84B0B500E9800F /* YMCategoryViewController.swift */; };
+		949875731E84B12900E9800F /* YMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875721E84B12900E9800F /* YMBaseViewController.swift */; };
+		949875751E84B23900E9800F /* YMNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875741E84B23900E9800F /* YMNetworkTool.swift */; };
+		949875791E84B2B700E9800F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875781E84B2B700E9800F /* UIView+Extension.swift */; };
+		9498757B1E84B30200E9800F /* UITableView+EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498757A1E84B30200E9800F /* UITableView+EmptyData.swift */; };
+		9498757D1E84B36F00E9800F /* YMVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498757C1E84B36F00E9800F /* YMVerticalButton.swift */; };
+		9498757F1E84B3B900E9800F /* YMGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498757E1E84B3B900E9800F /* YMGroup.swift */; };
+		949875821E84B41B00E9800F /* YMCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875801E84B41B00E9800F /* YMCollection.swift */; };
+		949875831E84B41B00E9800F /* YMCollectionPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875811E84B41B00E9800F /* YMCollectionPost.swift */; };
+		949875871E84B42900E9800F /* YMChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875841E84B42900E9800F /* YMChannel.swift */; };
+		949875881E84B42900E9800F /* YMHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875851E84B42900E9800F /* YMHomeItem.swift */; };
+		949875891E84B42900E9800F /* YMSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875861E84B42900E9800F /* YMSearchResult.swift */; };
+		9498758B1E84B43A00E9800F /* YMSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498758A1E84B43A00E9800F /* YMSetting.swift */; };
+		9498758F1E84B44500E9800F /* YMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498758C1E84B44500E9800F /* YMProduct.swift */; };
+		949875901E84B44500E9800F /* YMProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498758D1E84B44500E9800F /* YMProductDetail.swift */; };
+		949875911E84B44500E9800F /* YMComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498758E1E84B44500E9800F /* YMComment.swift */; };
+		949875941E84B47D00E9800F /* YMSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875921E84B47D00E9800F /* YMSettingCell.swift */; };
+		949875951E84B47D00E9800F /* YMSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875931E84B47D00E9800F /* YMSettingCell.xib */; };
+		949875981E84B4A400E9800F /* YMMeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875961E84B4A400E9800F /* YMMeFooterView.swift */; };
+		949875991E84B4A400E9800F /* YMMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875971E84B4A400E9800F /* YMMineHeaderView.swift */; };
+		9498759C1E84B5B200E9800F /* YMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498759A1E84B5B200E9800F /* YMLoginViewController.swift */; };
+		9498759D1E84B5B200E9800F /* YMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9498759B1E84B5B200E9800F /* YMLoginViewController.xib */; };
+		949875A01E84B60F00E9800F /* YMRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498759E1E84B60F00E9800F /* YMRegisterViewController.swift */; };
+		949875A11E84B60F00E9800F /* YMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9498759F1E84B60F00E9800F /* YMRegisterViewController.xib */; };
+		949875A31E84B63100E9800F /* YMMeChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875A21E84B63100E9800F /* YMMeChoiceView.swift */; };
+		949875A51E84B79100E9800F /* YMSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875A41E84B79100E9800F /* YMSettingViewController.swift */; };
+		949875A71E84B80B00E9800F /* YMMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875A61E84B80B00E9800F /* YMMessageViewController.swift */; };
+		949875A91E84B99800E9800F /* YMActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875A81E84B99800E9800F /* YMActionSheet.swift */; };
+		949875AB1E84BA3600E9800F /* YMShareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875AA1E84BA3600E9800F /* YMShareButtonView.swift */; };
+		949875AE1E84BAED00E9800F /* YMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875AC1E84BAED00E9800F /* YMCollectionViewCell.swift */; };
+		949875AF1E84BAED00E9800F /* YMCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875AD1E84BAED00E9800F /* YMCollectionViewCell.xib */; };
+		949875B21E84BB8700E9800F /* YMDetailChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875B01E84BB8700E9800F /* YMDetailChoiceButtonView.swift */; };
+		949875B31E84BB8700E9800F /* YMDetailChoiceButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875B11E84BB8700E9800F /* YMDetailChoiceButtonView.xib */; };
+		949875B61E84BBAE00E9800F /* YMDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875B41E84BBAE00E9800F /* YMDetailCollectionViewCell.swift */; };
+		949875B71E84BBAE00E9800F /* YMDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875B51E84BBAE00E9800F /* YMDetailCollectionViewCell.xib */; };
+		949875BC1E84BBBD00E9800F /* YMProductDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875B81E84BBBD00E9800F /* YMProductDetailBottomView.swift */; };
+		949875BD1E84BBBD00E9800F /* YMProductDetailToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875B91E84BBBD00E9800F /* YMProductDetailToolBar.swift */; };
+		949875BE1E84BBBD00E9800F /* YMProductDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875BA1E84BBBD00E9800F /* YMProductDetailToolBar.xib */; };
+		949875BF1E84BBBD00E9800F /* YMProductDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875BB1E84BBBD00E9800F /* YMProductDetailTopView.swift */; };
+		949875C31E84BBDE00E9800F /* YMDetailScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875C01E84BBDE00E9800F /* YMDetailScrollView.swift */; };
+		949875C41E84BBDE00E9800F /* YMCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875C11E84BBDE00E9800F /* YMCommentCell.swift */; };
+		949875C51E84BBDE00E9800F /* YMCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875C21E84BBDE00E9800F /* YMCommentCell.xib */; };
+		949875C81E84C23100E9800F /* YMHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875C61E84C23100E9800F /* YMHomeCell.swift */; };
+		949875C91E84C23100E9800F /* YMHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875C71E84C23100E9800F /* YMHomeCell.xib */; };
+		949875CD1E84C26900E9800F /* YMRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875CA1E84C26900E9800F /* YMRefreshControl.swift */; };
+		949875CE1E84C26900E9800F /* YMRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875CB1E84C26900E9800F /* YMRefreshView.swift */; };
+		949875CF1E84C26900E9800F /* YMRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875CC1E84C26900E9800F /* YMRefreshView.xib */; };
+		949875D41E84C2F000E9800F /* YMSearchRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875D01E84C2F000E9800F /* YMSearchRecordView.swift */; };
+		949875D51E84C2F000E9800F /* YMSortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875D11E84C2F000E9800F /* YMSortCell.swift */; };
+		949875D61E84C2F000E9800F /* YMSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875D21E84C2F000E9800F /* YMSortCell.xib */; };
+		949875D71E84C2F000E9800F /* YMSortTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875D31E84C2F000E9800F /* YMSortTableView.swift */; };
+		949875D91E84C3BD00E9800F /* YMDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875D81E84C3BD00E9800F /* YMDetailViewController.swift */; };
+		949875DC1E84C3C100E9800F /* YMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875DA1E84C3C100E9800F /* YMSearchViewController.swift */; };
+		949875DD1E84C3C100E9800F /* YMTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875DB1E84C3C100E9800F /* YMTopicViewController.swift */; };
+		949875E11E84C4D700E9800F /* YMProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875DE1E84C4D700E9800F /* YMProductDetailViewController.swift */; };
+		949875E21E84C4D700E9800F /* YMTMALLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875DF1E84C4D700E9800F /* YMTMALLViewController.swift */; };
+		949875E31E84C4D700E9800F /* YMTMALLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875E01E84C4D700E9800F /* YMTMALLViewController.xib */; };
+		949875ED1E84C64100E9800F /* YMCategoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875E41E84C64100E9800F /* YMCategoryBottomView.swift */; };
+		949875EE1E84C64100E9800F /* YMCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875E51E84C64100E9800F /* YMCategoryCollectionViewCell.swift */; };
+		949875EF1E84C64100E9800F /* YMCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875E61E84C64100E9800F /* YMCategoryCollectionViewCell.xib */; };
+		949875F01E84C64100E9800F /* YMCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875E71E84C64100E9800F /* YMCollectionTableViewCell.swift */; };
+		949875F11E84C64100E9800F /* YMCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875E81E84C64100E9800F /* YMCollectionTableViewCell.xib */; };
+		949875F21E84C64100E9800F /* YMSeeAllTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875E91E84C64100E9800F /* YMSeeAllTopicCell.swift */; };
+		949875F31E84C64100E9800F /* YMSeeAllTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875EA1E84C64100E9800F /* YMSeeAllTopicCell.xib */; };
+		949875F41E84C64100E9800F /* YMTopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875EB1E84C64100E9800F /* YMTopHeaderView.swift */; };
+		949875F51E84C64100E9800F /* YMTopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875EC1E84C64100E9800F /* YMTopHeaderView.xib */; };
+		949875FE1E84F2BB00E9800F /* YMCollectionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875F81E84F2BB00E9800F /* YMCollectionDetailController.swift */; };
+		949875FF1E84F2BB00E9800F /* YMCollectionDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875F91E84F2BB00E9800F /* YMCollectionDetailController.xib */; };
+		949876001E84F2BB00E9800F /* YMPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875FA1E84F2BB00E9800F /* YMPostDetailViewController.swift */; };
+		949876011E84F2BB00E9800F /* YMPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875FB1E84F2BB00E9800F /* YMPostDetailViewController.xib */; };
+		949876021E84F2BB00E9800F /* YMSeeAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949875FC1E84F2BB00E9800F /* YMSeeAllController.swift */; };
+		949876031E84F2BB00E9800F /* YMSeeAllController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949875FD1E84F2BB00E9800F /* YMSeeAllController.xib */; };
+		949876051E84F2DB00E9800F /* YMCategoryHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949876041E84F2DB00E9800F /* YMCategoryHeaderViewController.swift */; };
+		B047E71690AFE0C408DD18D7 /* Pods_DanTang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5428C704355532C8677DA /* Pods_DanTang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		250041A51D3DD15D00994B58 /* PBXContainerItemProxy */ = {
+		949875241E84A83400E9800F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 250041881D3DD15D00994B58 /* Project object */;
+			containerPortal = 949875071E84A83400E9800F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2500418F1D3DD15D00994B58;
+			remoteGlobalIDString = 9498750E1E84A83400E9800F;
 			remoteInfo = DanTang;
 		};
-		250041B01D3DD15D00994B58 /* PBXContainerItemProxy */ = {
+		9498752F1E84A83400E9800F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 250041881D3DD15D00994B58 /* Project object */;
+			containerPortal = 949875071E84A83400E9800F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2500418F1D3DD15D00994B58;
+			remoteGlobalIDString = 9498750E1E84A83400E9800F;
 			remoteInfo = DanTang;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053967763D40EE721AE073DA /* Pods_DanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig"; sourceTree = "<group>"; };
-		250041901D3DD15D00994B58 /* DanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2500419A1D3DD15D00994B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		250041A41D3DD15D00994B58 /* DanTangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		250041A81D3DD15D00994B58 /* DanTangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangTests.swift; sourceTree = "<group>"; };
-		250041AA1D3DD15D00994B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		250041B31D3DD15D00994B58 /* DanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangUITests.swift; sourceTree = "<group>"; };
-		250041B51D3DD15D00994B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25A285541D48493C0090498C /* YMCategoryHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryHeaderViewController.swift; sourceTree = "<group>"; };
-		25A285551D48493C0090498C /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
-		25A285561D48493C0090498C /* YMCollectionDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionDetailController.swift; sourceTree = "<group>"; };
-		25A285571D48493C0090498C /* YMCollectionDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionDetailController.xib; sourceTree = "<group>"; };
-		25A285581D48493C0090498C /* YMPostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMPostDetailViewController.swift; sourceTree = "<group>"; };
-		25A285591D48493C0090498C /* YMPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMPostDetailViewController.xib; sourceTree = "<group>"; };
-		25A2855A1D48493C0090498C /* YMSeeAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllController.swift; sourceTree = "<group>"; };
-		25A2855B1D48493C0090498C /* YMSeeAllController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllController.xib; sourceTree = "<group>"; };
-		25A2855D1D48493C0090498C /* YMCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollection.swift; sourceTree = "<group>"; };
-		25A2855E1D48493C0090498C /* YMCollectionPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionPost.swift; sourceTree = "<group>"; };
-		25A2855F1D48493C0090498C /* YMGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMGroup.swift; sourceTree = "<group>"; };
-		25A285611D48493C0090498C /* YMCategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryBottomView.swift; sourceTree = "<group>"; };
-		25A285621D48493C0090498C /* YMCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		25A285631D48493C0090498C /* YMCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
-		25A285641D48493C0090498C /* YMCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		25A285651D48493C0090498C /* YMCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		25A285661D48493C0090498C /* YMSeeAllTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllTopicCell.swift; sourceTree = "<group>"; };
-		25A285671D48493C0090498C /* YMSeeAllTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllTopicCell.xib; sourceTree = "<group>"; };
-		25A285681D48493C0090498C /* YMTopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopHeaderView.swift; sourceTree = "<group>"; };
-		25A285691D48493C0090498C /* YMTopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTopHeaderView.xib; sourceTree = "<group>"; };
-		25A2856A1D48493C0090498C /* YMVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMVerticalButton.swift; sourceTree = "<group>"; };
-		25A2856D1D48493C0090498C /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
-		25A2856E1D48493C0090498C /* YMDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailViewController.swift; sourceTree = "<group>"; };
-		25A2856F1D48493C0090498C /* YMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchViewController.swift; sourceTree = "<group>"; };
-		25A285701D48493C0090498C /* YMTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopicViewController.swift; sourceTree = "<group>"; };
-		25A285721D48493C0090498C /* YMChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMChannel.swift; sourceTree = "<group>"; };
-		25A285731D48493C0090498C /* YMHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMHomeItem.swift; sourceTree = "<group>"; };
-		25A285741D48493C0090498C /* YMSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchResult.swift; sourceTree = "<group>"; };
-		25A285761D48493C0090498C /* YMHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMHomeCell.swift; sourceTree = "<group>"; };
-		25A285771D48493C0090498C /* YMHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMHomeCell.xib; sourceTree = "<group>"; };
-		25A285781D48493C0090498C /* YMRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshControl.swift; sourceTree = "<group>"; };
-		25A285791D48493C0090498C /* YMRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshView.swift; sourceTree = "<group>"; };
-		25A2857A1D48493C0090498C /* YMRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMRefreshView.xib; sourceTree = "<group>"; };
-		25A2857B1D48493C0090498C /* YMSearchRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchRecordView.swift; sourceTree = "<group>"; };
-		25A2857C1D48493C0090498C /* YMSortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSortCell.swift; sourceTree = "<group>"; };
-		25A2857D1D48493C0090498C /* YMSortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSortCell.xib; sourceTree = "<group>"; };
-		25A2857E1D48493C0090498C /* YMSortTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSortTableView.swift; sourceTree = "<group>"; };
-		25A285811D48493C0090498C /* YMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMLoginViewController.swift; sourceTree = "<group>"; };
-		25A285821D48493C0090498C /* YMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMLoginViewController.xib; sourceTree = "<group>"; };
-		25A285831D48493C0090498C /* YMNewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNewfeatureViewController.swift; sourceTree = "<group>"; };
-		25A285841D48493C0090498C /* YMRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRegisterViewController.swift; sourceTree = "<group>"; };
-		25A285851D48493C0090498C /* YMRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMRegisterViewController.xib; sourceTree = "<group>"; };
-		25A285881D48493C0090498C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		25A285891D48493C0090498C /* UITableView+EmptyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyData.swift"; sourceTree = "<group>"; };
-		25A2858A1D48493C0090498C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		25A2858C1D48493C0090498C /* YMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMBaseViewController.swift; sourceTree = "<group>"; };
-		25A2858D1D48493C0090498C /* YMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNavigationController.swift; sourceTree = "<group>"; };
-		25A2858E1D48493C0090498C /* YMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTabBarController.swift; sourceTree = "<group>"; };
-		25A285901D48493C0090498C /* YMConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMConst.swift; sourceTree = "<group>"; };
-		25A285911D48493C0090498C /* YMNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNetworkTool.swift; sourceTree = "<group>"; };
-		25A285941D48493C0090498C /* YMMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMessageViewController.swift; sourceTree = "<group>"; };
-		25A285951D48493C0090498C /* YMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeViewController.swift; sourceTree = "<group>"; };
-		25A285961D48493C0090498C /* YMSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSettingViewController.swift; sourceTree = "<group>"; };
-		25A285981D48493C0090498C /* YMSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSetting.swift; sourceTree = "<group>"; };
-		25A2859A1D48493C0090498C /* YMMeChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeChoiceView.swift; sourceTree = "<group>"; };
-		25A2859B1D48493C0090498C /* YMMeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeFooterView.swift; sourceTree = "<group>"; };
-		25A2859C1D48493C0090498C /* YMMineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMineHeaderView.swift; sourceTree = "<group>"; };
-		25A2859D1D48493C0090498C /* YMSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSettingCell.swift; sourceTree = "<group>"; };
-		25A2859E1D48493C0090498C /* YMSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSettingCell.xib; sourceTree = "<group>"; };
-		25A285A01D48493C0090498C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25A285A11D48493C0090498C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25A285A21D48493C0090498C /* SettingCell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingCell.plist; sourceTree = "<group>"; };
-		25A285A61D48493C0090498C /* YMProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailViewController.swift; sourceTree = "<group>"; };
-		25A285A71D48493C0090498C /* YMProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductViewController.swift; sourceTree = "<group>"; };
-		25A285A81D48493C0090498C /* YMTMALLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTMALLViewController.swift; sourceTree = "<group>"; };
-		25A285A91D48493C0090498C /* YMTMALLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTMALLViewController.xib; sourceTree = "<group>"; };
-		25A285AB1D48493C0090498C /* YMProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProduct.swift; sourceTree = "<group>"; };
-		25A285AC1D48493C0090498C /* YMProductDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetail.swift; sourceTree = "<group>"; };
-		25A285AE1D48493C0090498C /* YMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMActionSheet.swift; sourceTree = "<group>"; };
-		25A285AF1D48493C0090498C /* YMCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionViewCell.swift; sourceTree = "<group>"; };
-		25A285B01D48493C0090498C /* YMCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionViewCell.xib; sourceTree = "<group>"; };
-		25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailChoiceButtonView.swift; sourceTree = "<group>"; };
-		25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailChoiceButtonView.xib; sourceTree = "<group>"; };
-		25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailCollectionViewCell.xib; sourceTree = "<group>"; };
-		25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailBottomView.swift; sourceTree = "<group>"; };
-		25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailToolBar.swift; sourceTree = "<group>"; };
-		25A285B71D48493C0090498C /* YMProductDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMProductDetailToolBar.xib; sourceTree = "<group>"; };
-		25A285B81D48493C0090498C /* YMProductDetailTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailTopView.swift; sourceTree = "<group>"; };
-		25A285B91D48493C0090498C /* YMShareButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMShareButtonView.swift; sourceTree = "<group>"; };
-		25A286151D486F860090498C /* YMDetailScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailScrollView.swift; sourceTree = "<group>"; };
-		25A286171D488E310090498C /* YMCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCommentCell.swift; sourceTree = "<group>"; };
-		25A286181D488E310090498C /* YMCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCommentCell.xib; sourceTree = "<group>"; };
-		25A2861B1D488F520090498C /* YMComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMComment.swift; sourceTree = "<group>"; };
-		91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
+		17D5428C704355532C8677DA /* Pods_DanTang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanTang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447B24D7DBE168286FAA6968 /* Pods-DanTang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.debug.xcconfig"; sourceTree = "<group>"; };
+		50A9413FAEE0DE75FBD432EE /* Pods-DanTang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTang/Pods-DanTang.release.xcconfig"; sourceTree = "<group>"; };
+		9498750F1E84A83400E9800F /* DanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		949875191E84A83400E9800F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		949875231E84A83400E9800F /* DanTangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		949875271E84A83400E9800F /* DanTangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangTests.swift; sourceTree = "<group>"; };
+		949875291E84A83400E9800F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9498752E1E84A83400E9800F /* DanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		949875321E84A83400E9800F /* DanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangUITests.swift; sourceTree = "<group>"; };
+		949875341E84A83400E9800F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		949875561E84AA6C00E9800F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		949875571E84AA6C00E9800F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		949875581E84AA6C00E9800F /* SettingCell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingCell.plist; sourceTree = "<group>"; };
+		949875601E84AB1700E9800F /* YMNewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNewfeatureViewController.swift; sourceTree = "<group>"; };
+		949875641E84AE3100E9800F /* YMConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMConst.swift; sourceTree = "<group>"; };
+		949875661E84AEA900E9800F /* YMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTabBarController.swift; sourceTree = "<group>"; };
+		949875681E84AF7F00E9800F /* YMNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNavigationController.swift; sourceTree = "<group>"; };
+		9498756A1E84B07700E9800F /* YMDanTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDanTangViewController.swift; sourceTree = "<group>"; };
+		9498756C1E84B09300E9800F /* YMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeViewController.swift; sourceTree = "<group>"; };
+		9498756E1E84B0A400E9800F /* YMProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductViewController.swift; sourceTree = "<group>"; };
+		949875701E84B0B500E9800F /* YMCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryViewController.swift; sourceTree = "<group>"; };
+		949875721E84B12900E9800F /* YMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMBaseViewController.swift; sourceTree = "<group>"; };
+		949875741E84B23900E9800F /* YMNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMNetworkTool.swift; sourceTree = "<group>"; };
+		949875781E84B2B700E9800F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9498757A1E84B30200E9800F /* UITableView+EmptyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyData.swift"; sourceTree = "<group>"; };
+		9498757C1E84B36F00E9800F /* YMVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMVerticalButton.swift; sourceTree = "<group>"; };
+		9498757E1E84B3B900E9800F /* YMGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMGroup.swift; sourceTree = "<group>"; };
+		949875801E84B41B00E9800F /* YMCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollection.swift; sourceTree = "<group>"; };
+		949875811E84B41B00E9800F /* YMCollectionPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionPost.swift; sourceTree = "<group>"; };
+		949875841E84B42900E9800F /* YMChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMChannel.swift; sourceTree = "<group>"; };
+		949875851E84B42900E9800F /* YMHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMHomeItem.swift; sourceTree = "<group>"; };
+		949875861E84B42900E9800F /* YMSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchResult.swift; sourceTree = "<group>"; };
+		9498758A1E84B43A00E9800F /* YMSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSetting.swift; sourceTree = "<group>"; };
+		9498758C1E84B44500E9800F /* YMProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProduct.swift; sourceTree = "<group>"; };
+		9498758D1E84B44500E9800F /* YMProductDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetail.swift; sourceTree = "<group>"; };
+		9498758E1E84B44500E9800F /* YMComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMComment.swift; sourceTree = "<group>"; };
+		949875921E84B47D00E9800F /* YMSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSettingCell.swift; sourceTree = "<group>"; };
+		949875931E84B47D00E9800F /* YMSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSettingCell.xib; sourceTree = "<group>"; };
+		949875961E84B4A400E9800F /* YMMeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeFooterView.swift; sourceTree = "<group>"; };
+		949875971E84B4A400E9800F /* YMMineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMineHeaderView.swift; sourceTree = "<group>"; };
+		9498759A1E84B5B200E9800F /* YMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMLoginViewController.swift; sourceTree = "<group>"; };
+		9498759B1E84B5B200E9800F /* YMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMLoginViewController.xib; sourceTree = "<group>"; };
+		9498759E1E84B60F00E9800F /* YMRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRegisterViewController.swift; sourceTree = "<group>"; };
+		9498759F1E84B60F00E9800F /* YMRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMRegisterViewController.xib; sourceTree = "<group>"; };
+		949875A21E84B63100E9800F /* YMMeChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMeChoiceView.swift; sourceTree = "<group>"; };
+		949875A41E84B79100E9800F /* YMSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSettingViewController.swift; sourceTree = "<group>"; };
+		949875A61E84B80B00E9800F /* YMMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMMessageViewController.swift; sourceTree = "<group>"; };
+		949875A81E84B99800E9800F /* YMActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMActionSheet.swift; sourceTree = "<group>"; };
+		949875AA1E84BA3600E9800F /* YMShareButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMShareButtonView.swift; sourceTree = "<group>"; };
+		949875AC1E84BAED00E9800F /* YMCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionViewCell.swift; sourceTree = "<group>"; };
+		949875AD1E84BAED00E9800F /* YMCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionViewCell.xib; sourceTree = "<group>"; };
+		949875B01E84BB8700E9800F /* YMDetailChoiceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailChoiceButtonView.swift; sourceTree = "<group>"; };
+		949875B11E84BB8700E9800F /* YMDetailChoiceButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailChoiceButtonView.xib; sourceTree = "<group>"; };
+		949875B41E84BBAE00E9800F /* YMDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		949875B51E84BBAE00E9800F /* YMDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		949875B81E84BBBD00E9800F /* YMProductDetailBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailBottomView.swift; sourceTree = "<group>"; };
+		949875B91E84BBBD00E9800F /* YMProductDetailToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailToolBar.swift; sourceTree = "<group>"; };
+		949875BA1E84BBBD00E9800F /* YMProductDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMProductDetailToolBar.xib; sourceTree = "<group>"; };
+		949875BB1E84BBBD00E9800F /* YMProductDetailTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailTopView.swift; sourceTree = "<group>"; };
+		949875C01E84BBDE00E9800F /* YMDetailScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailScrollView.swift; sourceTree = "<group>"; };
+		949875C11E84BBDE00E9800F /* YMCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCommentCell.swift; sourceTree = "<group>"; };
+		949875C21E84BBDE00E9800F /* YMCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCommentCell.xib; sourceTree = "<group>"; };
+		949875C61E84C23100E9800F /* YMHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMHomeCell.swift; sourceTree = "<group>"; };
+		949875C71E84C23100E9800F /* YMHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMHomeCell.xib; sourceTree = "<group>"; };
+		949875CA1E84C26900E9800F /* YMRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshControl.swift; sourceTree = "<group>"; };
+		949875CB1E84C26900E9800F /* YMRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMRefreshView.swift; sourceTree = "<group>"; };
+		949875CC1E84C26900E9800F /* YMRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMRefreshView.xib; sourceTree = "<group>"; };
+		949875D01E84C2F000E9800F /* YMSearchRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchRecordView.swift; sourceTree = "<group>"; };
+		949875D11E84C2F000E9800F /* YMSortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSortCell.swift; sourceTree = "<group>"; };
+		949875D21E84C2F000E9800F /* YMSortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSortCell.xib; sourceTree = "<group>"; };
+		949875D31E84C2F000E9800F /* YMSortTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSortTableView.swift; sourceTree = "<group>"; };
+		949875D81E84C3BD00E9800F /* YMDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMDetailViewController.swift; sourceTree = "<group>"; };
+		949875DA1E84C3C100E9800F /* YMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSearchViewController.swift; sourceTree = "<group>"; };
+		949875DB1E84C3C100E9800F /* YMTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopicViewController.swift; sourceTree = "<group>"; };
+		949875DE1E84C4D700E9800F /* YMProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMProductDetailViewController.swift; sourceTree = "<group>"; };
+		949875DF1E84C4D700E9800F /* YMTMALLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTMALLViewController.swift; sourceTree = "<group>"; };
+		949875E01E84C4D700E9800F /* YMTMALLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTMALLViewController.xib; sourceTree = "<group>"; };
+		949875E41E84C64100E9800F /* YMCategoryBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryBottomView.swift; sourceTree = "<group>"; };
+		949875E51E84C64100E9800F /* YMCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		949875E61E84C64100E9800F /* YMCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		949875E71E84C64100E9800F /* YMCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		949875E81E84C64100E9800F /* YMCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		949875E91E84C64100E9800F /* YMSeeAllTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllTopicCell.swift; sourceTree = "<group>"; };
+		949875EA1E84C64100E9800F /* YMSeeAllTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllTopicCell.xib; sourceTree = "<group>"; };
+		949875EB1E84C64100E9800F /* YMTopHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMTopHeaderView.swift; sourceTree = "<group>"; };
+		949875EC1E84C64100E9800F /* YMTopHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMTopHeaderView.xib; sourceTree = "<group>"; };
+		949875F81E84F2BB00E9800F /* YMCollectionDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCollectionDetailController.swift; sourceTree = "<group>"; };
+		949875F91E84F2BB00E9800F /* YMCollectionDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMCollectionDetailController.xib; sourceTree = "<group>"; };
+		949875FA1E84F2BB00E9800F /* YMPostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMPostDetailViewController.swift; sourceTree = "<group>"; };
+		949875FB1E84F2BB00E9800F /* YMPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMPostDetailViewController.xib; sourceTree = "<group>"; };
+		949875FC1E84F2BB00E9800F /* YMSeeAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMSeeAllController.swift; sourceTree = "<group>"; };
+		949875FD1E84F2BB00E9800F /* YMSeeAllController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMSeeAllController.xib; sourceTree = "<group>"; };
+		949876041E84F2DB00E9800F /* YMCategoryHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YMCategoryHeaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2500418D1D3DD15D00994B58 /* Frameworks */ = {
+		9498750C1E84A83400E9800F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49ED7EC25B9CAC63FEB5100 /* Pods_DanTang.framework in Frameworks */,
+				B047E71690AFE0C408DD18D7 /* Pods_DanTang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041A11D3DD15D00994B58 /* Frameworks */ = {
+		949875201E84A83400E9800F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041AC1D3DD15D00994B58 /* Frameworks */ = {
+		9498752B1E84A83400E9800F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,360 +236,359 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		250041871D3DD15D00994B58 = {
+		52F191597D5576171B7ED3C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				250041921D3DD15D00994B58 /* DanTang */,
-				250041A71D3DD15D00994B58 /* DanTangTests */,
-				250041B21D3DD15D00994B58 /* DanTangUITests */,
-				250041911D3DD15D00994B58 /* Products */,
-				897123692A8351DD9B82F159 /* Pods */,
-				71334DDCB8E57963AC7AE1DC /* Frameworks */,
+				447B24D7DBE168286FAA6968 /* Pods-DanTang.debug.xcconfig */,
+				50A9413FAEE0DE75FBD432EE /* Pods-DanTang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		949875061E84A83400E9800F = {
+			isa = PBXGroup;
+			children = (
+				949875111E84A83400E9800F /* DanTang */,
+				949875261E84A83400E9800F /* DanTangTests */,
+				949875311E84A83400E9800F /* DanTangUITests */,
+				949875101E84A83400E9800F /* Products */,
+				52F191597D5576171B7ED3C0 /* Pods */,
+				C15215F1E8AB8F5727492F63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		250041911D3DD15D00994B58 /* Products */ = {
+		949875101E84A83400E9800F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				250041901D3DD15D00994B58 /* DanTang.app */,
-				250041A41D3DD15D00994B58 /* DanTangTests.xctest */,
-				250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */,
+				9498750F1E84A83400E9800F /* DanTang.app */,
+				949875231E84A83400E9800F /* DanTangTests.xctest */,
+				9498752E1E84A83400E9800F /* DanTangUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		250041921D3DD15D00994B58 /* DanTang */ = {
+		949875111E84A83400E9800F /* DanTang */ = {
 			isa = PBXGroup;
 			children = (
-				25A285511D48493C0090498C /* Classes */,
-				2500419A1D3DD15D00994B58 /* Assets.xcassets */,
+				949875401E84AA6C00E9800F /* Classes */,
+				949875191E84A83400E9800F /* Assets.xcassets */,
 			);
 			path = DanTang;
 			sourceTree = "<group>";
 		};
-		250041A71D3DD15D00994B58 /* DanTangTests */ = {
+		949875261E84A83400E9800F /* DanTangTests */ = {
 			isa = PBXGroup;
 			children = (
-				250041A81D3DD15D00994B58 /* DanTangTests.swift */,
-				250041AA1D3DD15D00994B58 /* Info.plist */,
+				949875271E84A83400E9800F /* DanTangTests.swift */,
+				949875291E84A83400E9800F /* Info.plist */,
 			);
 			path = DanTangTests;
 			sourceTree = "<group>";
 		};
-		250041B21D3DD15D00994B58 /* DanTangUITests */ = {
+		949875311E84A83400E9800F /* DanTangUITests */ = {
 			isa = PBXGroup;
 			children = (
-				250041B31D3DD15D00994B58 /* DanTangUITests.swift */,
-				250041B51D3DD15D00994B58 /* Info.plist */,
+				949875321E84A83400E9800F /* DanTangUITests.swift */,
+				949875341E84A83400E9800F /* Info.plist */,
 			);
 			path = DanTangUITests;
 			sourceTree = "<group>";
 		};
-		25A285511D48493C0090498C /* Classes */ = {
+		949875401E84AA6C00E9800F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				25A285521D48493C0090498C /* Classify */,
-				25A2856B1D48493C0090498C /* DanTang */,
-				25A2857F1D48493C0090498C /* Login&Register */,
-				25A285861D48493C0090498C /* Main */,
-				25A285921D48493C0090498C /* Me */,
-				25A2859F1D48493C0090498C /* Others */,
-				25A285A31D48493C0090498C /* Product */,
+				949875411E84AA6C00E9800F /* Classify */,
+				949875451E84AA6C00E9800F /* DanTang */,
+				949875491E84AA6C00E9800F /* Login&Register */,
+				9498754D1E84AA6C00E9800F /* Main */,
+				949875511E84AA6C00E9800F /* Me */,
+				949875551E84AA6C00E9800F /* Others */,
+				949875591E84AA6C00E9800F /* Product */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		25A285521D48493C0090498C /* Classify */ = {
+		949875411E84AA6C00E9800F /* Classify */ = {
 			isa = PBXGroup;
 			children = (
-				25A285531D48493C0090498C /* Controller */,
-				25A2855C1D48493C0090498C /* Model */,
-				25A285601D48493C0090498C /* View */,
+				949875421E84AA6C00E9800F /* Controller */,
+				949875431E84AA6C00E9800F /* Model */,
+				949875441E84AA6C00E9800F /* View */,
 			);
 			path = Classify;
 			sourceTree = "<group>";
 		};
-		25A285531D48493C0090498C /* Controller */ = {
+		949875421E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A285541D48493C0090498C /* YMCategoryHeaderViewController.swift */,
-				25A285551D48493C0090498C /* YMCategoryViewController.swift */,
-				25A285561D48493C0090498C /* YMCollectionDetailController.swift */,
-				25A285571D48493C0090498C /* YMCollectionDetailController.xib */,
-				25A285581D48493C0090498C /* YMPostDetailViewController.swift */,
-				25A285591D48493C0090498C /* YMPostDetailViewController.xib */,
-				25A2855A1D48493C0090498C /* YMSeeAllController.swift */,
-				25A2855B1D48493C0090498C /* YMSeeAllController.xib */,
+				949875701E84B0B500E9800F /* YMCategoryViewController.swift */,
+				949876041E84F2DB00E9800F /* YMCategoryHeaderViewController.swift */,
+				949875F81E84F2BB00E9800F /* YMCollectionDetailController.swift */,
+				949875F91E84F2BB00E9800F /* YMCollectionDetailController.xib */,
+				949875FA1E84F2BB00E9800F /* YMPostDetailViewController.swift */,
+				949875FB1E84F2BB00E9800F /* YMPostDetailViewController.xib */,
+				949875FC1E84F2BB00E9800F /* YMSeeAllController.swift */,
+				949875FD1E84F2BB00E9800F /* YMSeeAllController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A2855C1D48493C0090498C /* Model */ = {
+		949875431E84AA6C00E9800F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				25A2855D1D48493C0090498C /* YMCollection.swift */,
-				25A2855E1D48493C0090498C /* YMCollectionPost.swift */,
-				25A2855F1D48493C0090498C /* YMGroup.swift */,
+				949875801E84B41B00E9800F /* YMCollection.swift */,
+				949875811E84B41B00E9800F /* YMCollectionPost.swift */,
+				9498757E1E84B3B900E9800F /* YMGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25A285601D48493C0090498C /* View */ = {
+		949875441E84AA6C00E9800F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				25A285611D48493C0090498C /* YMCategoryBottomView.swift */,
-				25A285621D48493C0090498C /* YMCategoryCollectionViewCell.swift */,
-				25A285631D48493C0090498C /* YMCategoryCollectionViewCell.xib */,
-				25A285641D48493C0090498C /* YMCollectionTableViewCell.swift */,
-				25A285651D48493C0090498C /* YMCollectionTableViewCell.xib */,
-				25A285661D48493C0090498C /* YMSeeAllTopicCell.swift */,
-				25A285671D48493C0090498C /* YMSeeAllTopicCell.xib */,
-				25A285681D48493C0090498C /* YMTopHeaderView.swift */,
-				25A285691D48493C0090498C /* YMTopHeaderView.xib */,
-				25A2856A1D48493C0090498C /* YMVerticalButton.swift */,
+				9498757C1E84B36F00E9800F /* YMVerticalButton.swift */,
+				949875E41E84C64100E9800F /* YMCategoryBottomView.swift */,
+				949875E51E84C64100E9800F /* YMCategoryCollectionViewCell.swift */,
+				949875E61E84C64100E9800F /* YMCategoryCollectionViewCell.xib */,
+				949875E71E84C64100E9800F /* YMCollectionTableViewCell.swift */,
+				949875E81E84C64100E9800F /* YMCollectionTableViewCell.xib */,
+				949875E91E84C64100E9800F /* YMSeeAllTopicCell.swift */,
+				949875EA1E84C64100E9800F /* YMSeeAllTopicCell.xib */,
+				949875EB1E84C64100E9800F /* YMTopHeaderView.swift */,
+				949875EC1E84C64100E9800F /* YMTopHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		25A2856B1D48493C0090498C /* DanTang */ = {
+		949875451E84AA6C00E9800F /* DanTang */ = {
 			isa = PBXGroup;
 			children = (
-				25A2856C1D48493C0090498C /* Controller */,
-				25A285711D48493C0090498C /* Model */,
-				25A285751D48493C0090498C /* View */,
+				949875461E84AA6C00E9800F /* Controller */,
+				949875471E84AA6C00E9800F /* Model */,
+				949875481E84AA6C00E9800F /* View */,
 			);
 			path = DanTang;
 			sourceTree = "<group>";
 		};
-		25A2856C1D48493C0090498C /* Controller */ = {
+		949875461E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A2856D1D48493C0090498C /* YMDanTangViewController.swift */,
-				25A2856E1D48493C0090498C /* YMDetailViewController.swift */,
-				25A2856F1D48493C0090498C /* YMSearchViewController.swift */,
-				25A285701D48493C0090498C /* YMTopicViewController.swift */,
+				9498756A1E84B07700E9800F /* YMDanTangViewController.swift */,
+				949875D81E84C3BD00E9800F /* YMDetailViewController.swift */,
+				949875DA1E84C3C100E9800F /* YMSearchViewController.swift */,
+				949875DB1E84C3C100E9800F /* YMTopicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A285711D48493C0090498C /* Model */ = {
+		949875471E84AA6C00E9800F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				25A285721D48493C0090498C /* YMChannel.swift */,
-				25A285731D48493C0090498C /* YMHomeItem.swift */,
-				25A285741D48493C0090498C /* YMSearchResult.swift */,
+				949875841E84B42900E9800F /* YMChannel.swift */,
+				949875851E84B42900E9800F /* YMHomeItem.swift */,
+				949875861E84B42900E9800F /* YMSearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25A285751D48493C0090498C /* View */ = {
+		949875481E84AA6C00E9800F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				25A285761D48493C0090498C /* YMHomeCell.swift */,
-				25A285771D48493C0090498C /* YMHomeCell.xib */,
-				25A285781D48493C0090498C /* YMRefreshControl.swift */,
-				25A285791D48493C0090498C /* YMRefreshView.swift */,
-				25A2857A1D48493C0090498C /* YMRefreshView.xib */,
-				25A2857B1D48493C0090498C /* YMSearchRecordView.swift */,
-				25A2857C1D48493C0090498C /* YMSortCell.swift */,
-				25A2857D1D48493C0090498C /* YMSortCell.xib */,
-				25A2857E1D48493C0090498C /* YMSortTableView.swift */,
+				949875C61E84C23100E9800F /* YMHomeCell.swift */,
+				949875C71E84C23100E9800F /* YMHomeCell.xib */,
+				949875CA1E84C26900E9800F /* YMRefreshControl.swift */,
+				949875CB1E84C26900E9800F /* YMRefreshView.swift */,
+				949875CC1E84C26900E9800F /* YMRefreshView.xib */,
+				949875D01E84C2F000E9800F /* YMSearchRecordView.swift */,
+				949875D11E84C2F000E9800F /* YMSortCell.swift */,
+				949875D21E84C2F000E9800F /* YMSortCell.xib */,
+				949875D31E84C2F000E9800F /* YMSortTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		25A2857F1D48493C0090498C /* Login&Register */ = {
+		949875491E84AA6C00E9800F /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
-				25A285801D48493C0090498C /* Controller */,
+				9498754A1E84AA6C00E9800F /* Controller */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
 		};
-		25A285801D48493C0090498C /* Controller */ = {
+		9498754A1E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A285811D48493C0090498C /* YMLoginViewController.swift */,
-				25A285821D48493C0090498C /* YMLoginViewController.xib */,
-				25A285831D48493C0090498C /* YMNewfeatureViewController.swift */,
-				25A285841D48493C0090498C /* YMRegisterViewController.swift */,
-				25A285851D48493C0090498C /* YMRegisterViewController.xib */,
+				9498759A1E84B5B200E9800F /* YMLoginViewController.swift */,
+				9498759B1E84B5B200E9800F /* YMLoginViewController.xib */,
+				949875601E84AB1700E9800F /* YMNewfeatureViewController.swift */,
+				9498759E1E84B60F00E9800F /* YMRegisterViewController.swift */,
+				9498759F1E84B60F00E9800F /* YMRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A285861D48493C0090498C /* Main */ = {
+		9498754D1E84AA6C00E9800F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				25A285871D48493C0090498C /* Category */,
-				25A2858B1D48493C0090498C /* Controller */,
-				25A2858F1D48493C0090498C /* Tools */,
+				949875621E84AE2600E9800F /* Category */,
+				949875631E84AE2600E9800F /* Tools */,
+				9498754E1E84AA6C00E9800F /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		25A285871D48493C0090498C /* Category */ = {
+		9498754E1E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A285881D48493C0090498C /* String+Extension.swift */,
-				25A285891D48493C0090498C /* UITableView+EmptyData.swift */,
-				25A2858A1D48493C0090498C /* UIView+Extension.swift */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		25A2858B1D48493C0090498C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				25A2858C1D48493C0090498C /* YMBaseViewController.swift */,
-				25A2858D1D48493C0090498C /* YMNavigationController.swift */,
-				25A2858E1D48493C0090498C /* YMTabBarController.swift */,
+				949875721E84B12900E9800F /* YMBaseViewController.swift */,
+				949875661E84AEA900E9800F /* YMTabBarController.swift */,
+				949875681E84AF7F00E9800F /* YMNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A2858F1D48493C0090498C /* Tools */ = {
+		949875511E84AA6C00E9800F /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				25A285901D48493C0090498C /* YMConst.swift */,
-				25A285911D48493C0090498C /* YMNetworkTool.swift */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		25A285921D48493C0090498C /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				25A285931D48493C0090498C /* Controller */,
-				25A285971D48493C0090498C /* Model */,
-				25A285991D48493C0090498C /* View */,
+				949875521E84AA6C00E9800F /* Controller */,
+				949875531E84AA6C00E9800F /* Model */,
+				949875541E84AA6C00E9800F /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
 		};
-		25A285931D48493C0090498C /* Controller */ = {
+		949875521E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A285941D48493C0090498C /* YMMessageViewController.swift */,
-				25A285951D48493C0090498C /* YMMeViewController.swift */,
-				25A285961D48493C0090498C /* YMSettingViewController.swift */,
+				9498756C1E84B09300E9800F /* YMMeViewController.swift */,
+				949875A61E84B80B00E9800F /* YMMessageViewController.swift */,
+				949875A41E84B79100E9800F /* YMSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A285971D48493C0090498C /* Model */ = {
+		949875531E84AA6C00E9800F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				25A285981D48493C0090498C /* YMSetting.swift */,
+				9498758A1E84B43A00E9800F /* YMSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25A285991D48493C0090498C /* View */ = {
+		949875541E84AA6C00E9800F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				25A2859A1D48493C0090498C /* YMMeChoiceView.swift */,
-				25A2859B1D48493C0090498C /* YMMeFooterView.swift */,
-				25A2859C1D48493C0090498C /* YMMineHeaderView.swift */,
-				25A2859D1D48493C0090498C /* YMSettingCell.swift */,
-				25A2859E1D48493C0090498C /* YMSettingCell.xib */,
+				949875A21E84B63100E9800F /* YMMeChoiceView.swift */,
+				949875961E84B4A400E9800F /* YMMeFooterView.swift */,
+				949875971E84B4A400E9800F /* YMMineHeaderView.swift */,
+				949875921E84B47D00E9800F /* YMSettingCell.swift */,
+				949875931E84B47D00E9800F /* YMSettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		25A2859F1D48493C0090498C /* Others */ = {
+		949875551E84AA6C00E9800F /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				25A285A01D48493C0090498C /* AppDelegate.swift */,
-				25A285A11D48493C0090498C /* Info.plist */,
-				25A285A21D48493C0090498C /* SettingCell.plist */,
+				949875561E84AA6C00E9800F /* AppDelegate.swift */,
+				949875571E84AA6C00E9800F /* Info.plist */,
+				949875581E84AA6C00E9800F /* SettingCell.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
 		};
-		25A285A31D48493C0090498C /* Product */ = {
+		949875591E84AA6C00E9800F /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				25A285A41D48493C0090498C /* Controller */,
-				25A285AA1D48493C0090498C /* Model */,
-				25A285AD1D48493C0090498C /* View */,
+				9498755A1E84AA6C00E9800F /* Controller */,
+				9498755B1E84AA6C00E9800F /* Model */,
+				9498755C1E84AA6C00E9800F /* View */,
 			);
 			path = Product;
 			sourceTree = "<group>";
 		};
-		25A285A41D48493C0090498C /* Controller */ = {
+		9498755A1E84AA6C00E9800F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25A285A71D48493C0090498C /* YMProductViewController.swift */,
-				25A285A61D48493C0090498C /* YMProductDetailViewController.swift */,
-				25A285A81D48493C0090498C /* YMTMALLViewController.swift */,
-				25A285A91D48493C0090498C /* YMTMALLViewController.xib */,
+				9498756E1E84B0A400E9800F /* YMProductViewController.swift */,
+				949875DE1E84C4D700E9800F /* YMProductDetailViewController.swift */,
+				949875DF1E84C4D700E9800F /* YMTMALLViewController.swift */,
+				949875E01E84C4D700E9800F /* YMTMALLViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25A285AA1D48493C0090498C /* Model */ = {
+		9498755B1E84AA6C00E9800F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				25A285AB1D48493C0090498C /* YMProduct.swift */,
-				25A285AC1D48493C0090498C /* YMProductDetail.swift */,
-				25A2861B1D488F520090498C /* YMComment.swift */,
+				9498758C1E84B44500E9800F /* YMProduct.swift */,
+				9498758D1E84B44500E9800F /* YMProductDetail.swift */,
+				9498758E1E84B44500E9800F /* YMComment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25A285AD1D48493C0090498C /* View */ = {
+		9498755C1E84AA6C00E9800F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				25A285AE1D48493C0090498C /* YMActionSheet.swift */,
-				25A285AF1D48493C0090498C /* YMCollectionViewCell.swift */,
-				25A285B01D48493C0090498C /* YMCollectionViewCell.xib */,
-				25A285B11D48493C0090498C /* YMDetailChoiceButtonView.swift */,
-				25A285B21D48493C0090498C /* YMDetailChoiceButtonView.xib */,
-				25A285B31D48493C0090498C /* YMDetailCollectionViewCell.swift */,
-				25A285B41D48493C0090498C /* YMDetailCollectionViewCell.xib */,
-				25A285B51D48493C0090498C /* YMProductDetailBottomView.swift */,
-				25A285B61D48493C0090498C /* YMProductDetailToolBar.swift */,
-				25A285B71D48493C0090498C /* YMProductDetailToolBar.xib */,
-				25A285B81D48493C0090498C /* YMProductDetailTopView.swift */,
-				25A285B91D48493C0090498C /* YMShareButtonView.swift */,
-				25A286151D486F860090498C /* YMDetailScrollView.swift */,
-				25A286171D488E310090498C /* YMCommentCell.swift */,
-				25A286181D488E310090498C /* YMCommentCell.xib */,
+				949875C01E84BBDE00E9800F /* YMDetailScrollView.swift */,
+				949875C11E84BBDE00E9800F /* YMCommentCell.swift */,
+				949875C21E84BBDE00E9800F /* YMCommentCell.xib */,
+				949875B81E84BBBD00E9800F /* YMProductDetailBottomView.swift */,
+				949875B91E84BBBD00E9800F /* YMProductDetailToolBar.swift */,
+				949875BA1E84BBBD00E9800F /* YMProductDetailToolBar.xib */,
+				949875BB1E84BBBD00E9800F /* YMProductDetailTopView.swift */,
+				949875AC1E84BAED00E9800F /* YMCollectionViewCell.swift */,
+				949875AD1E84BAED00E9800F /* YMCollectionViewCell.xib */,
+				949875B01E84BB8700E9800F /* YMDetailChoiceButtonView.swift */,
+				949875B11E84BB8700E9800F /* YMDetailChoiceButtonView.xib */,
+				949875B41E84BBAE00E9800F /* YMDetailCollectionViewCell.swift */,
+				949875B51E84BBAE00E9800F /* YMDetailCollectionViewCell.xib */,
+				949875AA1E84BA3600E9800F /* YMShareButtonView.swift */,
+				949875A81E84B99800E9800F /* YMActionSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		71334DDCB8E57963AC7AE1DC /* Frameworks */ = {
+		949875621E84AE2600E9800F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				053967763D40EE721AE073DA /* Pods_DanTang.framework */,
+				949875781E84B2B700E9800F /* UIView+Extension.swift */,
+				9498757A1E84B30200E9800F /* UITableView+EmptyData.swift */,
 			);
-			name = Frameworks;
+			path = Category;
 			sourceTree = "<group>";
 		};
-		897123692A8351DD9B82F159 /* Pods */ = {
+		949875631E84AE2600E9800F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */,
-				91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */,
+				949875641E84AE3100E9800F /* YMConst.swift */,
+				949875741E84B23900E9800F /* YMNetworkTool.swift */,
 			);
-			name = Pods;
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C15215F1E8AB8F5727492F63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17D5428C704355532C8677DA /* Pods_DanTang.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2500418F1D3DD15D00994B58 /* DanTang */ = {
+		9498750E1E84A83400E9800F /* DanTang */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250041B81D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTang" */;
+			buildConfigurationList = 949875371E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTang" */;
 			buildPhases = (
-				8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */,
-				2500418C1D3DD15D00994B58 /* Sources */,
-				2500418D1D3DD15D00994B58 /* Frameworks */,
-				2500418E1D3DD15D00994B58 /* Resources */,
-				CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */,
-				5B460329EE786A3126AB2760 /* Copy Pods Resources */,
+				06626A20BE9D80F463697739 /* [CP] Check Pods Manifest.lock */,
+				9498750B1E84A83400E9800F /* Sources */,
+				9498750C1E84A83400E9800F /* Frameworks */,
+				9498750D1E84A83400E9800F /* Resources */,
+				F58D400C519EA2EFA38DC245 /* [CP] Embed Pods Frameworks */,
+				34DC90A511B9F435893FD9C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -599,70 +596,75 @@
 			);
 			name = DanTang;
 			productName = DanTang;
-			productReference = 250041901D3DD15D00994B58 /* DanTang.app */;
+			productReference = 9498750F1E84A83400E9800F /* DanTang.app */;
 			productType = "com.apple.product-type.application";
 		};
-		250041A31D3DD15D00994B58 /* DanTangTests */ = {
+		949875221E84A83400E9800F /* DanTangTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250041BB1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangTests" */;
+			buildConfigurationList = 9498753A1E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTangTests" */;
 			buildPhases = (
-				250041A01D3DD15D00994B58 /* Sources */,
-				250041A11D3DD15D00994B58 /* Frameworks */,
-				250041A21D3DD15D00994B58 /* Resources */,
+				9498751F1E84A83400E9800F /* Sources */,
+				949875201E84A83400E9800F /* Frameworks */,
+				949875211E84A83400E9800F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				250041A61D3DD15D00994B58 /* PBXTargetDependency */,
+				949875251E84A83400E9800F /* PBXTargetDependency */,
 			);
 			name = DanTangTests;
 			productName = DanTangTests;
-			productReference = 250041A41D3DD15D00994B58 /* DanTangTests.xctest */;
+			productReference = 949875231E84A83400E9800F /* DanTangTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		250041AE1D3DD15D00994B58 /* DanTangUITests */ = {
+		9498752D1E84A83400E9800F /* DanTangUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250041BE1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangUITests" */;
+			buildConfigurationList = 9498753D1E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTangUITests" */;
 			buildPhases = (
-				250041AB1D3DD15D00994B58 /* Sources */,
-				250041AC1D3DD15D00994B58 /* Frameworks */,
-				250041AD1D3DD15D00994B58 /* Resources */,
+				9498752A1E84A83400E9800F /* Sources */,
+				9498752B1E84A83400E9800F /* Frameworks */,
+				9498752C1E84A83400E9800F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				250041B11D3DD15D00994B58 /* PBXTargetDependency */,
+				949875301E84A83400E9800F /* PBXTargetDependency */,
 			);
 			name = DanTangUITests;
 			productName = DanTangUITests;
-			productReference = 250041AF1D3DD15D00994B58 /* DanTangUITests.xctest */;
+			productReference = 9498752E1E84A83400E9800F /* DanTangUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		250041881D3DD15D00994B58 /* Project object */ = {
+		949875071E84A83400E9800F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = YM;
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = hrscy;
 				TargetAttributes = {
-					2500418F1D3DD15D00994B58 = {
-						CreatedOnToolsVersion = 7.3.1;
+					9498750E1E84A83400E9800F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CK4C7KZJ97;
+						ProvisioningStyle = Automatic;
 					};
-					250041A31D3DD15D00994B58 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 2500418F1D3DD15D00994B58;
+					949875221E84A83400E9800F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CK4C7KZJ97;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9498750E1E84A83400E9800F;
 					};
-					250041AE1D3DD15D00994B58 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 2500418F1D3DD15D00994B58;
+					9498752D1E84A83400E9800F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CK4C7KZJ97;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9498750E1E84A83400E9800F;
 					};
 				};
 			};
-			buildConfigurationList = 2500418B1D3DD15D00994B58 /* Build configuration list for PBXProject "DanTang" */;
+			buildConfigurationList = 9498750A1E84A83400E9800F /* Build configuration list for PBXProject "DanTang" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -670,56 +672,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 250041871D3DD15D00994B58;
-			productRefGroup = 250041911D3DD15D00994B58 /* Products */;
+			mainGroup = 949875061E84A83400E9800F;
+			productRefGroup = 949875101E84A83400E9800F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2500418F1D3DD15D00994B58 /* DanTang */,
-				250041A31D3DD15D00994B58 /* DanTangTests */,
-				250041AE1D3DD15D00994B58 /* DanTangUITests */,
+				9498750E1E84A83400E9800F /* DanTang */,
+				949875221E84A83400E9800F /* DanTangTests */,
+				9498752D1E84A83400E9800F /* DanTangUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2500418E1D3DD15D00994B58 /* Resources */ = {
+		9498750D1E84A83400E9800F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A285E31D48493C0090498C /* YMRegisterViewController.xib in Resources */,
-				25A285E01D48493C0090498C /* YMLoginViewController.xib in Resources */,
-				25A286081D48493C0090498C /* YMProductDetailToolBar.xib in Resources */,
-				25A285DD1D48493C0090498C /* YMSortCell.xib in Resources */,
-				25A286051D48493C0090498C /* YMDetailCollectionViewCell.xib in Resources */,
-				25A2861A1D488E310090498C /* YMCommentCell.xib in Resources */,
-				25A285BD1D48493C0090498C /* YMCollectionDetailController.xib in Resources */,
-				25A285FC1D48493C0090498C /* YMTMALLViewController.xib in Resources */,
-				25A286031D48493C0090498C /* YMDetailChoiceButtonView.xib in Resources */,
-				25A285F41D48493C0090498C /* YMSettingCell.xib in Resources */,
-				25A285CD1D48493C0090498C /* YMTopHeaderView.xib in Resources */,
-				25A285D71D48493C0090498C /* YMHomeCell.xib in Resources */,
-				25A285C91D48493C0090498C /* YMCollectionTableViewCell.xib in Resources */,
-				25A285F61D48493C0090498C /* Info.plist in Resources */,
-				25A285F71D48493C0090498C /* SettingCell.plist in Resources */,
-				25A285CB1D48493C0090498C /* YMSeeAllTopicCell.xib in Resources */,
-				2500419B1D3DD15D00994B58 /* Assets.xcassets in Resources */,
-				25A285DA1D48493C0090498C /* YMRefreshView.xib in Resources */,
-				25A285BF1D48493C0090498C /* YMPostDetailViewController.xib in Resources */,
-				25A285C71D48493C0090498C /* YMCategoryCollectionViewCell.xib in Resources */,
-				25A286011D48493C0090498C /* YMCollectionViewCell.xib in Resources */,
-				25A285C11D48493C0090498C /* YMSeeAllController.xib in Resources */,
+				949875B71E84BBAE00E9800F /* YMDetailCollectionViewCell.xib in Resources */,
+				949875F31E84C64100E9800F /* YMSeeAllTopicCell.xib in Resources */,
+				949875F51E84C64100E9800F /* YMTopHeaderView.xib in Resources */,
+				949875D61E84C2F000E9800F /* YMSortCell.xib in Resources */,
+				949875B31E84BB8700E9800F /* YMDetailChoiceButtonView.xib in Resources */,
+				949875C91E84C23100E9800F /* YMHomeCell.xib in Resources */,
+				949875BE1E84BBBD00E9800F /* YMProductDetailToolBar.xib in Resources */,
+				9498755E1E84AA6C00E9800F /* Info.plist in Resources */,
+				949875FF1E84F2BB00E9800F /* YMCollectionDetailController.xib in Resources */,
+				949875E31E84C4D700E9800F /* YMTMALLViewController.xib in Resources */,
+				949875CF1E84C26900E9800F /* YMRefreshView.xib in Resources */,
+				949876011E84F2BB00E9800F /* YMPostDetailViewController.xib in Resources */,
+				949875EF1E84C64100E9800F /* YMCategoryCollectionViewCell.xib in Resources */,
+				9498759D1E84B5B200E9800F /* YMLoginViewController.xib in Resources */,
+				949875C51E84BBDE00E9800F /* YMCommentCell.xib in Resources */,
+				949876031E84F2BB00E9800F /* YMSeeAllController.xib in Resources */,
+				949875F11E84C64100E9800F /* YMCollectionTableViewCell.xib in Resources */,
+				949875AF1E84BAED00E9800F /* YMCollectionViewCell.xib in Resources */,
+				9498751A1E84A83400E9800F /* Assets.xcassets in Resources */,
+				949875A11E84B60F00E9800F /* YMRegisterViewController.xib in Resources */,
+				949875951E84B47D00E9800F /* YMSettingCell.xib in Resources */,
+				9498755F1E84AA6C00E9800F /* SettingCell.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041A21D3DD15D00994B58 /* Resources */ = {
+		949875211E84A83400E9800F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041AD1D3DD15D00994B58 /* Resources */ = {
+		9498752C1E84A83400E9800F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -729,14 +731,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B460329EE786A3126AB2760 /* Copy Pods Resources */ = {
+		06626A20BE9D80F463697739 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		34DC90A511B9F435893FD9C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,29 +761,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DanTang/Pods-DanTang-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C2AA6E135B9E57F7CA4C15B /* Check Pods Manifest.lock */ = {
+		F58D400C519EA2EFA38DC245 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CD4BB2CB2EF7B62E6AFCD401 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,109 +779,108 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2500418C1D3DD15D00994B58 /* Sources */ = {
+		9498750B1E84A83400E9800F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A285E61D48493C0090498C /* UIView+Extension.swift in Sources */,
-				25A285D61D48493C0090498C /* YMHomeCell.swift in Sources */,
-				25A285BB1D48493C0090498C /* YMCategoryViewController.swift in Sources */,
-				25A285D31D48493C0090498C /* YMChannel.swift in Sources */,
-				25A285BC1D48493C0090498C /* YMCollectionDetailController.swift in Sources */,
-				25A285D11D48493C0090498C /* YMSearchViewController.swift in Sources */,
-				25A285C61D48493C0090498C /* YMCategoryCollectionViewCell.swift in Sources */,
-				25A285F01D48493C0090498C /* YMMeChoiceView.swift in Sources */,
-				25A285D91D48493C0090498C /* YMRefreshView.swift in Sources */,
-				25A285E41D48493C0090498C /* String+Extension.swift in Sources */,
-				25A2861C1D488F520090498C /* YMComment.swift in Sources */,
-				25A285D51D48493C0090498C /* YMSearchResult.swift in Sources */,
-				25A286041D48493C0090498C /* YMDetailCollectionViewCell.swift in Sources */,
-				25A285CC1D48493C0090498C /* YMTopHeaderView.swift in Sources */,
-				25A2860A1D48493C0090498C /* YMShareButtonView.swift in Sources */,
-				25A285F51D48493C0090498C /* AppDelegate.swift in Sources */,
-				25A285C31D48493C0090498C /* YMCollectionPost.swift in Sources */,
-				25A285E51D48493C0090498C /* UITableView+EmptyData.swift in Sources */,
-				25A285C41D48493C0090498C /* YMGroup.swift in Sources */,
-				25A285FF1D48493C0090498C /* YMActionSheet.swift in Sources */,
-				25A286191D488E310090498C /* YMCommentCell.swift in Sources */,
-				25A285DC1D48493C0090498C /* YMSortCell.swift in Sources */,
-				25A285DF1D48493C0090498C /* YMLoginViewController.swift in Sources */,
-				25A286071D48493C0090498C /* YMProductDetailToolBar.swift in Sources */,
-				25A286021D48493C0090498C /* YMDetailChoiceButtonView.swift in Sources */,
-				25A285EC1D48493C0090498C /* YMMessageViewController.swift in Sources */,
-				25A285BE1D48493C0090498C /* YMPostDetailViewController.swift in Sources */,
-				25A285EA1D48493C0090498C /* YMConst.swift in Sources */,
-				25A285F31D48493C0090498C /* YMSettingCell.swift in Sources */,
-				25A285D41D48493C0090498C /* YMHomeItem.swift in Sources */,
-				25A285D81D48493C0090498C /* YMRefreshControl.swift in Sources */,
-				25A285FD1D48493C0090498C /* YMProduct.swift in Sources */,
-				25A285BA1D48493C0090498C /* YMCategoryHeaderViewController.swift in Sources */,
-				25A285FB1D48493C0090498C /* YMTMALLViewController.swift in Sources */,
-				25A285E21D48493C0090498C /* YMRegisterViewController.swift in Sources */,
-				25A286061D48493C0090498C /* YMProductDetailBottomView.swift in Sources */,
-				25A285CF1D48493C0090498C /* YMDanTangViewController.swift in Sources */,
-				25A285C01D48493C0090498C /* YMSeeAllController.swift in Sources */,
-				25A285EE1D48493C0090498C /* YMSettingViewController.swift in Sources */,
-				25A285E71D48493C0090498C /* YMBaseViewController.swift in Sources */,
-				25A285C21D48493C0090498C /* YMCollection.swift in Sources */,
-				25A285E91D48493C0090498C /* YMTabBarController.swift in Sources */,
-				25A285DE1D48493C0090498C /* YMSortTableView.swift in Sources */,
-				25A285E11D48493C0090498C /* YMNewfeatureViewController.swift in Sources */,
-				25A285CA1D48493C0090498C /* YMSeeAllTopicCell.swift in Sources */,
-				25A285C51D48493C0090498C /* YMCategoryBottomView.swift in Sources */,
-				25A285DB1D48493C0090498C /* YMSearchRecordView.swift in Sources */,
-				25A285EB1D48493C0090498C /* YMNetworkTool.swift in Sources */,
-				25A285F21D48493C0090498C /* YMMineHeaderView.swift in Sources */,
-				25A286091D48493C0090498C /* YMProductDetailTopView.swift in Sources */,
-				25A286001D48493C0090498C /* YMCollectionViewCell.swift in Sources */,
-				25A286161D486F860090498C /* YMDetailScrollView.swift in Sources */,
-				25A285ED1D48493C0090498C /* YMMeViewController.swift in Sources */,
-				25A285FE1D48493C0090498C /* YMProductDetail.swift in Sources */,
-				25A285F11D48493C0090498C /* YMMeFooterView.swift in Sources */,
-				25A285E81D48493C0090498C /* YMNavigationController.swift in Sources */,
-				25A285D21D48493C0090498C /* YMTopicViewController.swift in Sources */,
-				25A285EF1D48493C0090498C /* YMSetting.swift in Sources */,
-				25A285C81D48493C0090498C /* YMCollectionTableViewCell.swift in Sources */,
-				25A285CE1D48493C0090498C /* YMVerticalButton.swift in Sources */,
-				25A285F91D48493C0090498C /* YMProductDetailViewController.swift in Sources */,
-				25A285FA1D48493C0090498C /* YMProductViewController.swift in Sources */,
-				25A285D01D48493C0090498C /* YMDetailViewController.swift in Sources */,
+				949875691E84AF7F00E9800F /* YMNavigationController.swift in Sources */,
+				949875D71E84C2F000E9800F /* YMSortTableView.swift in Sources */,
+				949876001E84F2BB00E9800F /* YMPostDetailViewController.swift in Sources */,
+				949875D41E84C2F000E9800F /* YMSearchRecordView.swift in Sources */,
+				9498757F1E84B3B900E9800F /* YMGroup.swift in Sources */,
+				949876051E84F2DB00E9800F /* YMCategoryHeaderViewController.swift in Sources */,
+				949875A71E84B80B00E9800F /* YMMessageViewController.swift in Sources */,
+				949875D51E84C2F000E9800F /* YMSortCell.swift in Sources */,
+				949875941E84B47D00E9800F /* YMSettingCell.swift in Sources */,
+				949875881E84B42900E9800F /* YMHomeItem.swift in Sources */,
+				949875751E84B23900E9800F /* YMNetworkTool.swift in Sources */,
+				949875A51E84B79100E9800F /* YMSettingViewController.swift in Sources */,
+				949875C31E84BBDE00E9800F /* YMDetailScrollView.swift in Sources */,
+				949875F41E84C64100E9800F /* YMTopHeaderView.swift in Sources */,
+				949875BF1E84BBBD00E9800F /* YMProductDetailTopView.swift in Sources */,
+				949875EE1E84C64100E9800F /* YMCategoryCollectionViewCell.swift in Sources */,
+				949875FE1E84F2BB00E9800F /* YMCollectionDetailController.swift in Sources */,
+				949875611E84AB1700E9800F /* YMNewfeatureViewController.swift in Sources */,
+				9498757B1E84B30200E9800F /* UITableView+EmptyData.swift in Sources */,
+				949875DC1E84C3C100E9800F /* YMSearchViewController.swift in Sources */,
+				9498756B1E84B07700E9800F /* YMDanTangViewController.swift in Sources */,
+				949875BC1E84BBBD00E9800F /* YMProductDetailBottomView.swift in Sources */,
+				949875ED1E84C64100E9800F /* YMCategoryBottomView.swift in Sources */,
+				949875D91E84C3BD00E9800F /* YMDetailViewController.swift in Sources */,
+				949875731E84B12900E9800F /* YMBaseViewController.swift in Sources */,
+				949875E11E84C4D700E9800F /* YMProductDetailViewController.swift in Sources */,
+				949875991E84B4A400E9800F /* YMMineHeaderView.swift in Sources */,
+				949875CD1E84C26900E9800F /* YMRefreshControl.swift in Sources */,
+				949875AB1E84BA3600E9800F /* YMShareButtonView.swift in Sources */,
+				949875981E84B4A400E9800F /* YMMeFooterView.swift in Sources */,
+				949875671E84AEA900E9800F /* YMTabBarController.swift in Sources */,
+				9498759C1E84B5B200E9800F /* YMLoginViewController.swift in Sources */,
+				949875B21E84BB8700E9800F /* YMDetailChoiceButtonView.swift in Sources */,
+				949875A31E84B63100E9800F /* YMMeChoiceView.swift in Sources */,
+				949875BD1E84BBBD00E9800F /* YMProductDetailToolBar.swift in Sources */,
+				949875791E84B2B700E9800F /* UIView+Extension.swift in Sources */,
+				949875C41E84BBDE00E9800F /* YMCommentCell.swift in Sources */,
+				949875AE1E84BAED00E9800F /* YMCollectionViewCell.swift in Sources */,
+				949875871E84B42900E9800F /* YMChannel.swift in Sources */,
+				949875711E84B0B500E9800F /* YMCategoryViewController.swift in Sources */,
+				949875651E84AE3100E9800F /* YMConst.swift in Sources */,
+				949875A91E84B99800E9800F /* YMActionSheet.swift in Sources */,
+				9498756D1E84B09300E9800F /* YMMeViewController.swift in Sources */,
+				949875831E84B41B00E9800F /* YMCollectionPost.swift in Sources */,
+				949875C81E84C23100E9800F /* YMHomeCell.swift in Sources */,
+				9498756F1E84B0A400E9800F /* YMProductViewController.swift in Sources */,
+				949875F21E84C64100E9800F /* YMSeeAllTopicCell.swift in Sources */,
+				9498755D1E84AA6C00E9800F /* AppDelegate.swift in Sources */,
+				949875B61E84BBAE00E9800F /* YMDetailCollectionViewCell.swift in Sources */,
+				9498758B1E84B43A00E9800F /* YMSetting.swift in Sources */,
+				9498757D1E84B36F00E9800F /* YMVerticalButton.swift in Sources */,
+				949876021E84F2BB00E9800F /* YMSeeAllController.swift in Sources */,
+				949875911E84B44500E9800F /* YMComment.swift in Sources */,
+				949875901E84B44500E9800F /* YMProductDetail.swift in Sources */,
+				949875891E84B42900E9800F /* YMSearchResult.swift in Sources */,
+				949875821E84B41B00E9800F /* YMCollection.swift in Sources */,
+				949875DD1E84C3C100E9800F /* YMTopicViewController.swift in Sources */,
+				949875CE1E84C26900E9800F /* YMRefreshView.swift in Sources */,
+				949875E21E84C4D700E9800F /* YMTMALLViewController.swift in Sources */,
+				949875A01E84B60F00E9800F /* YMRegisterViewController.swift in Sources */,
+				9498758F1E84B44500E9800F /* YMProduct.swift in Sources */,
+				949875F01E84C64100E9800F /* YMCollectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041A01D3DD15D00994B58 /* Sources */ = {
+		9498751F1E84A83400E9800F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250041A91D3DD15D00994B58 /* DanTangTests.swift in Sources */,
+				949875281E84A83400E9800F /* DanTangTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		250041AB1D3DD15D00994B58 /* Sources */ = {
+		9498752A1E84A83400E9800F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250041B41D3DD15D00994B58 /* DanTangUITests.swift in Sources */,
+				949875331E84A83400E9800F /* DanTangUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		250041A61D3DD15D00994B58 /* PBXTargetDependency */ = {
+		949875251E84A83400E9800F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2500418F1D3DD15D00994B58 /* DanTang */;
-			targetProxy = 250041A51D3DD15D00994B58 /* PBXContainerItemProxy */;
+			target = 9498750E1E84A83400E9800F /* DanTang */;
+			targetProxy = 949875241E84A83400E9800F /* PBXContainerItemProxy */;
 		};
-		250041B11D3DD15D00994B58 /* PBXTargetDependency */ = {
+		949875301E84A83400E9800F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2500418F1D3DD15D00994B58 /* DanTang */;
-			targetProxy = 250041B01D3DD15D00994B58 /* PBXContainerItemProxy */;
+			target = 9498750E1E84A83400E9800F /* DanTang */;
+			targetProxy = 9498752F1E84A83400E9800F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		250041B61D3DD15D00994B58 /* Debug */ = {
+		949875351E84A83400E9800F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -891,10 +892,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -916,15 +920,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		250041B71D3DD15D00994B58 /* Release */ = {
+		949875361E84A83400E9800F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -936,10 +941,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -955,83 +963,100 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		250041B91D3DD15D00994B58 /* Debug */ = {
+		949875381E84A83400E9800F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AC7FCCCC457EC50FC9CBF46 /* Pods-DanTang.debug.xcconfig */;
+			baseConfigurationReference = 447B24D7DBE168286FAA6968 /* Pods-DanTang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = DanTang/Classes/Others/Info.plist;
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
+				INFOPLIST_FILE = "$(SRCROOT)/DanTang/Classes/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		250041BA1D3DD15D00994B58 /* Release */ = {
+		949875391E84A83400E9800F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91EF270E66D496431DC127E0 /* Pods-DanTang.release.xcconfig */;
+			baseConfigurationReference = 50A9413FAEE0DE75FBD432EE /* Pods-DanTang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = DanTang/Classes/Others/Info.plist;
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
+				INFOPLIST_FILE = "$(SRCROOT)/DanTang/Classes/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		250041BC1D3DD15D00994B58 /* Debug */ = {
+		9498753B1E84A83400E9800F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
 				INFOPLIST_FILE = DanTangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang";
 			};
 			name = Debug;
 		};
-		250041BD1D3DD15D00994B58 /* Release */ = {
+		9498753C1E84A83400E9800F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
 				INFOPLIST_FILE = DanTangTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanTang.app/DanTang";
 			};
 			name = Release;
 		};
-		250041BF1D3DD15D00994B58 /* Debug */ = {
+		9498753E1E84A83400E9800F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
 				INFOPLIST_FILE = DanTangUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DanTang;
 			};
 			name = Debug;
 		};
-		250041C01D3DD15D00994B58 /* Release */ = {
+		9498753F1E84A83400E9800F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CK4C7KZJ97;
 				INFOPLIST_FILE = DanTangUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hrscy.DanTangUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = DanTang;
 			};
 			name = Release;
@@ -1039,43 +1064,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2500418B1D3DD15D00994B58 /* Build configuration list for PBXProject "DanTang" */ = {
+		9498750A1E84A83400E9800F /* Build configuration list for PBXProject "DanTang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				250041B61D3DD15D00994B58 /* Debug */,
-				250041B71D3DD15D00994B58 /* Release */,
+				949875351E84A83400E9800F /* Debug */,
+				949875361E84A83400E9800F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250041B81D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTang" */ = {
+		949875371E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				250041B91D3DD15D00994B58 /* Debug */,
-				250041BA1D3DD15D00994B58 /* Release */,
+				949875381E84A83400E9800F /* Debug */,
+				949875391E84A83400E9800F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250041BB1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangTests" */ = {
+		9498753A1E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTangTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				250041BC1D3DD15D00994B58 /* Debug */,
-				250041BD1D3DD15D00994B58 /* Release */,
+				9498753B1E84A83400E9800F /* Debug */,
+				9498753C1E84A83400E9800F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250041BE1D3DD15D00994B58 /* Build configuration list for PBXNativeTarget "DanTangUITests" */ = {
+		9498753D1E84A83400E9800F /* Build configuration list for PBXNativeTarget "DanTangUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				250041BF1D3DD15D00994B58 /* Debug */,
-				250041C01D3DD15D00994B58 /* Release */,
+				9498753E1E84A83400E9800F /* Debug */,
+				9498753F1E84A83400E9800F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 250041881D3DD15D00994B58 /* Project object */;
+	rootObject = 949875071E84A83400E9800F /* Project object */;
 }

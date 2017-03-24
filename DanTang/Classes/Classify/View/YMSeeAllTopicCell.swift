@@ -14,8 +14,8 @@ class YMSeeAllTopicCell: UITableViewCell {
     var collection: YMCollection? {
         didSet {
             let url = collection!.cover_image_url
-            bgImageView.kf_setImageWithURL(NSURL(string: url!)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-                self.placeholderButton.hidden = true
+            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderButton.isHidden = true
             }
             titleLabel.text = collection!.title
             subtitleLabel.text = collection!.subtitle
@@ -36,7 +36,7 @@ class YMSeeAllTopicCell: UITableViewCell {
         bgImageView.layer.masksToBounds = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

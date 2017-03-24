@@ -20,10 +20,10 @@ class YMCollectionViewCell: UICollectionViewCell {
     var result: YMSearchResult? {
         didSet {
             let url = result!.cover_image_url!
-            productImageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-                self.placeholderBtn.hidden = true
+            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderBtn.isHidden = true
             }
-            likeButton.setTitle(" " + String(result!.favorites_count!) + " ", forState: .Normal)
+            likeButton.setTitle(" " + String(result!.favorites_count!) + " ", for: .normal)
             titleLabel.text = result!.name
             priceLabel.text = "￥" + String(result!.price!)
         }
@@ -33,10 +33,10 @@ class YMCollectionViewCell: UICollectionViewCell {
     var product: YMProduct? {
         didSet {
             let url = product!.cover_image_url!
-            productImageView.kf_setImageWithURL(NSURL(string: url)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-                self.placeholderBtn.hidden = true
+            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                self.placeholderBtn.isHidden = true
             }
-            likeButton.setTitle(" " + String(product!.favorites_count!) + " ", forState: .Normal)
+            likeButton.setTitle(" " + String(product!.favorites_count!) + " ", for: .normal)
             titleLabel.text = product!.name
             priceLabel.text = "￥" + String(product!.price!)
         }
@@ -58,6 +58,6 @@ class YMCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func likeButtonClick(sender: UIButton) {
-        delegate?.collectionViewCellDidClickedLikeButton(sender)
+        delegate?.collectionViewCellDidClickedLikeButton(button: sender)
     }
 }

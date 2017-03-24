@@ -14,14 +14,14 @@ class YMVerticalButton: UIButton {
     var group: YMGroup? {
         didSet {
             let url = group!.icon_url
-            imageView?.kf_setImageWithURL(NSURL(string: url!)!)
+            imageView?.kf.setImage(with: URL(string: url!)!)
             titleLabel?.text = group!.name
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        titleLabel?.textAlignment = .Center
+        titleLabel?.textAlignment = .center
     }
     
     required init?(coder aDecoder: NSCoder) {

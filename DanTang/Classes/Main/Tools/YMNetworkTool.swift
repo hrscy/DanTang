@@ -2,11 +2,11 @@
 //  YMNetworkTool.swift
 //  DanTang
 //
-//  Created by 杨蒙 on 16/7/20.
-//  Copyright © 2016年 hrscy. All rights reserved.
+//  Created by 杨蒙 on 2017/3/24.
+//  Copyright © 2017年 hrscy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 import SVProgressHUD
 import SwiftyJSON
@@ -16,18 +16,18 @@ class YMNetworkTool: NSObject {
     static let shareNetworkTool = YMNetworkTool()
     
     /// 获取首页数据
-    func loadHomeInfo(id: Int, finished:(homeItems: [YMHomeItem]) -> ()) {
-//        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
+    func loadHomeInfo(id: Int, finished:@escaping (_ homeItems: [YMHomeItem]) -> ()) {
+        //        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
         let url = BASE_URL + "v1/channels/\(id)/items"
         let params = ["gender": 1,
                       "generation": 1,
                       "limit": 20,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -35,7 +35,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     let data = dict["data"].dictionary
@@ -46,23 +46,23 @@ class YMNetworkTool: NSObject {
                             let homeItem = YMHomeItem(dict: item as! [String: AnyObject])
                             homeItems.append(homeItem)
                         }
-                        finished(homeItems: homeItems)
+                        finished(homeItems)
                     }
                 }
         }
     }
     
     /// 获取首页顶部选择数据
-    func loadHomeTopData(finished:(ym_channels: [YMChannel]) -> ()) {
+    func loadHomeTopData(finished:@escaping (_ ym_channels: [YMChannel]) -> ()) {
         
         let url = BASE_URL + "v2/channels/preset"
         let params = ["gender": 1,
                       "generation": 1]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -70,7 +70,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -81,21 +81,21 @@ class YMNetworkTool: NSObject {
                             let ym_channel = YMChannel(dict: channel as! [String: AnyObject])
                             ym_channels.append(ym_channel)
                         }
-                        finished(ym_channels: ym_channels)
+                        finished(ym_channels)
                     }
                 }
         }
     }
     
     /// 搜索界面数据
-    func loadHotWords(finished:(words: [String]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadHotWords(finished:@escaping (_ words: [String]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v1/search/hot_words"
         Alamofire
-            .request(.GET, url)
+            .request(url)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -103,13 +103,13 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
                     if let data = dict["data"].dictionary {
                         if let hot_words = data["hot_words"]?.arrayObject {
-                            finished(words: hot_words as! [String])
+                            finished(hot_words as! [String])
                         }
                     }
                 }
@@ -117,19 +117,19 @@ class YMNetworkTool: NSObject {
     }
     
     /// 根据搜索条件进行搜索
-    func loadSearchResult(keyword: String, sort: String, finished:(results: [YMSearchResult]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadSearchResult(keyword: String, sort: String, finished:@escaping (_ results: [YMSearchResult]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = "http://api.dantangapp.com/v1/search/item"
         
         let params = ["keyword": keyword,
                       "limit": 20,
                       "offset": 0,
-                      "sort": sort]
+                      "sort": sort] as [String : Any]
         Alamofire
-            .request(.GET, url, parameters: params as? [String : AnyObject])
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -137,7 +137,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -148,25 +148,25 @@ class YMNetworkTool: NSObject {
                             let result = YMSearchResult(dict: item as! [String: AnyObject])
                             results.append(result)
                         }
-                        finished(results: results)
+                        finished(results)
                     }
                 }
         }
     }
     
     /// 获取单品数据
-    func loadProductData(finished:(products: [YMProduct]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadProductData(finished:@escaping (_ products: [YMProduct]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v2/items"
         let params = ["gender": 1,
                       "generation": 1,
                       "limit": 20,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -174,7 +174,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -182,12 +182,13 @@ class YMNetworkTool: NSObject {
                         if let items = data["items"]?.arrayObject {
                             var products = [YMProduct]()
                             for item in items {
-                                if let itemData = item["data"] {
+                                let itemDict = item as! [String : AnyObject]
+                                if let itemData = itemDict["data"] {
                                     let product = YMProduct(dict: itemData as! [String: AnyObject])
                                     products.append(product)
                                 }
                             }
-                            finished(products: products)
+                            finished(products)
                         }
                     }
                 }
@@ -195,14 +196,14 @@ class YMNetworkTool: NSObject {
     }
     
     /// 获取单品详情数据
-    func loadProductDetailData(id: Int, finished:(productDetail: YMProductDetail) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadProductDetailData(id: Int, finished:@escaping (_ productDetail: YMProductDetail) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v2/items/\(id)"
         Alamofire
-            .request(.GET, url)
+            .request(url)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -210,29 +211,29 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
                     if let data = dict["data"].dictionaryObject {
-                        let productDetail = YMProductDetail(dict: data)
-                        finished(productDetail: productDetail)
+                        let productDetail = YMProductDetail(dict: data as [String : AnyObject])
+                        finished(productDetail)
                     }
                 }
         }
     }
     
     /// 商品详情 评论
-    func loadProductDetailComments(id: Int, finished:(comments: [YMComment]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadProductDetailComments(id: Int, finished:@escaping (_ comments: [YMComment]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v2/items/\(id)/comments"
         let params = ["limit": 20,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -240,7 +241,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -251,7 +252,7 @@ class YMNetworkTool: NSObject {
                                 let comment = YMComment(dict: item as! [String: AnyObject])
                                 comments.append(comment)
                             }
-                            finished(comments: comments)
+                            finished(comments)
                         }
                     }
                 }
@@ -259,16 +260,16 @@ class YMNetworkTool: NSObject {
     }
     
     /// 分类界面 顶部 专题合集
-    func loadCategoryCollection(limit: Int, finished:(collections: [YMCollection]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadCategoryCollection(limit: Int, finished:@escaping (_ collections: [YMCollection]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v1/collections"
         let params = ["limit": limit,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.showError(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -276,7 +277,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.showInfo(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -287,7 +288,7 @@ class YMNetworkTool: NSObject {
                                 let collection = YMCollection(dict: item as! [String: AnyObject])
                                 collections.append(collection)
                             }
-                            finished(collections: collections)
+                            finished(collections)
                         }
                     }
                 }
@@ -295,18 +296,18 @@ class YMNetworkTool: NSObject {
     }
     
     /// 顶部 专题合集 -> 专题列表
-    func loadCollectionPosts(id: Int, finished:(posts: [YMCollectionPost]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadCollectionPosts(id: Int, finished:@escaping (_ posts: [YMCollectionPost]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v1/collections/\(id)/posts"
         let params = ["gender": 1,
                       "generation": 1,
                       "limit": 20,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.show(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -314,7 +315,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.show(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -325,7 +326,7 @@ class YMNetworkTool: NSObject {
                                 let post = YMCollectionPost(dict: item as! [String: AnyObject])
                                 posts.append(post)
                             }
-                            finished(posts: posts)
+                            finished(posts)
                         }
                     }
                 }
@@ -333,14 +334,14 @@ class YMNetworkTool: NSObject {
     }
     
     /// 分类界面 风格,品类
-    func loadCategoryGroup(finished:(outGroups: [AnyObject]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadCategoryGroup(finished:@escaping (_ outGroups: [AnyObject]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v1/channel_groups/all"
         Alamofire
-            .request(.GET, url)
+            .request(url)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.show(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -348,7 +349,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.show(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -359,14 +360,15 @@ class YMNetworkTool: NSObject {
                             var outGroups = [AnyObject]()
                             for channel_group in channel_groups {
                                 var inGroups = [YMGroup]()
-                                let channels = channel_group["channels"] as! [AnyObject]
+                                let channel_group_dict = channel_group as! [String: AnyObject]
+                                let channels = channel_group_dict["channels"] as! [AnyObject]
                                 for channel in channels {
                                     let group = YMGroup(dict: channel as! [String: AnyObject])
                                     inGroups.append(group)
                                 }
-                                outGroups.append(inGroups)
+                                outGroups.append(inGroups as AnyObject)
                             }
-                            finished(outGroups: outGroups)
+                            finished(outGroups)
                         }
                     }
                 }
@@ -374,16 +376,16 @@ class YMNetworkTool: NSObject {
     }
     
     /// 底部 风格品类 -> 列表
-    func loadStylesOrCategoryInfo(id: Int, finished:(items: [YMCollectionPost]) -> ()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func loadStylesOrCategoryInfo(id: Int, finished:@escaping (_ items: [YMCollectionPost]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
         let url = BASE_URL + "v1/channels/\(id)/items"
         let params = ["limit": 20,
                       "offset": 0]
         Alamofire
-            .request(.GET, url, parameters: params)
+            .request(url, parameters: params)
             .responseJSON { (response) in
                 guard response.result.isSuccess else {
-                    SVProgressHUD.showErrorWithStatus("加载失败...")
+                    SVProgressHUD.show(withStatus: "加载失败...")
                     return
                 }
                 if let value = response.result.value {
@@ -391,7 +393,7 @@ class YMNetworkTool: NSObject {
                     let code = dict["code"].intValue
                     let message = dict["message"].stringValue
                     guard code == RETURN_OK else {
-                        SVProgressHUD.showInfoWithStatus(message)
+                        SVProgressHUD.show(withStatus: message)
                         return
                     }
                     SVProgressHUD.dismiss()
@@ -402,10 +404,11 @@ class YMNetworkTool: NSObject {
                                 let post = YMCollectionPost(dict: item as! [String: AnyObject])
                                 items.append(post)
                             }
-                            finished(items: items)
+                            finished(items)
                         }
                     }
                 }
         }
     }
+    
 }

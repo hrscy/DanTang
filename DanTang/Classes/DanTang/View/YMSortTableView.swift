@@ -17,7 +17,7 @@ protocol YMSortTableViewDelegate: NSObjectProtocol {
     func sortView(sortView: YMSortTableView, didSelectSortAtIndexPath sort: String)
 }
 
-class YMSortTableView: UIView {
+class YMSortTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     weak var delegate: YMSortTableViewDelegate?
     
@@ -26,13 +26,13 @@ class YMSortTableView: UIView {
     let sorts = ["", "hot", "price%3Aasc", "price%3Adesc"]
     
     func show() {
-        let window = UIApplication.sharedApplication().keyWindow
-        self.frame = UIScreen.mainScreen().bounds
-        self.backgroundColor = UIColor.clearColor()
+        let window = UIApplication.shared.keyWindow
+        self.frame = UIScreen.main.bounds
+        self.backgroundColor = UIColor.clear
         window?.addSubview(self)
     }
     
-    override func touchesEstimatedPropertiesUpdated(touches: Set<NSObject>) {
+    func touchesEstimatedPropertiesUpdated(touches: Set<NSObject>) {
         self.removeFromSuperview()
     }
     
@@ -47,14 +47,14 @@ class YMSortTableView: UIView {
         
         bgView.addSubview(tableView)
         
-        bgView.snp_makeConstraints { (make) in
+        bgView.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(60)
             make.right.equalTo(self)
-            make.size.equalTo(CGSizeMake(140, 150))
+            make.size.equalTo(CGSize(width: 140, height: 150))
         }
         
-        tableView.snp_makeConstraints { (make) in
-            make.edges.equalTo(bgView).offset(UIEdgeInsetsMake(kMargin, kMargin, -kMargin, 0))
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(bgView).offset(UIEdgeInsetsMake(kMargin, kMargin, -kMargin, 0) as! ConstraintOffsetTarget)
         }
     }
     
@@ -64,7 +64,7 @@ class YMSortTableView: UIView {
     
     private lazy var bgView: UIImageView = {
         let bgView = UIImageView()
-        bgView.userInteractionEnabled = true
+        bgView.isUserInteractionEnabled = true
         bgView.image = UIImage(named: "bg_menu_sort_140x46_")
         return bgView
     }()
@@ -73,30 +73,27 @@ class YMSortTableView: UIView {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.clearColor()
+        tableView.backgroundColor = UIColor.clear
         tableView.rowHeight = 35
-        tableView.scrollEnabled = false
-        tableView.separatorStyle = .None
-        let nib = UINib(nibName: String(YMSortCell.self), bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: sortTableViewCellID)
+        tableView.isScrollEnabled = false
+        tableView.separatorStyle = .none
+        let nib = UINib(nibName: String(describing: YMSortCell.self), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: sortTableViewCellID)
         return tableView
     }()
-}
-
-extension YMSortTableView: UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(sortTableViewCellID) as! YMSortCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: sortTableViewCellID) as! YMSortCell
         cell.titleLabel.text = cells[indexPath.row]
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         let sort = sorts[indexPath.row]
-        delegate?.sortView(self, didSelectSortAtIndexPath: sort)
+        delegate?.sortView(sortView: self, didSelectSortAtIndexPath: sort)
     }
 }

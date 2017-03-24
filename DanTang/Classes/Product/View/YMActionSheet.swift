@@ -13,10 +13,10 @@ class YMActionSheet: UIView {
     
     class func show() {
         let actionSheet = YMActionSheet()
-        actionSheet.frame = UIScreen.mainScreen().bounds
-        actionSheet.backgroundColor = YMColor(0, g: 0, b: 0, a: 0.6)
+        actionSheet.frame = UIScreen.main.bounds
+        actionSheet.backgroundColor = YMColor(r: 0, g: 0, b: 0, a: 0.6)
         
-        let window = UIApplication.sharedApplication().keyWindow
+        let window = UIApplication.shared.keyWindow
         window?.addSubview(actionSheet)
     }
     
@@ -39,20 +39,20 @@ class YMActionSheet: UIView {
         // 6 个分享按钮的 view
         topView.addSubview(shareButtonView)
         
-        topView.snp_makeConstraints { (make) in
-            make.bottom.equalTo(cancelButton.snp_top).offset(-kMargin)
-            make.left.equalTo(cancelButton.snp_left)
-            make.right.equalTo(cancelButton.snp_right)
+        topView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(cancelButton.snp.top).offset(-kMargin)
+            make.left.equalTo(cancelButton.snp.left)
+            make.right.equalTo(cancelButton.snp.right)
             make.height.equalTo(kTopViewH)
         }
         
-        cancelButton.snp_makeConstraints { (make) in
+        cancelButton.snp.makeConstraints { (make) in
             make.left.equalTo(bgView).offset(kMargin)
             make.right.bottom.equalTo(bgView).offset(-kMargin)
             make.height.equalTo(44)
         }
         
-        shareLabel.snp_makeConstraints { (make) in
+        shareLabel.snp.makeConstraints { (make) in
             make.left.right.top.equalTo(topView)
             make.height.equalTo(30)
         }
@@ -60,7 +60,7 @@ class YMActionSheet: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        UIView.animateWithDuration(kAnimationDuration) {
+        UIView.animate(withDuration: kAnimationDuration) {
             self.bgView.y = SCREENH - self.bgView.height
         }
     }
@@ -68,13 +68,13 @@ class YMActionSheet: UIView {
     // 底部 view
     private lazy var bgView: UIView = {
         let bgView = UIView()
-        bgView.frame = CGRectMake(0, SCREENH, SCREENW, 280)
+        bgView.frame = CGRect(x: 0, y: SCREENH, width: SCREENW, height: 280)
         return bgView
     }()
     // 上部 view
     private lazy var topView: UIView = {
         let topView = UIView()
-        topView.backgroundColor = UIColor.whiteColor()
+        topView.backgroundColor = UIColor.white
         topView.layer.cornerRadius = kCornerRadius
         topView.layer.masksToBounds = true
         return topView
@@ -84,40 +84,40 @@ class YMActionSheet: UIView {
     private lazy var shareLabel: UILabel = {
         let shareLabel = UILabel()
         shareLabel.text = "分享到"
-        shareLabel.textColor = YMColor(0, g: 0, b: 0, a: 0.7)
-        shareLabel.textAlignment = .Center
+        shareLabel.textColor = YMColor(r: 0, g: 0, b: 0, a: 0.7)
+        shareLabel.textAlignment = .center
         return shareLabel
     }()
     // 6个按钮
     private lazy var shareButtonView: YMShareButtonView = {
         let shareButtonView = YMShareButtonView()
-        shareButtonView.frame = CGRectMake(0, 30, SCREENW - 20, kTopViewH - 30)
+        shareButtonView.frame = CGRect(x: 0, y: 30, width: SCREENW - 20, height: kTopViewH - 30)
         return shareButtonView
     }()
     
     private lazy var cancelButton: UIButton = {
         let cancelButton = UIButton()
-        cancelButton.setTitle("取消", forState: .Normal)
-        cancelButton.titleLabel?.font = UIFont.systemFontOfSize(18)
-        cancelButton.setTitleColor(YMColor(37, g: 142, b: 240, a: 1.0), forState: .Normal)
-        cancelButton.backgroundColor = UIColor.whiteColor()
-        cancelButton.addTarget(self, action: #selector(cancelButtonClick), forControlEvents: .TouchUpInside)
+        cancelButton.setTitle("取消", for: .normal)
+        cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        cancelButton.setTitleColor(YMColor(r: 37, g: 142, b: 240, a: 1.0), for: .normal)
+        cancelButton.backgroundColor = UIColor.white
+        cancelButton.addTarget(self, action: #selector(cancelButtonClick), for: .touchUpInside)
         cancelButton.layer.cornerRadius = kCornerRadius
         cancelButton.layer.masksToBounds = true
         return cancelButton
     }()
     
     func cancelButtonClick() {
-        UIView.animateWithDuration(kAnimationDuration, animations: {
+        UIView.animate(withDuration: kAnimationDuration, animations: {
             self.bgView.y = SCREENH
         }) { (_) in
             self.removeFromSuperview()
         }
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        UIView.animateWithDuration(kAnimationDuration, animations: { 
+        UIView.animate(withDuration: kAnimationDuration, animations: { 
             self.bgView.y = SCREENH
             }) { (_) in
                 self.removeFromSuperview()

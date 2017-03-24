@@ -10,7 +10,7 @@
 
 import UIKit
 
-class YMPostDetailViewController: YMBaseViewController {
+class YMPostDetailViewController: YMBaseViewController, UIWebViewDelegate {
 
     var post: YMCollectionPost?
     
@@ -21,9 +21,9 @@ class YMPostDetailViewController: YMBaseViewController {
 
         /// 自动对页面进行缩放以适应屏幕
         webView.scalesPageToFit = true
-        webView.dataDetectorTypes = .All
-        let url = NSURL(string: post!.content_url!)
-        let request = NSURLRequest(URL: url!)
+        webView.dataDetectorTypes = .all
+        let url = URL(string: post!.content_url!)
+        let request = URLRequest(url: url!)
         webView.loadRequest(request)
         view.addSubview(webView)
     }
@@ -33,16 +33,14 @@ class YMPostDetailViewController: YMBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        print(webView.stringByEvaluatingJavaScript(from: "document.documentElement.innerHTML")!)
+    }
+    
 }
 
-extension YMPostDetailViewController: UIWebViewDelegate {
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        print(webView.stringByEvaluatingJavaScriptFromString("document.documentElement.innerHTML"))
-    }
-}

@@ -33,13 +33,13 @@ class YMShareButtonView: UIView {
         for index in 0..<images.count {
             let button = YMVerticalButton()
             button.tag = index
-            button.setImage(UIImage(named: images[index]), forState: .Normal)
-            button.setTitle(titles[index], forState: .Normal)
-            button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-            button.titleLabel?.font = UIFont.systemFontOfSize(14)
+            button.setImage(UIImage(named: images[index]), for: .normal)
+            button.setTitle(titles[index], for: .normal)
+            button.setTitleColor(UIColor.black, for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             button.width = buttonW
             button.height = buttonH
-            button.addTarget(self, action: #selector(shareButtonClick(_:)), forControlEvents: .TouchUpInside)
+            button.addTarget(self, action: #selector(shareButtonClick), for: .touchUpInside)
             
             // 计算 X、Y
             let row = Int(index / maxCols)
@@ -47,7 +47,7 @@ class YMShareButtonView: UIView {
             let buttonX: CGFloat = CGFloat(col) * (xMargin + buttonW) + buttonStartX
             let buttonMaxY: CGFloat = CGFloat(row) * buttonH
             let buttonY = buttonMaxY
-            button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH)
+            button.frame = CGRect(x: buttonX, y: buttonY, width: buttonW, height: buttonH)
             addSubview(button)
         }
     }

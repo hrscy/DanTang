@@ -14,7 +14,7 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .Plain, target: self, action: #selector(categoryRightBBClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .plain, target: self, action: #selector(categoryRightBBClick))
         setupScrollView()
     }
     
@@ -24,17 +24,17 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
         let headerViewController = YMCategoryHeaderViewController()
         addChildViewController(headerViewController)
         
-        let topBGView = UIView(frame: CGRectMake(0, 0, SCREENW, 135))
+        let topBGView = UIView(frame: CGRect(x: 0, y: 0, width: SCREENW, height: 135))
         scrollView.addSubview(topBGView)
         
         let headerVC = childViewControllers[0]
         topBGView.addSubview(headerVC.view)
         
-        let bottomBGView = YMCategoryBottomView(frame: CGRectMake(0, CGRectGetMaxY(topBGView.frame) + 10, SCREENW, SCREENH - 160))
+        let bottomBGView = YMCategoryBottomView(frame: CGRect(x: 0, y: topBGView.frame.maxY + 10, width: SCREENW, height: SCREENH - 160))
         bottomBGView.backgroundColor = YMGlobalColor()
         bottomBGView.delegate = self
         scrollView.addSubview(bottomBGView)
-        scrollView.contentSize = CGSizeMake(SCREENW, CGRectGetMaxY(bottomBGView.frame))
+        scrollView.contentSize = CGSize(width: SCREENW, height: bottomBGView.frame.maxY)
     }
     
     func categoryRightBBClick() {
@@ -45,9 +45,9 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
     /// 懒加载创建 scrollView
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.scrollEnabled = true
+        scrollView.isScrollEnabled = true
         scrollView.backgroundColor = YMGlobalColor()
-        scrollView.frame = CGRectMake(0, 0, SCREENW, SCREENH)
+        scrollView.frame = CGRect(x: 0, y: 0, width: SCREENW, height: SCREENH)
         return scrollView
     }()
     

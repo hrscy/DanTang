@@ -12,7 +12,7 @@ import UIKit
 
 let collectionCellID = "YMCollectionViewCell"
 
-class YMProductViewController: YMBaseViewController {
+class YMProductViewController: YMBaseViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate {
     
     var products = [YMProduct]()
     
@@ -23,9 +23,10 @@ class YMProductViewController: YMBaseViewController {
         /// 设置collectionView
         setupCollectionView()
         
-        YMNetworkTool.shareNetworkTool.loadProductData { [weak self] (products) in
-            self!.products = products
-            self!.collectionView!.reloadData()
+        weak var weakSelf = self
+        YMNetworkTool.shareNetworkTool.loadProductData { (products) in
+            weakSelf!.products = products
+            weakSelf!.collectionView!.reloadData()
         }
     }
     
@@ -35,34 +36,27 @@ class YMProductViewController: YMBaseViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = view.backgroundColor
         collectionView.dataSource = self
-        let nib = UINib(nibName: String(YMCollectionViewCell), bundle: nil)
-        collectionView.registerNib(nib, forCellWithReuseIdentifier: collectionCellID)
+        let nib = UINib(nibName: String(describing: YMCollectionViewCell.self), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: collectionCellID)
         view.addSubview(collectionView)
         self.collectionView = collectionView
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-extension YMProductViewController: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, YMCollectionViewCellDelegate {
     
     // MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count ?? 0
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionCellID, forIndexPath: indexPath) as! YMCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath) as! YMCollectionViewCell
         cell.product = products[indexPath.item]
         cell.delegate = self
         return cell
     }
     
     // MARK: - UICollectionViewDelegate
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let productDetailVC = YMProductDetailViewController()
         productDetailVC.title = "商品详情"
         productDetailVC.product = products[indexPath.item]
@@ -70,25 +64,31 @@ extension YMProductViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width: CGFloat = (UIScreen.mainScreen().bounds.width - 20) / 2
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = (UIScreen.main.bounds.width - 20) / 2
         let height: CGFloat = 245
-        return CGSizeMake(width, height)
+        return CGSize(width: width, height: height)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(5, 5, 5, 5)
     }
     
     // MARK: - YMCollectionViewCellDelegate
     func collectionViewCellDidClickedLikeButton(button: UIButton) {
-        if !NSUserDefaults.standardUserDefaults().boolForKey(isLogin) {
+        if !UserDefaults.standard.bool(forKey: isLogin) {
             let loginVC = YMLoginViewController()
             loginVC.title = "登录"
             let nav = YMNavigationController(rootViewController: loginVC)
-            presentViewController(nav, animated: true, completion: nil)
+            present(nav, animated: true, completion: nil)
         } else {
             
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
