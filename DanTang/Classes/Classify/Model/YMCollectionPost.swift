@@ -14,6 +14,11 @@ class YMCollectionPost: NSObject {
 
     var id: Int?
 
+    
+    
+    
+    
+    
     var published_at: Int?
 
     var created_at: Int?
